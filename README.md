@@ -1,6 +1,16 @@
 ![Capa do livro Python para Escritórios Inteligentes](images/capa.png)
 
-# Python para Escritórios Inteligentes
+# Automação de Tarefas para Escritórios com Python e Inteligência Artificial
+
+Exemplos práticos para advocacia, contabilidade, logística, repartições públicas e e-commerce.
+
+## Autor
+**Christian Mulato**
+Programador de Computador, especialista em automação de processos com Python. Com mais de 10 anos de experiência, Christian é apaixonado por simplificar tarefas do dia a dia e aumentar a produtividade através da tecnologia. Ele acredita que a programação pode ser uma ferramenta poderosa para todos os profissionais, independentemente da área de atuação.
+
+## Sobre o Livro
+
+Este livro é um guia prático para profissionais que desejam automatizar tarefas comuns em escritórios usando Python. Com uma abordagem acessível e direta, o autor apresenta conceitos fundamentais e exemplos reais que podem ser aplicados imediatamente no dia a dia de trabalho.
 
 ## Apresentação
 

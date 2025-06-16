@@ -1,4 +1,5 @@
-```
+CAPA
+```plaintext
  ___________________________________________________________
 |                                                           |
 |   ____        _   _                 _                     |
@@ -10,7 +11,8 @@
 |                                                           |
 |   ⚖️   [ ]   🚚   🛒                                     |
 |                                                           |
-|   PYTHON PARA ESCRITÓRIOS INTELIGENTES                    |
+|   AUTOMAÇÃO DE TAREFAS PARA ESCRITÓRIOS                   |
+|   COM PYTHON E INTELIGÊNCIA ARTIFICIAL                    |
 |                                                           |
 |   ┌───────────────────────────────────────────────┐       |
 |   │ [  ][  ][  ][  ][  ][  ][  ][  ][  ][  ][  ]  │       |
@@ -21,30 +23,29 @@
 |   Christian Mulato - Programador de Computador            |
 |___________________________________________________________|
 
-# Python para Escritórios Inteligentes
+# Automação de Tarefas para Escritórios com Python e Inteligência Artificial
 **Christian Mulato**
 Programador de Computador
 **ISBN:** 978-65-0000-000-0
 **Data de publicação:** Junho de 2025
 **Direitos Autorais Reservados**
-```
 
 ***
 
 # Apresentação
 
-Vivemos uma era em que a tecnologia pode transformar o dia a dia dos escritórios, tornando tarefas repetitivas mais rápidas, precisas e menos cansativas. No entanto, muitos profissionais ainda gastam horas com atividades manuais que poderiam ser facilmente automatizadas.
+Vivemos uma era em que a tecnologia e a inteligência artificial podem transformar o dia a dia dos escritórios, tornando tarefas repetitivas mais rápidas, precisas e menos cansativas. No entanto, muitos profissionais ainda gastam horas com atividades manuais que poderiam ser facilmente automatizadas.
 
-Este livro nasceu da vontade de aproximar o poder da programação — especialmente do Python — do ambiente de escritórios, sejam eles de advocacia, contabilidade, logística, vendas ou serviços para repartições públicas e órgãos governamentais. O objetivo é mostrar, de forma prática e acessível, como automatizar processos comuns, economizar tempo e aumentar a produtividade, mesmo para quem nunca programou antes.
+Este livro nasceu da vontade de aproximar o poder da programação — especialmente do Python — e da inteligência artificial do ambiente de escritórios, sejam eles de advocacia, contabilidade, logística, vendas ou serviços para repartições públicas e órgãos governamentais. O objetivo é mostrar, de forma prática e acessível, como automatizar processos comuns, economizar tempo e aumentar a produtividade, mesmo para quem nunca programou antes.
 
 Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser um especialista em tecnologia: basta curiosidade e vontade de aprender.
 
 O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
 
-- **Parte I – Fundamentos da Automação:** Aqui você aprenderá os conceitos essenciais, desde a instalação do ambiente até a manipulação de arquivos, automação de e-mails, web scraping e criação de interfaces gráficas simples.
+- **Parte I – Fundamentos da Automação:** Aqui você aprenderá os conceitos essenciais, desde a instalação do ambiente até a manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas simples e introdução ao uso de inteligência artificial em tarefas do escritório.
 - **Parte II – Casos Reais por Tipo de Escritório:** Nesta parte, apresentamos exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
 
-Espero que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação está ao alcance de todos.
+Espero que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
 
 Boa leitura e ótimos projetos!
 
