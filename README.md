@@ -103,4 +103,8 @@ Cada capítulo está em um arquivo Markdown na pasta `src`. Siga o sumário para
 
 Sugestões, correções e contribuições são bem-vindas! Abra uma issue ou envie um pull request.
 
+## Licença
+
+Este projeto está licenciado sob os termos da licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
 ***
