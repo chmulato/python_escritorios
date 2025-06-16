@@ -145,5 +145,67 @@ Python é uma das linguagens de programação mais populares para automação de
 - Coletar informações de sites automaticamente (web scraping).
 - Gerar relatórios e dashboards de forma automática.
 
-Ao longo deste livro, você verá como essas e outras tarefas podem ser automatizadas, tornando o seu dia a dia mais produtivo e eficiente. Vamos começar a jornada pela automação com
+Ao longo deste livro, você verá como essas e outras tarefas podem ser automatizadas, tornando o seu dia a dia mais produtivo e eficiente. Vamos começar a jornada pela automação com Python!
 
+***
+
+## 2. Instalação de ambiente: VS Code, Python, bibliotecas úteis
+
+Antes de começar a programar e automatizar tarefas, é importante preparar o ambiente de desenvolvimento. Nesta etapa, você vai instalar o Python, o Visual Studio Code (VS Code) e as principais bibliotecas que serão usadas ao longo do livro.
+
+### 2.1 Instalando o Python
+
+1. Acesse o site oficial: [python.org/downloads](https://www.python.org/downloads/)
+2. Baixe a versão recomendada para o seu sistema operacional (Windows, macOS ou Linux).
+3. Execute o instalador e marque a opção **"Add Python to PATH"** antes de clicar em "Install Now".
+4. Para verificar se a instalação foi bem-sucedida, abra o terminal (Prompt de Comando no Windows) e digite:
+   ```
+   python --version
+   ```
+   O terminal deve exibir a versão instalada do Python.
+
+### 2.2 Instalando o Visual Studio Code (VS Code)
+
+1. Acesse: [code.visualstudio.com](https://code.visualstudio.com/)
+2. Baixe e instale o VS Code para o seu sistema operacional.
+3. Após a instalação, abra o VS Code e, na barra lateral esquerda, clique em **Extensões** (ícone de quadrado).
+4. Busque e instale a extensão **Python** (desenvolvida pela Microsoft).
+
+### 2.3 Instalando bibliotecas úteis
+
+As bibliotecas Python ampliam as funcionalidades da linguagem e facilitam a automação de tarefas. Algumas das principais bibliotecas que usaremos são:
+
+- **pandas** (manipulação de dados e planilhas)
+- **openpyxl** (trabalho com arquivos Excel)
+- **python-docx** (manipulação de arquivos Word)
+- **PyPDF2** (leitura de PDFs)
+- **requests** (requisições web)
+- **beautifulsoup4** (web scraping)
+- **tkinter** ou **PyWebIO** (interfaces gráficas)
+
+Para instalar essas bibliotecas, abra o terminal e execute:
+
+```
+pip install pandas openpyxl python-docx PyPDF2 requests beautifulsoup4
+```
+
+> **Obs.:** O `tkinter` já vem instalado com o Python na maioria das distribuições. O `PyWebIO` pode ser instalado separadamente, se preferir usar interfaces web:
+>
+> ```
+> pip install pywebio
+> ```
+
+### 2.4 Testando o ambiente
+
+Abra o VS Code, crie um novo arquivo chamado `teste.py` e cole o seguinte código:
+
+```python
+print("Ambiente Python configurado com sucesso!")
+```
+
+Salve o arquivo e execute-o (clique com o botão direito e escolha "Run Python File in Terminal" ou use o terminal com `python teste.py`).  
+Se aparecer a mensagem, seu ambiente está pronto para começar!
+
+***
+
+## 3. Trabalhando com arquivos (Excel, CSV, PDF, Word)
