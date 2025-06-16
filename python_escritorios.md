@@ -1,3 +1,4 @@
+```
  ___________________________________________________________
 |                                                           |
 |   ____        _   _                 _                     |
@@ -19,6 +20,16 @@
 |                                                           |
 |   Christian Mulato - Programador de Computador            |
 |___________________________________________________________|
+
+# Python para Escritórios Inteligentes
+**Christian Mulato**
+Programador de Computador
+**ISBN:** 978-65-0000-000-0
+**Data de publicação:** Junho de 2025
+**Direitos Autorais Reservados**
+```
+
+***
 
 # Apresentação
 
