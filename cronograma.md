@@ -2,9 +2,9 @@
 
 ## Parte 1 – Fundamentos da Automação
 
-- [ ] **2025-06-17:** Introdução à automação com Python
-- [ ] **2025-06-18:** Instalação do ambiente: VS Code, Python e bibliotecas úteis
-- [ ] **2025-06-19:** Trabalhando com arquivos (Excel, CSV, PDF, Word)
+- [X] **2025-06-17:** Introdução à automação com Python
+- [X] **2025-06-18:** Instalação do ambiente: VS Code, Python e bibliotecas úteis
+- [X] **2025-06-19:** Trabalhando com arquivos (Excel, CSV, PDF, Word)
 - [ ] **2025-06-20:** Automação de e-mails e notificações
 - [ ] **2025-06-21:** Web scraping e automação de sites
 - [ ] **2025-06-22:** Criação de interfaces gráficas simples (Tkinter ou PyWebIO)

@@ -209,3 +209,168 @@ Se aparecer a mensagem, seu ambiente está pronto para começar!
 ***
 
 ## 3. Trabalhando com arquivos (Excel, CSV, PDF, Word)
+
+Nesta seção, você aprenderá a manipular diferentes tipos de arquivos comuns no ambiente de escritório, como Excel, CSV, PDF e Word. Essas habilidades são essenciais para automatizar tarefas que envolvem leitura, escrita e processamento de dados.
+
+### 3.1. Arquivos CSV
+
+Para ler e escrever arquivos CSV, use o módulo csv ou o pandas:
+```python
+import csv
+# Lendo um arquivo CSV
+with open('dados.csv', mode='r', encoding='utf-8') as file:
+    leitor = csv.reader(file)
+    for linha in leitor:
+        print(linha)
+# Escrevendo em um arquivo CSV
+with open('saida.csv', mode='w', newline='', encoding='utf-8') as file:
+    escritor = csv.writer(file)
+    escritor.writerow(['Nome', 'Idade'])
+    escritor.writerow(['João', 30])
+    escritor.writerow(['Maria', 25])
+```
+
+### 3.2. Arquivos Excel
+
+Para manipular arquivos Excel, use a biblioteca `pandas` ou `openpyxl`. Aqui está um exemplo com `pandas`:
+
+```python
+import pandas as pd
+# Lendo um arquivo Excel
+df = pd.read_excel('dados.xlsx', sheet_name='Planilha1')
+print(df.head())  # Exibe as primeiras linhas do DataFrame
+# Escrevendo em um arquivo Excel
+df.to_excel('saida.xlsx', index=False, sheet_name='Resultados')
+```
+
+### 3.3. Arquivos PDF
+
+Para ler arquivos PDF, você pode usar a biblioteca `PyPDF2`. Aqui está um exemplo simples:
+
+```python
+import PyPDF2
+# Lendo um arquivo PDF
+with open('documento.pdf', 'rb') as file:
+    leitor = PyPDF2.PdfReader(file)
+    for pagina in leitor.pages:
+        print(pagina.extract_text())  # Extrai o texto de cada página
+```
+
+### 3.4. Arquivos Word
+
+Para manipular arquivos Word, use a biblioteca `python-docx`. Veja como ler e escrever documentos:
+
+```python
+from docx import Document
+# Lendo um arquivo Word
+doc = Document('documento.docx')
+for par in doc.paragraphs:
+    print(par.text)  # Exibe o texto de cada parágrafo
+# Escrevendo em um arquivo Word
+doc_novo = Document()
+doc_novo.add_heading('Título do Documento', level=1)
+doc_novo.add_paragraph('Este é um parágrafo de exemplo.')
+doc_novo.save('novo_documento.docx')  # Salva o novo documento
+```
+
+### 3.5. Configurando as dependências do ambiente Python
+
+Para trabalhar com arquivos Excel, CSV, PDF e Word, você precisa instalar algumas bibliotecas extras. Siga os passos abaixo:
+
+1. **Crie um ambiente virtual (opcional, mas recomendado):**
+   No terminal, execute:
+   ```
+   python -m venv venv
+   ```
+   Ative o ambiente virtual:
+   ```
+   venv\Scripts\activate
+   ```
+
+2. **Instale as bibliotecas necessárias:**
+   ```
+   pip install pandas openpyxl pdfplumber python-docx
+   ```
+
+   - `pandas`: manipulação de dados (CSV, Excel)
+   - `openpyxl`: leitura/escrita de arquivos Excel (.xlsx)
+   - `pdfplumber`: leitura de arquivos PDF
+   - `python-docx`: leitura/escrita de arquivos Word (.docx)
+
+3. **(Opcional) Crie um arquivo `requirements.txt` para registrar as dependências:**
+   ```
+   pip freeze > requirements.txt
+   ```
+
+Assim, seu ambiente estará pronto para manipular arquivos desses tipos em Python. Você pode usar os exemplos acima como base para criar scripts que automatizam tarefas relacionadas a esses arquivos no seu dia a dia profissional.
+
+***
+
+### 3.6. Exercícios Práticos
+
+#### 3.6.1. Exercício prático: Análise de vendas de produtos online (CSV)
+
+**História:**  
+Você trabalha no setor de análise de dados de uma loja online. Recebeu um arquivo `vendas.csv` contendo o histórico de vendas do último mês. Cada linha do arquivo representa uma venda, com as seguintes colunas: `data`, `produto`, `quantidade`, `preco_unitario`.
+
+**Desafio:**  
+1. Leia o arquivo `vendas.csv` usando Python.
+2. Calcule o total vendido (em reais) por produto.
+3. Gere um novo arquivo `relatorio_vendas.csv` contendo duas colunas: `produto` e `total_vendido`.
+4. (Opcional) Identifique qual produto teve o maior volume de vendas.
+
+**Exemplo de entrada (`vendas.csv`):**
+```
+data,produto,quantidade,preco_unitario
+2025-06-01,Mouse,2,50
+2025-06-01,Teclado,1,120
+2025-06-02,Mouse,1,50
+2025-06-02,Monitor,1,900
+```
+
+Código Python para resolver o exercício:
+
+```python
+import os
+import pandas as pd
+
+# Caminhos dos arquivos
+csv_path = r'C:\dev\python_escritorios\codes\vendas.csv'
+relatorio_path = r'C:\dev\python_escritorios\codes\relatorio_vendas.csv'
+
+# Apaga o relatório antigo, se existir
+if os.path.exists(relatorio_path):
+    os.remove(relatorio_path)
+
+# Lê o arquivo de vendas
+df = pd.read_csv(csv_path)
+
+# Calcula o total vendido por produto
+df['total'] = df['quantidade'] * df['preco_unitario']
+df_relatorio = df.groupby('produto')['total'].sum().reset_index()
+df_relatorio.rename(columns={'total': 'total_vendido'}, inplace=True)
+
+# Salva o novo relatório
+df_relatorio.to_csv(relatorio_path, index=False)
+
+print("Relatório de vendas gerado com sucesso!")
+```
+
+Resultado esperado (`relatorio_vendas.csv`):
+```
+produto,total_vendido
+Mouse,150
+Teclado,120
+Monitor,900
+```
+**Conclusão**
+Com este exercício, você praticou a leitura de arquivos CSV, manipulação de dados com pandas e geração de relatórios. Essas habilidades são fundamentais para automatizar análises de vendas e outras tarefas relacionadas a dados em escritórios.
+
+#### 3.6.2. **Manipulação de planilhas Excel:**  
+   Abrir uma planilha Excel, adicionar uma nova coluna calculada (ex: imposto sobre vendas), e salvar a planilha modificada.
+
+#### 3.6.3. **Extração de texto de um PDF:**  
+   Ler um arquivo PDF e extrair todo o texto, salvando o conteúdo em um arquivo `.txt`.
+
+#### 3.6.4. **Leitura e modificação de um arquivo Word:**  
+   Abrir um documento Word, listar todos os parágrafos, adicionar um novo parágrafo ao final e salvar o documento com outro nome.
