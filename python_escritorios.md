@@ -919,19 +919,16 @@ Veja o arquivo `codes/08_exemplo_pratico_envio_relatorio_diario.py` para o exemp
 
 Ao automatizar o envio de e-mails, é importante considerar as implicações de segurança. O uso de senhas em texto claro, como mostrado nos exemplos, não é recomendado para ambientes de produção.
 
-## OAuth2
+### 4.6.1. OAuth2
 
 Uma abordagem mais segura é usar OAuth2 para autenticação. O OAuth2 é um protocolo de autorização que permite que aplicativos de terceiros acessem suas informações sem precisar compartilhar suas senhas.
 
-### Vantagens do OAuth2
-
+**Vantagens do OAuth2:**
 - **Segurança:** Não é necessário armazenar senhas em texto claro.
 - **Controle:** É possível revogar o acesso a qualquer momento.
 - **Escopo:** É possível limitar o acesso a apenas determinadas informações.
 
-### Como Usar OAuth2 com Python
-
-Para usar OAuth2 com Python, você pode usar a biblioteca `oauth2client`. Abaixo está um exemplo básico de como configurar o OAuth2:
+**Como Usar OAuth2 com Python:**
 
 ```python
 from oauth2client.service_account import ServiceAccountCredentials
@@ -950,106 +947,26 @@ dados = planilha.get_all_records()
 print(dados)
 ```
 
-## Aplicativos Menos Seguros
+### 4.6.2. Aplicativos Menos Seguros
 
 Se você estiver usando o Gmail, é possível que precise permitir o acesso de "aplicativos menos seguros" para que o envio de e-mails funcione. No entanto, essa opção reduz a segurança da sua conta e não é recomendada.
 
-### Como Ativar
-
+**Como Ativar:**
 1. Acesse sua conta do Google.
 2. Vá para "Segurança".
 3. Na seção "Acesso a app menos seguro", ative a opção "Permitir aplicativos menos seguros".
 
-### Atenção
-
+**Atenção:**
 - Essa opção pode não estar disponível para contas do Google Workspace (antigo G Suite).
 - O Google pode bloquear o acesso de aplicativos menos seguros a qualquer momento, afetando a funcionalidade do seu aplicativo.
 
+### 4.6.3. Conclusão
+
+Neste capítulo, você aprendeu sobre considerações de segurança ao automatizar o envio de e-mails. A utilização de OAuth2 é a abordagem recomendada para garantir a segurança das suas credenciais e informações.
+
+***
 ## Conclusão
 
 Neste capítulo, você aprendeu sobre considerações de segurança ao automatizar o envio de e-mails. A utilização de OAuth2 é a abordagem recomendada para garantir a segurança das suas credenciais e informações.
 
 ***
-print("E-mail enviado com sucesso!")
-# Limpeza do arquivo Excel após o envio (opcional, remova se não desejar)
-# if os.path.exists(excel_path):
-#     os.remove(excel_path)
-#     print(f"Arquivo {excel_path} removido após o envio.")
-```
-```plaintext
-Dados de Vendas Gerados:
-           data   produto  quantidade  preco_unitario
-0   2025-06-01  exemplo1           3             120
-1   2025-06-02  exemplo2           7             350
-... (mais linhas) ...
-E-mail enviado com sucesso!
-```
-
-**Observações:**
-- Substitua `seu_email@gmail.com` e `sua_senha` pelas suas credenciais.
-- Instale as dependências necessárias com:  
-  `pip install pandas faker openpyxl`
-- Nunca compartilhe suas credenciais em código público.
-- Considere usar senha de aplicativo ou OAuth2 para maior segurança.
-
-**Conclusão:**  
-Com este exemplo, você praticou a geração de dados fictícios, manipulação de arquivos Excel, exibição de dados no console e envio automático de e-mails com anexo usando Python.
-
-***
-
-## 4.6. Considerações de Segurança (OAuth2, aplicativos menos seguros)
-
-Ao automatizar o envio de e-mails, é importante considerar as implicações de segurança. O uso de senhas em texto claro, como mostrado nos exemplos, não é recomendado para ambientes de produção.
-
-## OAuth2
-
-Uma abordagem mais segura é usar OAuth2 para autenticação. O OAuth2 é um protocolo de autorização que permite que aplicativos de terceiros acessem suas informações sem precisar compartilhar suas senhas.
-
-### Vantagens do OAuth2
-
-- **Segurança:** Não é necessário armazenar senhas em texto claro.
-- **Controle:** É possível revogar o acesso a qualquer momento.
-- **Escopo:** É possível limitar o acesso a apenas determinadas informações.
-
-### Como Usar OAuth2 com Python
-
-Para usar OAuth2 com Python, você pode usar a biblioteca `oauth2client`. Abaixo está um exemplo básico de como configurar o OAuth2:
-
-```python
-from oauth2client.service_account import ServiceAccountCredentials
-import gspread
-
-# Configurar o escopo e as credenciais
-escopo = ['https://www.googleapis.com/auth/spreadsheets']
-credenciais = ServiceAccountCredentials.from_json_keyfile_name('caminho/para/credenciais.json', escopo)
-
-# Autenticar e acessar o Google Sheets
-cliente = gspread.authorize(credenciais)
-planilha = cliente.open('Nome da Planilha').sheet1
-
-# Ler dados da planilha
-dados = planilha.get_all_records()
-print(dados)
-```
-
-## Aplicativos Menos Seguros
-
-Se você estiver usando o Gmail, é possível que precise permitir o acesso de "aplicativos menos seguros" para que o envio de e-mails funcione. No entanto, essa opção reduz a segurança da sua conta e não é recomendada.
-
-### Como Ativar
-
-1. Acesse sua conta do Google.
-2. Vá para "Segurança".
-3. Na seção "Acesso a app menos seguro", ative a opção "Permitir aplicativos menos seguros".
-
-### Atenção
-
-- Essa opção pode não estar disponível para contas do Google Workspace (antigo G Suite).
-- O Google pode bloquear o acesso de aplicativos menos seguros a qualquer momento, afetando a funcionalidade do seu aplicativo.
-
-## Conclusão
-
-Neste capítulo, você aprendeu sobre considerações de segurança ao automatizar o envio de e-mails. A utilização de OAuth2 é a abordagem recomendada para garantir a segurança das suas credenciais e informações.
-
-***
-
