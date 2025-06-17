@@ -97,13 +97,13 @@ Programador de Computador
 
 ### Escritórios que prestam serviços para repartições públicas e órgãos governamentais
 
-19. Controle Automatizado de Protocolos em Repartição Pública  
+19. Controle Automatizado de Protocolos em Repartição Pública:  
    - Leitura de protocolos em planilhas, geração de relatórios e envio de notificações por e-mail.  
-20. Conversor de tabelas PDF → Excel
-    - Extração de dados de tabelas em arquivos PDF e conversão para planilhas Excel, facilitando a análise de dados.
-21. Organizador de arquivos em pastas por cliente
+20. Conversor de tabelas PDF → Excel:
+   - Extração de dados de tabelas em arquivos PDF e conversão para planilhas Excel, facilitando a análise de dados.
+21. Organizador de arquivos em pastas por cliente:
    - Classificação e movimentação de arquivos em pastas específicas com base no cliente.
-22. Dashboard de pagamentos
+22. Dashboard de pagamentos:
    - Criação de um painel simples para visualizar pagamentos pendentes e recebidos, utilizando gráficos básicos.
 
 ## Anexos
