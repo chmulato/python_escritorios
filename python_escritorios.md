@@ -121,9 +121,9 @@ Programador de Computador
    - `codes/05_exemplo_pratico_extracao_pdf.py`
 - Exemplo Prático 06 - Leitura e modificação de um arquivo Word
    - `codes/06_exemplo_pratico_modificacao_word.py`
-- Exemplo Prático 07 - Automação de Google Sheets
-   - `codes/07_exemplo_pratico_automacao_excel.py`
-- Exemplo Prático 08 - Envio de relatórios diários por e-mail
+- Exemplo Prático 07 - Envio de relatório diário de vendas por e-mail (planilha pronta)
+   - `codes/07_exemplo_pratico_envio_relatorio_diario.py`
+- Exemplo Prático 08 - Geração e envio de múltiplos relatórios diários por e-mail (múltiplos arquivos)
    - `codes/08_exemplo_pratico_envio_relatorio_diario.py`
 
 ***
@@ -831,6 +831,7 @@ def enviar_email_com_anexo(destinatario, assunto, corpo, caminho_anexo):
         server.starttls()
         server.login(smtp_user, smtp_password)
         server.send_message(msg)
+
 # Caminho do arquivo Excel
 excel_path = r'C:\dev\python_escritorios\codes\relatorio_vendas.xlsx'
 
@@ -867,13 +868,12 @@ Data	Produto	Quantidade	Valor Total
 E-mail enviado com sucesso!
 ```
 
-**Observação:**
-Certifique-se de substituir `seu_email@gmail.com` e `sua_senha` pelas suas credenciais de e-mail.
-
-**Atenção:**
-- Nunca compartilhe suas credenciais de e-mail em código público.
-- Use uma senha de aplicativo se estiver usando o Gmail, pois o Google pode bloquear tentativas de login de aplicativos menos seguros.
-- Considere usar OAuth2 para uma abordagem mais segura.
+**Observações:**
+- Substitua `seu_email@gmail.com` e `sua_senha` pelas suas credenciais.
+- Instale as dependências necessárias com:  
+  `pip install pandas faker openpyxl`
+- Nunca compartilhe suas credenciais em código público.
+- Considere usar senha de aplicativo ou OAuth2 para maior segurança.
 
 **Conclusão:**
 
@@ -881,93 +881,93 @@ Com este exercício, você praticou o envio de e-mails com anexos usando Python.
 
 ***
 
-### 4.5.2. Exercício Prático: Envio Automático de Relatório Diário de Vendas
+### 4.5.2. Exercício Prático: Geração e Envio Automático de Relatórios Diários de Vendas (Múltiplos Dias)
 
 **História:**  
-A empresa "Tech Solutions" deseja automatizar o envio diário de um relatório de vendas por e-mail para a equipe de gerência. O relatório deve conter dados fictícios de vendas, ser salvo em Excel e enviado como anexo para a gerente Ana.
+A empresa "Tech Solutions" deseja automatizar o envio de relatórios diários de vendas, gerando arquivos separados para cada dia e enviando todos juntos em um único e-mail para a gerente Ana.
 
 **Desafio:**  
-Automatizar o processo de geração e envio do relatório diário de vendas, seguindo os passos:
+Automatizar o processo de geração de dados fictícios de vendas para vários dias, salvar um arquivo Excel para cada dia e enviar todos os arquivos como anexos em um único e-mail.
 
-1. **Geração de Dados Fictícios de Vendas:**  
-   - Gerar 10 registros fictícios de vendas usando a biblioteca `Faker`.
-   - Cada registro deve conter: data, produto, quantidade e preço unitário.
+1. **Geração de Dados Fictícios de Vendas para Múltiplos Dias:**  
+   - Gerar registros de vendas para vários dias usando a biblioteca `Faker`.
+   - Cada arquivo deve conter as vendas de um dia específico.
 
-2. **Salvando Dados em um Arquivo Excel (.xlsx):**  
-   - Salvar os dados em um arquivo Excel chamado `relatorio_vendas.xlsx` usando o `pandas`.
+2. **Salvando Dados em Arquivos Excel Diários:**  
+   - Salvar cada dia em um arquivo Excel separado, nomeando conforme a data.
 
-3. **Exibindo Dados no Console para Cópia Manual para o Excel:**  
-   - Exibir os dados gerados no console para facilitar a cópia.
+3. **Exibindo Dados no Console:**  
+   - Exibir os dados de cada dia no console para conferência.
 
-4. **Envio do Relatório como Anexo por E-mail:**  
-   - Enviar o arquivo Excel como anexo para o e-mail da gerente Ana (`ana@techsolutions.com`) usando `smtplib`.
+4. **Envio de Todos os Relatórios em um Único E-mail:**  
+   - Enviar todos os arquivos gerados como anexos em um único e-mail para a gerente Ana (`ana@techsolutions.com`).
 
-**Código Python:**
+**Código Python:**  
+Veja o arquivo `codes/08_exemplo_pratico_envio_relatorio_diario.py` para o exemplo completo.
+
+**Resumo do Aprendizado:**
+- Geração de dados para múltiplos dias.
+- Manipulação e criação dinâmica de múltiplos arquivos Excel.
+- Envio de múltiplos anexos em um único e-mail.
+- Organização de arquivos em pastas.
+
+***
+
+## 4.6. Considerações de Segurança (OAuth2, aplicativos menos seguros)
+
+Ao automatizar o envio de e-mails, é importante considerar as implicações de segurança. O uso de senhas em texto claro, como mostrado nos exemplos, não é recomendado para ambientes de produção.
+
+## OAuth2
+
+Uma abordagem mais segura é usar OAuth2 para autenticação. O OAuth2 é um protocolo de autorização que permite que aplicativos de terceiros acessem suas informações sem precisar compartilhar suas senhas.
+
+### Vantagens do OAuth2
+
+- **Segurança:** Não é necessário armazenar senhas em texto claro.
+- **Controle:** É possível revogar o acesso a qualquer momento.
+- **Escopo:** É possível limitar o acesso a apenas determinadas informações.
+
+### Como Usar OAuth2 com Python
+
+Para usar OAuth2 com Python, você pode usar a biblioteca `oauth2client`. Abaixo está um exemplo básico de como configurar o OAuth2:
 
 ```python
-import pandas as pd
-import smtplib
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.base import MIMEBase
-from email import encoders
-from datetime import datetime
-import os
+from oauth2client.service_account import ServiceAccountCredentials
+import gspread
 
-# Configurações do servidor SMTP
-smtp_server = 'smtp.gmail.com'
-smtp_port = 587
-smtp_user = 'seu_email@gmail.com'
-smtp_password = 'sua_senha'
+# Configurar o escopo e as credenciais
+escopo = ['https://www.googleapis.com/auth/spreadsheets']
+credenciais = ServiceAccountCredentials.from_json_keyfile_name('caminho/para/credenciais.json', escopo)
 
-# Caminho do arquivo Excel
-excel_path = r'C:\dev\python_escritorios\codes\relatorio_vendas.xlsx'
+# Autenticar e acessar o Google Sheets
+cliente = gspread.authorize(credenciais)
+planilha = cliente.open('Nome da Planilha').sheet1
 
-# Ler o arquivo Excel existente
-if os.path.exists(excel_path):
-    df_vendas = pd.read_excel(excel_path)
-    print(f"Arquivo de vendas encontrado em: {excel_path}")
-    # Exibir os dados de vendas no console para copiar e colar no Excel
-    print("\nCopie e cole os dados abaixo no Excel, se desejar:")
-    print(df_vendas.to_csv(sep='\t', index=False))
-else:
-    print(f"Arquivo {excel_path} não encontrado. Certifique-se de que a planilha existe com os dados prontos.")
-    exit(1)
+# Ler dados da planilha
+dados = planilha.get_all_records()
+print(dados)
+```
 
-# Envio do relatório como anexo por e-mail
-data_atual = datetime.now().strftime('%d/%m/%Y')
-assunto = f'Relatório de Vendas - {data_atual}'
-corpo = 'Prezada Ana, segue em anexo o relatório de vendas do dia.'
+## Aplicativos Menos Seguros
 
-def enviar_email_com_anexo(destinatario, assunto, corpo, caminho_anexo):
-    # Criar o objeto de mensagem
-    msg = MIMEMultipart()
-    msg['Subject'] = assunto
-    msg['From'] = smtp_user
-    msg['To'] = destinatario
-    # Adicionar o corpo do e-mail
-    msg.attach(MIMEText(corpo, 'plain'))
-    # Adicionar o anexo
-    with open(caminho_anexo, 'rb') as anexo:
-        parte = MIMEBase('application', 'octet-stream')
-        parte.set_payload(anexo.read())
-        encoders.encode_base64(parte)
-        parte.add_header('Content-Disposition', f'attachment; filename={caminho_anexo.split("/")[-1]}')
-        msg.attach(parte)
-    # Enviar o e-mail
-    with smtplib.SMTP(smtp_server, smtp_port) as server:
-        server.starttls()
-        server.login(smtp_user, smtp_password)
-        server.send_message(msg)
+Se você estiver usando o Gmail, é possível que precise permitir o acesso de "aplicativos menos seguros" para que o envio de e-mails funcione. No entanto, essa opção reduz a segurança da sua conta e não é recomendada.
 
-# Enviar o e-mail com o relatório
-enviar_email_com_anexo(
-    'ana@techsolutions.com',
-    assunto,
-    corpo,
-    excel_path
-)
+### Como Ativar
 
+1. Acesse sua conta do Google.
+2. Vá para "Segurança".
+3. Na seção "Acesso a app menos seguro", ative a opção "Permitir aplicativos menos seguros".
+
+### Atenção
+
+- Essa opção pode não estar disponível para contas do Google Workspace (antigo G Suite).
+- O Google pode bloquear o acesso de aplicativos menos seguros a qualquer momento, afetando a funcionalidade do seu aplicativo.
+
+## Conclusão
+
+Neste capítulo, você aprendeu sobre considerações de segurança ao automatizar o envio de e-mails. A utilização de OAuth2 é a abordagem recomendada para garantir a segurança das suas credenciais e informações.
+
+***
 print("E-mail enviado com sucesso!")
 # Limpeza do arquivo Excel após o envio (opcional, remova se não desejar)
 # if os.path.exists(excel_path):
