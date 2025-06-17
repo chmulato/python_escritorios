@@ -43,8 +43,11 @@ Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e 
 
 O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
 
-- **Parte I – Fundamentos da Automação:** Aqui você aprenderá os conceitos essenciais, desde a instalação do ambiente até a manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas simples e introdução ao uso de inteligência artificial em tarefas do escritório.
-- **Parte II – Casos Reais por Tipo de Escritório:** Nesta parte, apresentamos exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
+- **Parte I – Fundamentos da Automação:** 
+- Aqui você aprenderá os conceitos essenciais, desde a instalação do ambiente até a manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas simples e introdução ao uso de inteligência artificial em tarefas do escritório.
+
+- **Parte II – Casos Reais por Tipo de Escritório:**
+-  Nesta parte, apresentamos exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
 
 Espero que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
 
