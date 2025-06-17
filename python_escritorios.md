@@ -67,8 +67,7 @@ Programador de Computador
 3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
 4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações) 
 5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites) 
-6. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-7. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
+6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
 
 ## Parte 2 – Casos Reais por Tipo de Escritório
 
