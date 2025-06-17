@@ -164,62 +164,40 @@ Ao longo deste livro, você verá como essas e outras tarefas podem ser automati
 
 ***
 
-## 2. Instalação de ambiente: VS Code, Python, bibliotecas úteis
+## 2. Instalação de Ambiente: VS Code, Python e Bibliotecas Úteis
 
-Antes de começar a programar e automatizar tarefas, é importante preparar o ambiente de desenvolvimento. Nesta etapa, você vai instalar o Python, o Visual Studio Code (VS Code) e as principais bibliotecas que serão usadas ao longo do livro.
+Antes de iniciar os exemplos práticos, é importante preparar o ambiente de desenvolvimento. Siga os passos abaixo:
 
-### 2.1 Instalando o Python
+### 2.1. Instale o Visual Studio Code (VS Code)
 
-1. Acesse o site oficial: [python.org/downloads](https://www.python.org/downloads/)
-2. Baixe a versão recomendada para o seu sistema operacional (Windows, macOS ou Linux).
-3. Execute o instalador e marque a opção **"Add Python to PATH"** antes de clicar em "Install Now".
-4. Para verificar se a instalação foi bem-sucedida, abra o terminal (Prompt de Comando no Windows) e digite:
-   ```
-   python --version
-   ```
-   O terminal deve exibir a versão instalada do Python.
+- Acesse: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+- Baixe e instale a versão adequada para o seu sistema operacional (Windows, macOS ou Linux).
 
-### 2.2 Instalando o Visual Studio Code (VS Code)
+### 2.2. Instale o Python
 
-1. Acesse: [code.visualstudio.com](https://code.visualstudio.com/)
-2. Baixe e instale o VS Code para o seu sistema operacional.
-3. Após a instalação, abra o VS Code e, na barra lateral esquerda, clique em **Extensões** (ícone de quadrado).
-4. Busque e instale a extensão **Python** (desenvolvida pela Microsoft).
+- Acesse: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+- Baixe a versão mais recente do Python 3.x.
+- Durante a instalação, marque a opção **"Add Python to PATH"**.
 
-### 2.3 Instalando bibliotecas úteis
+### 2.3. Instale Bibliotecas Úteis
 
-As bibliotecas Python ampliam as funcionalidades da linguagem e facilitam a automação de tarefas. Algumas das principais bibliotecas que usaremos são:
+Abra o terminal do VS Code (atalho: `Ctrl + ``) e execute os comandos abaixo para instalar as principais bibliotecas que serão usadas nos exemplos:
 
-- **pandas** (manipulação de dados e planilhas)
-- **openpyxl** (trabalho com arquivos Excel)
-- **python-docx** (manipulação de arquivos Word)
-- **PyPDF2** (leitura de PDFs)
-- **requests** (requisições web)
-- **beautifulsoup4** (web scraping)
-- **tkinter** ou **PyWebIO** (interfaces gráficas)
-
-Para instalar essas bibliotecas, abra o terminal e execute:
-
-```
-pip install pandas openpyxl python-docx PyPDF2 requests beautifulsoup4
+```sh
+pip install pandas openpyxl
 ```
 
-> **Obs.:** O `tkinter` já vem instalado com o Python na maioria das distribuições. O `PyWebIO` pode ser instalado separadamente, se preferir usar interfaces web:
->
-> ```
-> pip install pywebio
-> ```
+- `pandas`: Manipulação de dados e leitura de planilhas Excel.
+- `openpyxl`: Leitura e escrita de arquivos `.xlsx` (Excel).
 
-### 2.4 Testando o ambiente
+### 2.4. (Opcional) Instale Extensões no VS Code
 
-Abra o VS Code, crie um novo arquivo chamado `teste.py` e cole o seguinte código:
+- **Python** (Microsoft): Suporte a sintaxe, depuração e execução de scripts Python.
+- **Jupyter**: Para notebooks interativos, se desejar.
 
-```python
-print("Ambiente Python configurado com sucesso!")
-```
+---
 
-Salve o arquivo e execute-o (clique com o botão direito e escolha "Run Python File in Terminal" ou use o terminal com `python teste.py`).  
-Se aparecer a mensagem, seu ambiente está pronto para começar!
+> Após esses passos, seu ambiente estará pronto para executar os exemplos práticos.
 
 ***
 
