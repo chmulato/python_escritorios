@@ -121,12 +121,10 @@ Programador de Computador
    - `codes/05_exemplo_pratico_extracao_pdf.py`
 - Exemplo Prático 06 - Leitura e modificação de um arquivo Word
    - `codes/06_exemplo_pratico_modificacao_word.py`
-- Exemplo Prático 07 - Envio de relatório diário de vendas por e-mail (planilha pronta)
-   - `codes/07_exemplo_pratico_envio_relatorio_diario.py`
-- Exemplo Prático 08 - Geração e envio de múltiplos relatórios diários por e-mail (múltiplos arquivos)
+- Exemplo Prático 07 - Automação de Excel com Pandas
+   - `codes/07_exemplo_pratico_automacao_excel.py`
+- Exemplo Prático 08 - Geração e envio de múltiplos relatórios diários por e-mail
    - `codes/08_exemplo_pratico_envio_relatorio_diario.py`
-- Exemplo Prático Extra - Geração e envio automático de relatório de vendas (dados fictícios em um arquivo)
-   - `codes/08_exemplo_pratico_envio_automatico_relatorio.py`
 
 ***
 
