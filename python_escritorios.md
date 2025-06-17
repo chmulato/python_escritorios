@@ -114,10 +114,13 @@ Programador de Computador
 ## Códigos em Python
 
 - Exemplo Prático 01 - Análise de vendas de produtos online (CSV)
+   `codes/01_exemplo_pratico_vendas_online.py`
 - Exemplo Prático 02 - Geração de relatórios financeiros (Excel)
+   `codes/02_exemplo_pratico_relatorio_financeiro.py`
 - Exemplo Prático 03 - Controle de inadimplência em aluguéis (Excel + E-mail)
-- Exemplo Prático 04 - Envio de e-mails automatizados
-
+   `codes/03_exemplo_pratico_alugueis_com_email.py`
+- Exemplo Prático 04 - Envio de e-mails automatizados (Python + SMTP)
+   `codes/04_exemplo_pratico_envio_email.py`
 
 ***
 
@@ -491,7 +494,7 @@ O código completo para geração do relatório de inadimplentes e envio real de
 
 **Código Python para envio de e-mails:**
 
-`codes/02_exemplo_pratico_alugueis_com_email.py`
+`codes/03_exemplo_pratico_alugueis_com_email.py`
 
 4. **Exemplo de Planilha de Aluguéis com E-mail dos Inquilinos**
 
