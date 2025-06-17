@@ -72,5 +72,3 @@ print("Relatório final salvo com sucesso em 'relatorio_final.xlsx'.")
 
 # 13. Fim do script
 print("Processamento concluído.")
-
-# 14. Fim do script

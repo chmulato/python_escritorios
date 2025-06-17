@@ -134,7 +134,7 @@ Esperamos que este livro seja um ponto de partida para transformar sua rotina pr
 
 ***
 
-# Parte 1 – Fundamentos da Automação
+# Parte I – Fundamentos da Automação
 
 Nesta primeira parte, você vai aprender os conceitos e ferramentas essenciais para começar a automatizar tarefas com Python no ambiente de escritório. O objetivo é construir uma base sólida, mesmo para quem nunca programou antes, mostrando passo a passo como instalar o ambiente, manipular arquivos, enviar e-mails automaticamente, coletar informações da internet e criar interfaces gráficas simples.
 
@@ -305,6 +305,8 @@ Assim, seu ambiente estará pronto para manipular arquivos desses tipos em Pytho
 
 ### 3.6. Exercícios Práticos
 
+Nesta seção, você encontrará exercícios práticos para aplicar os conceitos aprendidos sobre manipulação de arquivos. Esses exercícios são projetados para serem desafiadores e ajudarão a consolidar seu conhecimento em automação de tarefas comuns em escritórios.
+
 #### 3.6.1. Exercício prático: Análise de vendas de produtos online (CSV)
 
 **História:**  
@@ -365,6 +367,7 @@ Com este exercício, você praticou a leitura de arquivos CSV, manipulação de 
 
 ## 3.6.2. Automatizando Relatórios de Inadimplência em Aluguéis com Python e Excel
 
+**História:**
 Neste exercício, vamos aplicar a integração entre Python e Excel para resolver um problema comum em empresas de aluguel de imóveis: o controle de inadimplência.
 
 **Cenário:**  
@@ -464,8 +467,6 @@ print("Relatório final salvo com sucesso em 'relatorio_final.xlsx'.")
 
 # 13. Fim do script
 print("Processamento concluído.")
-
-# 14. Fim do script
 ```
 
 ### Adendo: Envio Real de E-mails para Inquilinos Inadimplentes
