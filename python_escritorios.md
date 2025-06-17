@@ -481,6 +481,8 @@ Além de gerar o relatório de inadimplentes, é possível automatizar o envio d
 3. **Exemplo de código Python:**  
 O código completo para geração do relatório de inadimplentes e envio real de e-mails está disponível no arquivo:
 
+**Código Python para envio de e-mails:**
+
 `codes/02_exemplo_pratico_alugueis_com_email.py`
 
 4. **Exemplo de Planilha de Aluguéis com E-mail dos Inquilinos**
@@ -505,9 +507,8 @@ O código completo para geração do relatório de inadimplentes e envio real de
 
 Com essa automação, a empresa pode agilizar a comunicação com os inquilinos inadimplentes, tornando o processo mais eficiente e reduzindo o tempo gasto com cobranças manuais.
 
-**Conclusão**
-
-Com este exercício, você praticou a leitura e escrita de arquivos Excel, filtragem de dados com pandas e simulação de envio de e-mails. Essas habilidades são essenciais para automatizar o controle de inadimplência em empresas de aluguel de imóveis, tornando o processo mais eficiente e organizado.
+**Conclusão:**
+Com este exercício, você praticou a leitura e escrita de arquivos Excel, filtragem de dados com pandas. Essas habilidades são essenciais para automatizar o controle de inadimplência em empresas de aluguel de imóveis, tornando o processo mais eficiente e organizado.
 
 ***
 
