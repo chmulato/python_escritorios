@@ -62,47 +62,47 @@ Programador de Computador
 
 ## Parte 1 – Fundamentos da Automação
 
-1. Introdução à automação com Python  
-2. Instalação de ambiente: VS Code, Python e bibliotecas úteis  
-3. Trabalhando com arquivos (Excel, CSV, PDF, Word)  
-4. Automação de e-mails e notificações  
-5. Web scraping e automação de sites  
-6. Criação de interfaces gráficas simples (Tkinter ou PyWebIO)  
+1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
+2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
+3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
+4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
+5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
+6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
 
 ## Parte 2 – Casos Reais por Tipo de Escritório
 
 ### Escritório de Advocacia
-7. Gerador automático de procurações e petições a partir de modelos  
-8. Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)  
-9. Consulta a sites de tribunais  
+7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
+8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
+9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
 
 ### Escritório de Contabilidade
-10. Leitura e consolidação de extratos bancários (CSV)  
-11. Geração automática de guias de impostos  
-12. Envio automático de boletos por e-mail  
+10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
+11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
+12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
 
 ### Escritório de Logística
-13. Leitura e geração de manifestos (XML, PDF)  
-14. Roteirização com base em distância (API Google Maps ou OpenRoute)  
-15. Acompanhamento de entregas via planilhas atualizadas  
+13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
+14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
+15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
 
 ### E-commerce e Vendas Online
-16. Leitura de pedidos de marketplaces  
-17. Atualização automática de estoque em Excel/ERP simples  
-18. Envio de notas fiscais e respostas automáticas a clientes  
+16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
+17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
+18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
 
 ### Escritórios para repartições públicas e órgãos governamentais
-19. Controle automatizado de protocolos em repartição pública  
-20. Conversor de tabelas PDF → Excel  
-21. Organizador de arquivos em pastas por cliente  
-22. Dashboard de pagamentos  
+19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
+20. [Conversor de tabelas PDF → Excel](#20-conversor-de-tabelas-pdf--excel)  
+21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
+22. [Dashboard de pagamentos](#22-dashboard-de-pagamentos)  
 
 ---
 
-23. Conclusão  
-24. Agradecimentos  
-25. Referências Bibliográficas (Formato ABNT)  
-26. Adendo: Códigos em Python
+23. [Conclusão](#23-conclusão)  
+24. [Agradecimentos](#24-agradecimentos)  
+25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
+26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
 
 ***
 
@@ -1558,7 +1558,7 @@ import glob
 
 # Função para ler o extrato bancário
 def ler_extrato(caminho_arquivo):
-    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1)
 
 # Função para consolidar extratos
 def consolidar_extratos(pasta_extratos):
@@ -2094,13 +2094,15 @@ O controle de protocolos em repartições públicas é uma atividade importante 
 
 O objetivo deste exemplo é criar um script que:
 - Leia uma planilha com os dados dos protocolos, contendo informações como número do protocolo, descrição, data de entrada e situação.
-- Envie notificações automáticas para os responsáveis, informando sobre a situação dos protocolos.
+- Verifique quais protocolos estão com a situação pendente ou próxima do vencimento.
+- Envie um e-mail de alerta para o responsável pelo protocolo, informando sobre a pendência ou o vencimento iminente.
 
 ## 19.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
 - `ler_planilha_protocolos()`: Para ler a planilha com os dados dos protocolos.
-- `enviar_notificacoes_protocolos()`: Para enviar as notificações automáticas.
+- `verificar_protocolos_pendentes()`: Para identificar quais protocolos estão pendentes ou próximos do vencimento.
+- `enviar_alertas_protocolos()`: Para enviar os e-mails de alerta.
 
 ## 19.3. Exemplo de Código
 
@@ -2108,19 +2110,26 @@ O código será estruturado em funções, para facilitar a leitura e a manutenç
 import pandas as pd
 import smtplib
 from email.mime.text import MIMEText
+from datetime import datetime, timedelta
 
 # Função para ler a planilha de protocolos
 def ler_planilha_protocolos(caminho_arquivo):
     return pd.read_excel(caminho_arquivo)
 
-# Função para enviar notificações automáticas
-def enviar_notificacoes_protocolos(df_protocolos, smtp_user, smtp_password):
+# Função para verificar protocolos pendentes ou próximos do vencimento
+def verificar_protocolos_pendentes(df, dias_aviso=3):
+    hoje = datetime.now()
+    proximos_protocolos = df[(df['Data de Vencimento'] - hoje).dt.days <= dias_aviso]
+    return proximos_protocolos
+
+# Função para enviar e-mail de alerta
+def enviar_alertas_protocolos(df_protocolos, smtp_user, smtp_password):
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
     for _, row in df_protocolos.iterrows():
         destinatario = row['Email']
-        assunto = f"Atualização sobre seu Protocolo - {row['Número do Protocolo']}"
-        corpo = f"Prezado(a),\n\nInformamos que a situação do seu protocolo {row['Número do Protocolo']} foi atualizado para: {row['Situação']}.\n\nAtenciosamente,"
+        assunto = f"Aviso de Protocolo - {row['Número do Protocolo']}"
+        corpo = f"Prezado(a),\n\nEste é um aviso de que o protocolo {row['Número do Protocolo']} está pendente ou próximo do vencimento.\nData de Vencimento: {row['Data de Vencimento'].strftime('%d/%m/%Y')}\n\nAtenciosamente,"
         
         msg = MIMEText(corpo)
         msg['Subject'] = assunto
@@ -2135,8 +2144,10 @@ def enviar_notificacoes_protocolos(df_protocolos, smtp_user, smtp_password):
 # Exemplo de uso
 caminho_planilha = 'protocolos_reparticao_publica.xlsx'
 df_protocolos = ler_planilha_protocolos(caminho_planilha)
-# Enviar notificações (descomente a linha abaixo para enviar os e-mails)
-# enviar_notificacoes_protocolos(df_protocolos, 'seu_email@gmail.com', 'sua_senha')
+df_protocolos_pendentes = verificar_protocolos_pendentes(df_protocolos)
+
+# Enviar alertas (descomente a linha abaixo para enviar os e-mails)
+# enviar_alertas_protocolos(df_protocolos_pendentes, 'seu_email@gmail.com', 'sua_senha')
 
 print("Processamento concluído.")
 ```
