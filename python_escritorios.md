@@ -339,7 +339,7 @@ data,produto,quantidade,preco_unitario
 2025-06-02,Monitor,1,900
 ```
 
-Código Python para resolver o exercício:
+**Código Python** para resolver o exercício:
 
 ```python
 import os
@@ -367,14 +367,15 @@ df_relatorio.to_csv(relatorio_path, index=False)
 print("Relatório de vendas gerado com sucesso!")
 ```
 
-Resultado esperado (`relatorio_vendas.csv`):
-```
+**Resultado esperado (`relatorio_vendas.csv`)**:
+```plaintext
 produto,total_vendido
 Mouse,150
 Teclado,120
 Monitor,900
 ```
-**Conclusão**
+**Conclusão:**
+
 Com este exercício, você praticou a leitura de arquivos CSV, manipulação de dados com pandas e geração de relatórios. Essas habilidades são fundamentais para automatizar análises de vendas e outras tarefas relacionadas a dados em escritórios.
 
 
@@ -528,6 +529,7 @@ O código completo para geração do relatório de inadimplentes e envio real de
 Com essa automação, a empresa pode agilizar a comunicação com os inquilinos inadimplentes, tornando o processo mais eficiente e reduzindo o tempo gasto com cobranças manuais.
 
 **Conclusão:**
+
 Com este exercício, você praticou a leitura e escrita de arquivos Excel, filtragem de dados com pandas. Essas habilidades são essenciais para automatizar o controle de inadimplência em empresas de aluguel de imóveis, tornando o processo mais eficiente e organizado.
 
 ***
