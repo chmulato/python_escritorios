@@ -1,0 +1,4 @@
+Guia de Pagamento de Imposto
+Empresa: Exemplo LTDA
+Valor: R$ 500,00
+Vencimento: 2024-06-20

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Manifesto>
+    <Transporte>
+        <ID>001</ID>
+        <Motorista>José da Silva</Motorista>
+        <Placa>ABC1234</Placa>
+        <Origem>Curitiba</Origem>
+        <Destino>São Paulo</Destino>
+    </Transporte>
+</Manifesto>
