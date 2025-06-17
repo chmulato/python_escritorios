@@ -110,17 +110,17 @@ Programador de Computador
 ## Códigos em Python
 
 - Exemplo Prático 01 - Análise de vendas de produtos online (CSV)
-   `codes/01_exemplo_pratico_vendas_online.py`
+   - `codes/01_exemplo_pratico_vendas_online.py`
 - Exemplo Prático 02 - Geração de relatórios financeiros (Excel)
-   `codes/02_exemplo_pratico_relatorio_financeiro.py`
+   - `codes/02_exemplo_pratico_relatorio_financeiro.py`
 - Exemplo Prático 03 - Controle de inadimplência em aluguéis (Excel + E-mail)
-   `codes/03_exemplo_pratico_alugueis_com_email.py`
+   - `codes/03_exemplo_pratico_alugueis_com_email.py`
 - Exemplo Prático 04 - Envio de e-mails automatizados (Python + SMTP)
-   `codes/04_exemplo_pratico_envio_email.py`
+   - `codes/04_exemplo_pratico_envio_email.py`
 - Exemplo Prático 05 - Extração de texto de um PDF
-   `codes/05_exemplo_pratico_extracao_pdf.py`
+   - `codes/05_exemplo_pratico_extracao_pdf.py`
 - Exemplo Prático 06 - Leitura e modificação de um arquivo Word
-   `codes/06_exemplo_pratico_modificacao_word.py`
+   - `codes/06_exemplo_pratico_modificacao_word.py`
 
 ***
 
