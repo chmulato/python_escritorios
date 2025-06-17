@@ -319,7 +319,7 @@ Nesta seção, você encontrará exercícios práticos para aplicar os conceitos
 
 ***
 
-### 3.6.1. Exercício Prático: Análise de vendas de produtos online (CSV)
+### 3.6.1. Exercício Prático: Análise de Vendas de Produtos Online (CSV)
 
 **História:**  
 Você trabalha no setor de análise de dados de uma loja online. Recebeu um arquivo `vendas.csv` contendo o histórico de vendas do último mês. Cada linha do arquivo representa uma venda, com as seguintes colunas: `data`, `produto`, `quantidade`, `preco_unitario`.
@@ -612,7 +612,7 @@ Com este exercício, você praticou a leitura de arquivos PDF e a extração de 
 
 ***
 
-### 3.6.4. Exercício Prático: Leitura e modificação de um arquivo Word
+### 3.6.4. Exercício Prático: Leitura e Modificação de um Arquivo Word
 
 **História Fictícia:**  
 O escritório de advocacia “Silva & Associados” recebe frequentemente minutas de contratos em formato Word, enviadas por clientes e parceiros. A advogada Júlia precisa revisar rapidamente esses contratos para garantir que todos contenham uma cláusula padrão de confidencialidade. Para agilizar o processo, ela deseja um script Python que leia o arquivo Word do contrato, verifique se a cláusula está presente e, caso não esteja, adicione automaticamente a cláusula ao final do documento.
