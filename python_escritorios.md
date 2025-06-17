@@ -62,45 +62,46 @@ Programador de Computador
 
 ## Parte 1 – Fundamentos da Automação
 
-1. Introdução à automação com Python  
-2. Instalação de ambiente: VS Code, Python, bibliotecas úteis  
-3. Trabalhando com arquivos (Excel, CSV, PDF, Word)  
-4. Automação de e-mails e notificações  
-5. Web scraping e automação de sites  
-6. Criação de interfaces gráficas simples (Tkinter ou PyWebIO)  
+1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
+2. [Instalação de ambiente: VS Code, Python, bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
+3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
+4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações) 
+5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites) 
+6. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
+7. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
 
 ## Parte 2 – Casos Reais por Tipo de Escritório
 
 ### Escritório de Advocacia
 
-7. Gerador automático de procurações e petições a partir de modelos  
-8. Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)  
-9. Consulta a sites de tribunais  
+7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
+8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
+9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
 
 ### Escritório de Contabilidade
 
-10. Leitura e consolidação de extratos bancários (CSV)  
-11. Geração automática de guias de impostos  
-12. Envio automático de boletos por e-mail  
+10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
+11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
+12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
 
 ### Escritório de Logística
 
-13. Leitura e geração de manifestos (XML, PDF)  
-14. Roteirização com base em distância (API Google Maps ou OpenRoute)  
-15. Acompanhamento de entregas via planilhas atualizadas  
+13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
+14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
+15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
 
 ### E-commerce e Vendas Online
 
-16. Leitura de pedidos de marketplaces  
-17. Atualização automática de estoque em Excel/ERP simples  
-18. Envio de notas fiscais e respostas automáticas a clientes  
+16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
+17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
+18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
 
 ### Escritórios que prestam serviços para repartições públicas e órgãos governamentais
 
-19. Controle Automatizado de Protocolos em Repartição Pública
-20. Conversor de tabelas PDF → Excel
-21. Organizador de arquivos em pastas por cliente
-22. Dashboard de pagamentos
+19. [Controle Automatizado de Protocolos em Repartição Pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)
+20. [Conversor de tabelas PDF → Excel](#20-conversor-de-tabelas-pdf--excel)
+21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)
+22. [Dashboard de pagamentos](#22-dashboard-de-pagamentos)
 
 ## Anexos
 
@@ -121,6 +122,10 @@ Programador de Computador
    - `codes/05_exemplo_pratico_extracao_pdf.py`
 - Exemplo Prático 06 - Leitura e modificação de um arquivo Word
    - `codes/06_exemplo_pratico_modificacao_word.py`
+- Exemplo Prático 07 - Automação de Google Sheets
+   - `codes/07_exemplo_pratico_automacao_excel.py`
+- Exemplo Prático 08 - Envio de relatórios diários por e-mail
+   - `codes/08_exemplo_pratico_envio_relatorio_diario.py`
 
 ***
 
@@ -550,7 +555,7 @@ Ajude Ana a automatizar esse processo criando um script Python que:
 **Dica:**  
 Utilize a biblioteca `PyPDF2` para a extração de texto de arquivos PDF.
 
-**Código Python:** 
+**Código Python**:
 
 ```python
 import PyPDF2
@@ -675,4 +680,391 @@ Com este exercício, você praticou a leitura e modificação de arquivos Word u
 
 ***
 
+# 4. Automação de E-mails e Notificações
+
+Nesta seção, você aprenderá a automatizar o envio de e-mails e notificações usando Python. Essa habilidade é essencial para manter a comunicação eficiente em escritórios, seja para enviar lembretes, relatórios ou avisos importantes.
+
+## 4.1. Enviando E-mails com Python
+
+Para enviar e-mails com Python, você pode usar a biblioteca `smtplib`, que permite enviar mensagens através do protocolo SMTP. Abaixo está um exemplo básico de como enviar um e-mail:
+
+```python
+import smtplib
+from email.mime.text import MIMEText
+# Configurações do servidor SMTP
+smtp_server = 'smtp.gmail.com'
+smtp_port = 587
+smtp_user = 'seu_email@gmail.com'
+smtp_password = 'sua_senha'
+# Função para enviar e-mail
+def enviar_email(destinatario, assunto, corpo):
+    # Criar o objeto de mensagem
+    msg = MIMEText(corpo)
+    msg['Subject'] = assunto
+    msg['From'] = smtp_user
+    msg['To'] = destinatario
+    # Enviar o e-mail
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(smtp_user, smtp_password)
+        server.send_message(msg)    
+# Exemplo de uso
+enviar_email('destinatario@example.com', 'Assunto do E-mail', 'Corpo do e-mail')
+```
+
+## 4.2. Enviando E-mails com Anexos
+
+Para enviar e-mails com anexos, você pode usar a biblioteca `email` para criar mensagens mais complexas. Veja o exemplo abaixo:
+```python
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+# Configurações do servidor SMTP
+smtp_server = 'smtp.gmail.com'
+smtp_port = 587
+smtp_user = 'seu_email@gmail.com'
+smtp_password = 'sua_senha'
+# Função para enviar e-mail com anexo
+def enviar_email_com_anexo(destinatario, assunto, corpo, caminho_anexo):
+    # Criar o objeto de mensagem
+    msg = MIMEMultipart()
+    msg['Subject'] = assunto
+    msg['From'] = smtp_user
+    msg['To'] = destinatario
+    # Adicionar o corpo do e-mail
+    msg.attach(MIMEText(corpo, 'plain'))
+    # Adicionar o anexo
+    with open(caminho_anexo, 'rb') as anexo:
+        parte = MIMEBase('application', 'octet-stream')
+        parte.set_payload(anexo.read())
+        encoders.encode_base64(parte)
+        parte.add_header('Content-Disposition', f'attachment; filename={caminho_anexo.split("/")[-1]}')
+        msg.attach(parte)
+    # Enviar o e-mail
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(smtp_user, smtp_password)
+        server.send_message(msg)
+# Exemplo de uso
+enviar_email_com_anexo(
+    'destinatario@example.com',
+    'Assunto do E-mail com Anexo',
+    'Corpo do e-mail com anexo',
+    'caminho/para/o/anexo.txt'
+)
+```
+
+## 4.3. Enviando Notificações por E-mail
+
+Para enviar notificações por e-mail, você pode usar a função `enviar_email` que criamos anteriormente. Veja um exemplo de como enviar um lembrete de reunião:
+
+```python
+enviar_email(
+    'destinatario@example.com',
+    'Lembrete de Reunião',
+    'Este é um lembrete de que você tem uma reunião agendada para amanhã às 10h.'
+)
+```
+
+## 4.4. Configurando as Dependências do Ambiente Python
+
+Para que os exemplos de envio de e-mails funcionem, você precisa ter o Python instalado em seu ambiente, bem como as bibliotecas necessárias. Você pode instalar as bibliotecas usando o gerenciador de pacotes `pip`. Execute o seguinte comando no terminal:
+
+```bash
+pip install secure-smtplib email
+```
+
+## 4.5. Exercícios Práticos
+
+Nesta seção, você encontrará exercícios práticos para aplicar os conceitos aprendidos sobre automação de e-mails e notificações. Esses exercícios são projetados para serem desafiadores e ajudarão a consolidar seu conhecimento em automação de comunicação por e-mail.
+
+
+### 4.5.1. Exercício Prático: Envio de Relatórios Diários por E-mail
+
+**História:**
+A empresa "Tech Solutions" precisa enviar relatórios diários de vendas para a equipe de gerência. O relatório é gerado em um arquivo Excel chamado `relatorio_vendas.xlsx`, que contém as vendas do dia anterior. A gerente Ana deseja automatizar o envio desse relatório por e-mail todas as manhãs.
+
+**Desafio:**
+Crie um script Python que:
+1. Leia o arquivo `relatorio_vendas.xlsx` localizado na pasta `codes`.
+2. Envie o arquivo como anexo para o e-mail da gerente Ana, cujo endereço é `ana@techsolutions.com`.
+3. O assunto do e-mail deve ser "Relatório de Vendas - [Data Atual]".
+4. O corpo do e-mail deve conter uma breve mensagem: "Prezada Ana, segue em anexo o relatório de vendas do dia anterior."
+5. Certifique-se de que o e-mail seja enviado usando uma conta de e-mail válida (por exemplo, Gmail).
+6. (Opcional) Configure o script para ser executado automaticamente todos os dias às 8h da manhã usando o agendador de tarefas do sistema operacional (Windows Task Scheduler ou cron no Linux).
+
+**Código Python:**
+
+```python
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+import pandas as pd
+from datetime import datetime
+import os
+
+# Configurações do servidor SMTP
+smtp_server = 'smtp.gmail.com'
+smtp_port = 587
+smtp_user = 'seu_email@gmail.com'
+smtp_password = 'sua_senha'
+
+# Caminho do arquivo Excel
+excel_path = r'C:\dev\python_escritorios\codes\relatorio_vendas.xlsx'
+
+# 1. Geração de dados fictícios de vendas
+fake = Faker('pt_BR')
+dados_vendas = []
+for _ in range(10):  # Gerar 10 registros fictícios
+    dados_vendas.append({
+        'data': fake.date_this_month(),
+        'produto': fake.word(),
+        'quantidade': fake.random_int(min=1, max=10),
+        'preco_unitario': fake.random_int(min=50, max=500)
+    })
+
+# Criar DataFrame
+df_vendas = pd.DataFrame(dados_vendas)
+
+# 2. Salvando dados em um arquivo Excel (.xlsx)
+df_vendas.to_excel(excel_path, index=False, sheet_name='Vendas')
+
+# 3. Exibindo dados no console para cópia manual para o Excel
+print("Dados de Vendas Gerados:")
+print(df_vendas)
+
+# 4. Envio do relatório como anexo por e-mail
+data_atual = datetime.now().strftime('%d/%m/%Y')
+assunto = f'Relatório de Vendas - {data_atual}'
+corpo = 'Prezada Ana, segue em anexo o relatório de vendas do dia.'
+
+# Função para enviar e-mail com anexo
+def enviar_email_com_anexo(destinatario, assunto, corpo, caminho_anexo):
+    # Criar o objeto de mensagem
+    msg = MIMEMultipart()
+    msg['Subject'] = assunto
+    msg['From'] = smtp_user
+    msg['To'] = destinatario
+    # Adicionar o corpo do e-mail
+    msg.attach(MIMEText(corpo, 'plain'))
+    # Adicionar o anexo
+    with open(caminho_anexo, 'rb') as anexo:
+        parte = MIMEBase('application', 'octet-stream')
+        parte.set_payload(anexo.read())
+        encoders.encode_base64(parte)
+        parte.add_header('Content-Disposition', f'attachment; filename={caminho_anexo.split("/")[-1]}')
+        msg.attach(parte)
+    # Enviar o e-mail
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(smtp_user, smtp_password)
+        server.send_message(msg)
+
+# Enviar o e-mail com o relatório
+enviar_email_com_anexo(
+    'ana@techsolutions.com',
+    assunto,
+    corpo,
+    excel_path
+)
+```
+
+**Resultado esperado:**
+```plaintext
+Arquivo de vendas gerado em: C:\dev\python_escritorios\codes\relatorio_vendas.xlsx
+Copie e cole os dados abaixo no Excel, se desejar:
+Data	Produto	Quantidade	Valor Total
+25/10/2023	Notebook	5	15000.00
+E-mail enviado com sucesso!
+```
+
+**Observação:**
+Certifique-se de substituir `seu_email@gmail.com` e `sua_senha` pelas suas credenciais de e-mail.
+
+**Atenção:**
+- Nunca compartilhe suas credenciais de e-mail em código público.
+- Use uma senha de aplicativo se estiver usando o Gmail, pois o Google pode bloquear tentativas de login de aplicativos menos seguros.
+- Considere usar OAuth2 para uma abordagem mais segura.
+
+**Conclusão:**
+
+Com este exercício, você praticou o envio de e-mails com anexos usando Python. Essa habilidade é essencial para automatizar a comunicação de relatórios e documentos importantes em ambientes corporativos, economizando tempo e aumentando a eficiência na troca de informações.
+
+***
+
+### 4.5.2. Exercício Prático: Envio Automático de Relatório Diário de Vendas
+
+**História:**  
+A empresa "Tech Solutions" deseja automatizar o envio diário de um relatório de vendas por e-mail para a equipe de gerência. O relatório deve conter dados fictícios de vendas, ser salvo em Excel e enviado como anexo para a gerente Ana.
+
+**Desafio:**  
+Automatizar o processo de geração e envio do relatório diário de vendas, seguindo os passos:
+
+1. **Geração de Dados Fictícios de Vendas:**  
+   - Gerar 10 registros fictícios de vendas usando a biblioteca `Faker`.
+   - Cada registro deve conter: data, produto, quantidade e preço unitário.
+
+2. **Salvando Dados em um Arquivo Excel (.xlsx):**  
+   - Salvar os dados em um arquivo Excel chamado `relatorio_vendas.xlsx` usando o `pandas`.
+
+3. **Exibindo Dados no Console para Cópia Manual para o Excel:**  
+   - Exibir os dados gerados no console para facilitar a cópia.
+
+4. **Envio do Relatório como Anexo por E-mail:**  
+   - Enviar o arquivo Excel como anexo para o e-mail da gerente Ana (`ana@techsolutions.com`) usando `smtplib`.
+
+**Código Python:**
+
+```python
+import pandas as pd
+from faker import Faker
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+from datetime import datetime
+import os
+
+# Configurações do servidor SMTP
+smtp_server = 'smtp.gmail.com'
+smtp_port = 587
+smtp_user = 'seu_email@gmail.com'
+smtp_password = 'sua_senha'
+
+# Caminho do arquivo Excel
+excel_path = r'C:\dev\python_escritorios\codes\relatorio_vendas.xlsx'
+
+# 1. Geração de dados fictícios de vendas
+fake = Faker('pt_BR')
+dados_vendas = []
+for _ in range(10):
+    dados_vendas.append({
+        'data': fake.date_this_month(),
+        'produto': fake.word(),
+        'quantidade': fake.random_int(min=1, max=10),
+        'preco_unitario': fake.random_int(min=50, max=500)
+    })
+
+# 2. Criar DataFrame e salvar em Excel
+df_vendas = pd.DataFrame(dados_vendas)
+df_vendas.to_excel(excel_path, index=False, sheet_name='Vendas')
+
+# 3. Exibir dados no console
+print("Dados de Vendas Gerados:")
+print(df_vendas)
+
+# 4. Envio do relatório como anexo por e-mail
+data_atual = datetime.now().strftime('%d/%m/%Y')
+assunto = f'Relatório de Vendas - {data_atual}'
+corpo = 'Prezada Ana, segue em anexo o relatório de vendas do dia.'
+
+def enviar_email_com_anexo(destinatario, assunto, corpo, caminho_anexo):
+    msg = MIMEMultipart()
+    msg['Subject'] = assunto
+    msg['From'] = smtp_user
+    msg['To'] = destinatario
+    msg.attach(MIMEText(corpo, 'plain'))
+    with open(caminho_anexo, 'rb') as anexo:
+        parte = MIMEBase('application', 'octet-stream')
+        parte.set_payload(anexo.read())
+        encoders.encode_base64(parte)
+        parte.add_header('Content-Disposition', f'attachment; filename={caminho_anexo.split("/")[-1]}')
+        msg.attach(parte)
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(smtp_user, smtp_password)
+        server.send_message(msg)
+
+enviar_email_com_anexo(
+    'ana@techsolutions.com',
+    assunto,
+    corpo,
+    excel_path
+)
+
+print("E-mail enviado com sucesso!")
+```
+
+**Resultado esperado:**
+```plaintext
+Dados de Vendas Gerados:
+           data   produto  quantidade  preco_unitario
+0   2025-06-01  exemplo1           3             120
+1   2025-06-02  exemplo2           7             350
+... (mais linhas) ...
+E-mail enviado com sucesso!
+```
+
+**Observações:**
+- Substitua `seu_email@gmail.com` e `sua_senha` pelas suas credenciais.
+- Instale as dependências necessárias com:  
+  `pip install pandas faker openpyxl`
+- Nunca compartilhe suas credenciais em código público.
+- Considere usar senha de aplicativo ou OAuth2 para maior segurança.
+
+**Conclusão:**  
+Com este exemplo, você praticou a geração de dados fictícios, manipulação de arquivos Excel, exibição de dados no console e envio automático de e-mails com anexo usando Python.
+
+***
+
+## 4.6. Considerações de Segurança (OAuth2, aplicativos menos seguros)
+
+Ao automatizar o envio de e-mails, é importante considerar as implicações de segurança. O uso de senhas em texto claro, como mostrado nos exemplos, não é recomendado para ambientes de produção.
+
+## OAuth2
+
+Uma abordagem mais segura é usar OAuth2 para autenticação. O OAuth2 é um protocolo de autorização que permite que aplicativos de terceiros acessem suas informações sem precisar compartilhar suas senhas.
+
+### Vantagens do OAuth2
+
+- **Segurança:** Não é necessário armazenar senhas em texto claro.
+- **Controle:** É possível revogar o acesso a qualquer momento.
+- **Escopo:** É possível limitar o acesso a apenas determinadas informações.
+
+### Como Usar OAuth2 com Python
+
+Para usar OAuth2 com Python, você pode usar a biblioteca `oauth2client`. Abaixo está um exemplo básico de como configurar o OAuth2:
+
+```python
+from oauth2client.service_account import ServiceAccountCredentials
+import gspread
+
+# Configurar o escopo e as credenciais
+escopo = ['https://www.googleapis.com/auth/spreadsheets']
+credenciais = ServiceAccountCredentials.from_json_keyfile_name('caminho/para/credenciais.json', escopo)
+
+# Autenticar e acessar o Google Sheets
+cliente = gspread.authorize(credenciais)
+planilha = cliente.open('Nome da Planilha').sheet1
+
+# Ler dados da planilha
+dados = planilha.get_all_records()
+print(dados)
+```
+
+## Aplicativos Menos Seguros
+
+Se você estiver usando o Gmail, é possível que precise permitir o acesso de "aplicativos menos seguros" para que o envio de e-mails funcione. No entanto, essa opção reduz a segurança da sua conta e não é recomendada.
+
+### Como Ativar
+
+1. Acesse sua conta do Google.
+2. Vá para "Segurança".
+3. Na seção "Acesso a app menos seguro", ative a opção "Permitir aplicativos menos seguros".
+
+### Atenção
+
+- Essa opção pode não estar disponível para contas do Google Workspace (antigo G Suite).
+- O Google pode bloquear o acesso de aplicativos menos seguros a qualquer momento, afetando a funcionalidade do seu aplicativo.
+
+## Conclusão
+
+Neste capítulo, você aprendeu sobre considerações de segurança ao automatizar o envio de e-mails. A utilização de OAuth2 é a abordagem recomendada para garantir a segurança das suas credenciais e informações.
+
+***
 
