@@ -62,45 +62,47 @@ Programador de Computador
 
 ## Parte 1 – Fundamentos da Automação
 
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)
-2. [Instalação de ambiente: VS Code, Python, bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)
+1. Introdução à automação com Python  
+2. Instalação de ambiente: VS Code, Python e bibliotecas úteis  
+3. Trabalhando com arquivos (Excel, CSV, PDF, Word)  
+4. Automação de e-mails e notificações  
+5. Web scraping e automação de sites  
+6. Criação de interfaces gráficas simples (Tkinter ou PyWebIO)  
 
 ## Parte 2 – Casos Reais por Tipo de Escritório
 
 ### Escritório de Advocacia
-
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)
+7. Gerador automático de procurações e petições a partir de modelos  
+8. Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)  
+9. Consulta a sites de tribunais  
 
 ### Escritório de Contabilidade
-
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)
+10. Leitura e consolidação de extratos bancários (CSV)  
+11. Geração automática de guias de impostos  
+12. Envio automático de boletos por e-mail  
 
 ### Escritório de Logística
-
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)
+13. Leitura e geração de manifestos (XML, PDF)  
+14. Roteirização com base em distância (API Google Maps ou OpenRoute)  
+15. Acompanhamento de entregas via planilhas atualizadas  
 
 ### E-commerce e Vendas Online
+16. Leitura de pedidos de marketplaces  
+17. Atualização automática de estoque em Excel/ERP simples  
+18. Envio de notas fiscais e respostas automáticas a clientes  
 
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)
+### Escritórios para repartições públicas e órgãos governamentais
+19. Controle automatizado de protocolos em repartição pública  
+20. Conversor de tabelas PDF → Excel  
+21. Organizador de arquivos em pastas por cliente  
+22. Dashboard de pagamentos  
 
-### Escritórios que prestam serviços para repartições públicas e órgãos governamentais
+---
 
-19. [Controle Automatizado de Protocolos em Repartição Pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)
-20. [Conversor de tabelas PDF → Excel](#20-conversor-de-tabelas-pdf--excel)
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)
-22. [Dashboard de pagamentos](#22-dashboard-de-pagamentos)
+23. Conclusão  
+24. Agradecimentos  
+25. Referências Bibliográficas (Formato ABNT)  
+26. Adendo: Códigos em Python
 
 ***
 
