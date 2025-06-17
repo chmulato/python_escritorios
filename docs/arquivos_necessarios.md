@@ -14,13 +14,38 @@ Este documento lista todos os arquivos e pastas de dados que você deve criar ou
 c:\dev\python_escritorios\
 │
 ├── codes\
-│   ├── arquivos_entrada\
-│   ├── extratos_bancarios\
-│   ├── relatorios_diarios\
-│   └── ... (scripts .py e arquivos de dados)
+│   ├── arquivos_entrada\           # Para arquivos a serem organizados por cliente
+│   ├── extratos_bancarios\         # Para arquivos CSV de extratos bancários
+│   ├── relatorios_diarios\         # Para relatórios diários de vendas (gerados)
+│   ├── ... (outros arquivos de dados e scripts .py)
+│   ├── vendas.csv
+│   ├── relatorio_vendas.xlsx
+│   ├── alugueis.xlsx
+│   ├── oficio_exemplo.pdf
+│   ├── contrato_exemplo.docx
+│   ├── dados.xlsx
+│   ├── dados.csv
+│   ├── documento.pdf
+│   ├── documento.docx
+│   ├── modelo_procuracao.docx
+│   ├── prazos_processuais.xlsx
+│   ├── protocolos_reparticao_publica.xlsx
+│   ├── pagamentos.xlsx
+│   ├── guia_pagamento_imposto.txt
+│   ├── manifesto.xml
+│   ├── entregas.xlsx
+│   ├── pedidos_marketplace.csv
+│   ├── estoque.xlsx
+│   ├── tabela.pdf
+│   ├── tabela.xlsx
+│   ├── boleto_joao_silva.csv
+│   ├── nota_fiscal_joao_silva.csv
+│   └── ... (demais arquivos de entrada/saída)
 │
 ├── docs\
-│   └── arquivos_necessarios.md
+│   ├── arquivos_necessarios.md
+│   └── ... (outros documentos)
+│
 ├── python_escritorios.md
 └── cronograma.md
 ```
