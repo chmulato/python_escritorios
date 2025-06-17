@@ -102,8 +102,11 @@ Programador de Computador
 
 ## Códigos em Python
 
-- Exemplo Prático 01
-- Exemplo Prático 02
+- Exemplo Prático 01 - Análise de vendas de produtos online (CSV)
+- Exemplo Prático 02 - Geração de relatórios financeiros (Excel)
+- Exemplo Prático 03 - Controle de inadimplência em aluguéis (Excel + E-mail)
+- Exemplo Prático 04 - Envio de e-mails automatizados
+
 
 ***
 
@@ -378,8 +381,146 @@ Monitor,900
 **Conclusão**
 Com este exercício, você praticou a leitura de arquivos CSV, manipulação de dados com pandas e geração de relatórios. Essas habilidades são fundamentais para automatizar análises de vendas e outras tarefas relacionadas a dados em escritórios.
 
-#### 3.6.2. **Manipulação de planilhas Excel:**  
-   Abrir uma planilha Excel, adicionar uma nova coluna calculada (ex: imposto sobre vendas), e salvar a planilha modificada.
+## 3.6.2. Automatizando Relatórios de Inadimplência em Aluguéis com Python e Excel
+
+Neste exercício, vamos aplicar a integração entre Python e Excel para resolver um problema comum em empresas de aluguel de imóveis: o controle de inadimplência.
+
+**Cenário:**  
+Uma empresa de aluguel de imóveis mantém uma planilha chamada `alugueis.xlsx` com os seguintes campos:
+
+- Imóvel
+- Inquilino
+- Valor Mensal
+- Data de Vencimento
+- Pago (Sim/Não)
+
+**Planilha de exemplo (`alugueis.xlsx`):**
+```
+| Imóvel       | Inquilino   | Valor Mensal | Data de Vencimento | Pago (Sim/Não) |
+| Apartamento 101 | João Silva  | 1200         | 2025-06-05         | Não            |
+| Casa 202    | Maria Souza | 1500         | 2025-06-10         | Sim            |
+| Apartamento 303 | Ana Costa   | 1300         | 2025-06-15         | Não            |
+```
+
+**Desafio:**  
+Crie um script Python que:
+
+1. Leia a planilha `alugueis.xlsx`.
+2. Filtre os registros de imóveis cujo aluguel ainda não foi pago.
+3. Gere um novo arquivo Excel chamado `relatorio_inadimplentes.xlsx` apenas com os inadimplentes.
+4. Simule o envio de um e-mail para cada inquilino inadimplente, informando o valor devido e a data de vencimento.
+
+**Exemplo de Código:**
+
+```python
+import pandas as pd
+import os
+
+relatorio_path = r'C:\dev\python_escritorios\codes\relatorio_inadimplentes.xlsx'
+# 1. Importar bibliotecas
+# Importar bibliotecas necessárias
+# Apagar o relatório anterior, se existir
+if os.path.exists(relatorio_path):
+    os.remove(relatorio_path)
+
+# 2. Ler a planilha de aluguéis
+df = pd.read_excel(r'C:\dev\python_escritorios\codes\alugueis.xlsx')
+
+# 3. Filtrar inadimplentes
+inadimplentes = df[df['Pago (Sim/Não)'] == 'Não']
+
+# 4. Salvar relatório dos inadimplentes
+inadimplentes.to_excel(r'C:\dev\python_escritorios\codes\relatorio_inadimplentes.xlsx', index=False)
+
+# 5. Simular envio de e-mails
+for _, row in inadimplentes.iterrows():
+    print(f"Enviando e-mail para {row['Inquilino']}:")
+    print(f"Prezado(a) {row['Inquilino']}, seu aluguel do imóvel {row['Imóvel']} no valor de R$ {row['Valor Mensal']} está em aberto. Vencimento: {row['Data de Vencimento']}.")
+    print("------------------------------\n")
+
+# 6. Calcular total de aluguéis em aberto
+total_inadimplentes = inadimplentes['Valor Mensal'].sum()
+print(f"Total de aluguéis em aberto: R$ {total_inadimplentes}")
+
+# 7. Calcular total de aluguéis pagos
+total_pagos = df[df['Pago (Sim/Não)'] == 'Sim']['Valor Mensal'].sum()
+print(f"Total de aluguéis pagos: R$ {total_pagos}")
+
+# 8. Calcular total geral de aluguéis
+total_geral = df['Valor Mensal'].sum()
+print(f"Total geral de aluguéis: R$ {total_geral}")
+
+# 9. Calcular porcentagem de inadimplência
+porcentagem_inadimplencia = (total_inadimplentes / total_geral) * 100 if total_geral > 0 else 0
+print(f"Porcentagem de inadimplência: {porcentagem_inadimplencia:.2f}%")
+
+# 10. Exibir relatório final
+print("\nRelatório Final:")
+print(f"Total de aluguéis em aberto: R$ {total_inadimplentes}")
+print(f"Total de aluguéis pagos: R$ {total_pagos}")
+print(f"Total geral de aluguéis: R$ {total_geral}")
+
+# 11. Salvar relatório final
+relatorio_final = {
+    'Total Aluguéis em Aberto': [total_inadimplentes],
+    'Total Aluguéis Pagos': [total_pagos],
+    'Total Geral de Aluguéis': [total_geral],
+    'Porcentagem de Inadimplência': [porcentagem_inadimplencia]
+}
+relatorio_df = pd.DataFrame(relatorio_final)
+relatorio_df.to_excel(r'C:\dev\python_escritorios\codes\relatorio_final.xlsx', index=False)
+
+# 12. Exibir mensagem de conclusão
+print("Relatório final salvo com sucesso em 'relatorio_final.xlsx'.")
+
+# 13. Fim do script
+print("Processamento concluído.")
+
+# 14. Fim do script
+```
+
+### Adendo: Envio Real de E-mails para Inquilinos Inadimplentes
+
+Além de gerar o relatório de inadimplentes, é possível automatizar o envio de e-mails reais para cada inquilino com aluguel em aberto utilizando Python.
+
+**Como fazer:**
+
+1. **Adicione uma coluna "E-mail"** na planilha `alugueis.xlsx` com o endereço de e-mail de cada inquilino.
+
+2. **Utilize a biblioteca `smtplib`** do Python para enviar e-mails automáticos. É recomendado utilizar uma conta de e-mail dedicada e, no caso do Gmail, gerar uma senha de aplicativo para maior segurança.
+
+3. **Exemplo de código:**  
+O código completo para geração do relatório de inadimplentes e envio real de e-mails está disponível no arquivo:
+
+`codes/02_exemplo_pratico_alugueis_com_email.py`
+
+4. **Exemplo de Planilha de Aluguéis com E-mail dos Inquilinos**
+
+```plaintext
+| Imóvel    | Inquilino         | Valor Mensal | Data de Vencimento | Pago (Sim/Não) | E-mail               |
+|-----------|-------------------|--------------|--------------------|----------------|----------------------|
+| Apto 101  | João da Silva     | 1800         | 2025-06-10         | Sim            | joao@email.com       |
+| Casa 202  | Maria Souza       | 2500         | 2025-06-15         | Não            | maria@email.com      |
+| Loja 303  | Pedro Lima        | 3200         | 2025-06-20         | Não            | pedro@email.com      |
+| Apto 104  | Ana Martins       | 2000         | 2025-06-12         | Sim            | ana@email.com        |
+| Casa 205  | Bruno Carvalho    | 2700         | 2025-06-18         | Não            | bruno@email.com      |
+| Loja 307  | Carla Mendes      | 3500         | 2025-06-25         | Sim            | carla@email.com      |
+| Apto 110  | Felipe Gonçalves  | 2100         | 2025-06-14         | Não            | felipe@email.com     |
+| Casa 208  | Luciana Ferreira  | 2600         | 2025-06-22         | Não            | luciana@email.com    |
+```
+
+**Atenção:**  
+- Nunca compartilhe senhas em código público.
+- Teste o envio com poucos destinatários antes de usar em produção.
+- Certifique-se de que o envio de e-mails está de acordo com as políticas da sua empresa e com a legislação vigente (LGPD).
+
+Com essa automação, a empresa pode agilizar a comunicação com os inquilinos inadimplentes, tornando o processo mais eficiente e reduzindo o tempo gasto com cobranças manuais.
+
+**Conclusão**
+
+Com este exercício, você praticou a leitura e escrita de arquivos Excel, filtragem de dados com pandas e simulação de envio de e-mails. Essas habilidades são essenciais para automatizar o controle de inadimplência em empresas de aluguel de imóveis, tornando o processo mais eficiente e organizado.
+
+***
 
 #### 3.6.3. **Extração de texto de um PDF:**  
    Ler um arquivo PDF e extrair todo o texto, salvando o conteúdo em um arquivo `.txt`.
