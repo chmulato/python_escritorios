@@ -125,6 +125,50 @@ Programador de Computador
   `codes/07_exemplo_pratico_automacao_excel.py`
 - **Exemplo Prático 08** – Geração e envio de múltiplos relatórios diários por e-mail  
   `codes/08_exemplo_pratico_envio_relatorio_diario.py`
+- **Exemplo Prático 09** – Web scraping básico com BeautifulSoup  
+  `codes/09_exemplo_pratico_webscraping.py`
+- **Exemplo Prático 10** – Extração de tabelas HTML para Excel  
+  `codes/10_exemplo_pratico_tabela_html_excel.py`
+- **Exemplo Prático 11** – Automação de sites com Selenium  
+  `codes/11_exemplo_pratico_selenium.py`
+- **Exemplo Prático 12** – Interface gráfica simples com Tkinter  
+  `codes/12_exemplo_pratico_tkinter.py`
+- **Exemplo Prático 13** – Interface web simples com PyWebIO  
+  `codes/13_exemplo_pratico_pywebio.py`
+- **Exemplo Prático 14** – Gerador automático de procurações e petições  
+  `codes/14_exemplo_pratico_gerador_procuracao.py`
+- **Exemplo Prático 15** – Controle de prazos processuais com alertas  
+  `codes/15_exemplo_pratico_prazos_alerta.py`
+- **Exemplo Prático 16** – Consulta automatizada a sites de tribunais  
+  `codes/16_exemplo_pratico_consulta_tribunal.py`
+- **Exemplo Prático 17** – Leitura e consolidação de extratos bancários  
+  `codes/17_exemplo_pratico_extratos_bancarios.py`
+- **Exemplo Prático 18** – Geração automática de guias de impostos  
+  `codes/18_exemplo_pratico_guia_imposto.py`
+- **Exemplo Prático 19** – Envio automático de boletos por e-mail  
+  `codes/19_exemplo_pratico_envio_boleto.py`
+- **Exemplo Prático 20** – Leitura e geração de manifestos (XML, PDF)  
+  `codes/20_exemplo_pratico_manifesto.py`
+- **Exemplo Prático 21** – Roteirização com base em distância (API)  
+  `codes/21_exemplo_pratico_roteirizacao.py`
+- **Exemplo Prático 22** – Acompanhamento de entregas via planilhas  
+  `codes/22_exemplo_pratico_entregas.py`
+- **Exemplo Prático 23** – Leitura de pedidos de marketplaces  
+  `codes/23_exemplo_pratico_pedidos_marketplace.py`
+- **Exemplo Prático 24** – Atualização automática de estoque  
+  `codes/24_exemplo_pratico_estoque.py`
+- **Exemplo Prático 25** – Envio de notas fiscais e respostas automáticas  
+  `codes/25_exemplo_pratico_nota_fiscal.py`
+- **Exemplo Prático 26** – Controle automatizado de protocolos  
+  `codes/26_exemplo_pratico_protocolos.py`
+- **Exemplo Prático 27** – Conversor de tabelas PDF para Excel  
+  `codes/27_exemplo_pratico_pdf_para_excel.py`
+- **Exemplo Prático 28** – Organizador de arquivos em pastas por cliente  
+  `codes/28_exemplo_pratico_organizador_arquivos.py`
+- **Exemplo Prático 29** – Dashboard de pagamentos  
+  `codes/29_exemplo_pratico_dashboard_pagamentos.py`
+- **Exemplo Prático 30** – Calculadora de impostos com interface  
+  `codes/30_exemplo_pratico_calculadora_impostos.py`
 
 ***
 
@@ -805,11 +849,13 @@ from email import encoders
 import pandas as pd
 from datetime import datetime
 import os
+
 # Configurações do servidor SMTP
 smtp_server = 'smtp.gmail.com'
 smtp_port = 587
 smtp_user = 'seu_email@gmail.com'
 smtp_password = 'sua_senha'
+
 # Função para enviar e-mail com anexo
 def enviar_email_com_anexo(destinatario, assunto, corpo, caminho_anexo):
     # Criar o objeto de mensagem
@@ -1468,11 +1514,11 @@ Ao executar o script, um servidor web será iniciado. Acesse `http://localhost:8
 
 # Parte II – Casos Reais por Tipo de Escritório
 
-Na segunda parte deste livro, apresentamos exemplos práticos de automação voltados para diferentes áreas de atuação. Cada capítulo traz um estudo de caso realista, com o objetivo de demonstrar como as técnicas de automação podem ser aplicadas para resolver problemas específicos de escritórios de advocacia, contabilidade, logística, vendas online e também para serviços prestados a repartições públicas e órgãos governamentais.
+Na segunda parte deste livro, apresentamos exemplos práticos de automação voltados para diferentes áreas de atuação. Cada capítulo traz um estudo de caso realista, com o objetivo de demonstrar como as técnicas de automação podem ser aplicadas para resolver problemas específicos de escritórios de advocacia, contabilidade, logística e e-commerce.
 
-Os exemplos foram escolhidos com base em situações comuns enfrentadas por profissionais dessas áreas e buscam mostrar, de forma prática e didática, como a automação pode trazer ganhos significativos de produtividade, precisão e eficiência.
+Os exemplos foram escolhidos com base em situações comuns enfrentadas por profissionais dessas áreas e buscam mostrar, de forma prática e didática, como resolver essas situações com Python.
 
-Ao final de cada capítulo, você encontrará dicas e sugestões para adaptar as soluções apresentadas à sua realidade, além de exercícios práticos para consolidar o aprendizado.
+Ao final de cada exemplo, você encontrará dicas e sugestões para adaptar as soluções apresentadas à sua realidade, além de exercícios práticos para consolidar o aprendizado.
 
 Esperamos que esta parte do livro inspire você a identificar novas oportunidades de automação em sua rotina profissional e a explorar todo o potencial da programação e da inteligência artificial para transformar o seu trabalho.
 
@@ -1572,7 +1618,7 @@ O objetivo deste exemplo é criar um script que:
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
 - `ler_planilha()`: Para ler o arquivo da planilha com os prazos processuais.
 - `verificar_prazos()`: Para identificar quais prazos estão próximos do vencimento.
-- `enviar_alertas()`: Para enviar e-mails de alerta aos responsáveis pelos processos.
+- `enviar_alertas()`: Para enviar os e-mails de alerta.
 
 ## 8.3. Exemplo de Código
 
@@ -1583,8 +1629,8 @@ from email.mime.text import MIMEText
 from datetime import datetime, timedelta
 
 # Função para ler a planilha de prazos
-def ler_planilha(caminho_planilha):
-    return pd.read_excel(caminho_planilha)
+def ler_planilha(caminho_arquivo):
+    return pd.read_excel(caminho_arquivo)
 
 # Função para verificar prazos próximos do vencimento
 def verificar_prazos(df, dias_aviso=3):
@@ -1594,61 +1640,56 @@ def verificar_prazos(df, dias_aviso=3):
 
 # Função para enviar e-mail de alerta
 def enviar_alertas(df_prazos, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
     for _, row in df_prazos.iterrows():
-        destinatario = row['Responsável']
-        assunto = f"Aviso: Prazo processual próximo do vencimento - {row['Número do Processo']}"
-        corpo = f"Prezado(a),\n\nEste é um lembrete de que o prazo para o processo {row['Número do Processo']} " \
-                f"está se aproximando. Descrição do prazo: {row['Descrição do Prazo']}." \
-                f"\nData de término: {row['Data de Término'].strftime('%d/%m/%Y')}.\n\nAtenciosamente,"
+        destinatario = row['Email']
+        assunto = f"Aviso de Prazo Processual - {row['Número do Processo']}"
+        corpo = f"Prezado(a),\n\nEste é um aviso de que o prazo processual referente ao processo {row['Número do Processo']} está se aproximando.\nData de Término: {row['Data de Término'].strftime('%d/%m/%Y')}\n\nAtenciosamente,"
         
-        # Criar o objeto de mensagem
         msg = MIMEText(corpo)
         msg['Subject'] = assunto
         msg['From'] = smtp_user
         msg['To'] = destinatario
         
-        # Enviar o e-mail
-        with smtplib.SMTP('smtp.gmail.com', 587) as server:
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
             server.starttls()
             server.login(smtp_user, smtp_password)
             server.send_message(msg)
 
 # Exemplo de uso
 caminho_planilha = 'prazos_processuais.xlsx'
-df_prazos = ler_planilha(caminho_planilha)
-prazos_proximos = verificar_prazos(df_prazos)
+df = ler_planilha(caminho_planilha)
+df_prazos_proximos = verificar_prazos(df)
 
-# Enviar alertas (descomente para enviar e-mails)
-# smtp_user = 'seu_email@gmail.com'
-# smtp_password = 'sua_senha'
-# enviar_alertas(prazos_proximos, smtp_user, smtp_password)
+# Enviar alertas (descomente a linha abaixo para enviar os e-mails)
+# enviar_alertas(df_prazos_proximos, 'seu_email@gmail.com', 'sua_senha')
 
-print("Prazos próximos do vencimento:")
-print(prazos_proximos)
+print("Processamento concluído.")
 ```
 
 ## 8.4. Considerações Finais
 
-A automação do controle de prazos processuais pode trazer maior eficiência e segurança para escritórios de advocacia, reduzindo o risco de perda de prazos importantes e melhorando a comunicação com os clientes. Com o uso de planilhas e o envio automático de alertas por e-mail, é possível manter o controle dos prazos de forma simples e eficaz.
+A automação do controle de prazos processuais pode trazer maior eficiência e segurança para escritórios de advocacia, reduzindo o risco de perda de prazos importantes e melhorando a comunicação com os clientes. Com o uso de planilhas e o envio automático de alertas por e-mail, é possível manter o controle dos prazos de forma organizada e prática.
 
 ***
 
 # 9. Consulta a sites de tribunais
 
-A consulta a sites de tribunais é uma atividade rotineira em escritórios de advocacia, utilizada para acompanhar o andamento de processos, verificar publicações e obter informações atualizadas sobre casos judiciais. Neste exemplo, vamos mostrar como automatizar a consulta a sites de tribunais, utilizando Python para acessar as informações de forma programática.
+A consulta a sites de tribunais é uma atividade rotineira em escritórios de advocacia, utilizada para acompanhar o andamento de processos, verificar publicações e obter informações atualizadas sobre casos judiciais. Neste exemplo, vamos mostrar como automatizar a consulta a sites de tribunais, utilizando Python para acessar as informações de forma rápida e eficiente.
 
 ## 9.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
 - Acesse o site de um tribunal (por exemplo, Tribunal de Justiça de São Paulo).
-- Realize uma busca pelo número de um processo.
-- Extraia informações relevantes sobre o processo, como partes envolvidas, advogado, data da última movimentação, entre outros.
+- Realize a busca por um processo utilizando o número do processo informado pelo usuário.
+- Extraia e exiba informações relevantes sobre o andamento do processo.
 
 ## 9.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
 - `acessar_site()`: Para acessar o site do tribunal.
-- `buscar_processo()`: Para realizar a busca pelo número do processo.
+- `buscar_processo()`: Para realizar a busca pelo processo.
 - `extrair_informacoes()`: Para extrair as informações relevantes sobre o processo.
 
 ## 9.3. Exemplo de Código
@@ -1669,51 +1710,39 @@ def acessar_site(url):
 def buscar_processo(html, numero_processo):
     soup = BeautifulSoup(html, 'html.parser')
     campo_busca = soup.find('input', {'name': 'numero_processo'})
-    
-    # Simular a busca pelo processo
     if campo_busca:
-        campo_busca['value'] = numero_processo
-        # Aqui você deve adicionar o código para simular o envio do formulário de busca
-        # Isso pode variar dependendo da estrutura do site
+        # Simular a busca pelo processo
+        return f"Processo {numero_processo} encontrado."
     else:
-        raise Exception("Campo de busca não encontrado no site.")
+        return "Campo de busca não encontrado."
 
 # Função para extrair informações do processo
 def extrair_informacoes(html):
     soup = BeautifulSoup(html, 'html.parser')
     informacoes = {}
-    
-    # Extrair informações relevantes (exemplo)
-    informacoes['parte_autora'] = soup.find('div', class_='parte-autora').text
-    informacoes['parte_re'] = soup.find('div', class_='parte-re').text
-    informacoes['advogado'] = soup.find('div', class_='advogado').text
-    informacoes['data_ultima_movimentacao'] = soup.find('div', class_='data-ultima-movimentacao').text
-    
+    # Extrair informações relevantes (exemplo: número do processo, partes, advogado, etc.)
+    informacoes['numero_processo'] = soup.find('h1').text
+    informacoes['partes'] = [parte.text for parte in soup.find_all('div', class_='parte')]
     return informacoes
 
 # Exemplo de uso
 url = 'https://www.tjsp.jus.br/'
 numero_processo = '1234567890'
-
 html_site = acessar_site(url)
-buscar_processo(html_site, numero_processo)
+resultado_busca = buscar_processo(html_site, numero_processo)
 
-# Após simular a busca, você deve obter o HTML da página de resultado e extrair as informações
-# html_resultado = acessar_site(url_resultado)
-# informacoes_processo = extrair_informacoes(html_resultado)
-
-# print(informacoes_processo)
+print(resultado_busca)
 ```
 
 ## 9.4. Considerações Finais
 
-A automação da consulta a sites de tribunais pode trazer maior agilidade e eficiência para escritórios de advocacia, permitindo o acompanhamento em tempo real dos processos e a obtenção de informações atualizadas de forma programática. Com o uso de web scraping e automação de navegação, é possível integrar essas informações aos sistemas internos do escritório, melhorando a gestão dos casos judiciais.
+A automação da consulta a sites de tribunais pode trazer maior agilidade e eficiência para escritórios de advocacia, permitindo o acompanhamento em tempo real dos processos e a obtenção rápida de informações relevantes. Com o uso de web scraping e automação de navegação, é possível simplificar e otimizar essa tarefa rotineira.
 
 ***
 
 # Escritório de Contabilidade
 
-Os escritórios de contabilidade desempenham um papel crucial na gestão financeira de empresas e indivíduos, lidando com uma variedade de tarefas, como a preparação de declarações de impostos, a elaboração de demonstrações financeiras e o fornecimento de consultoria fiscal. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e conformidade nas obrigações fiscais e contábeis.
+Os escritórios de contabilidade desempenham um papel crucial na gestão financeira de empresas e indivíduos, lidando com uma variedade de tarefas, como a preparação de declarações de impostos, a elaboração de demonstrações financeiras e o gerenciamento de folha de pagamento. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e conformidade.
 
 Nesta seção, apresentamos exemplos práticos de automação voltados para escritórios de contabilidade, com o objetivo de demonstrar como as técnicas de programação e automação podem ser aplicadas para resolver problemas específicos dessa área.
 
@@ -1727,21 +1756,20 @@ Esperamos que esta seção inspire você a identificar novas oportunidades de au
 
 # 10. Leitura e consolidação de extratos bancários (CSV)
 
-A leitura e consolidação de extratos bancários é uma tarefa comum e importante na contabilidade, utilizada para reconciliar as movimentações financeiras e garantir a correta escrituração contábil. Neste exemplo, vamos mostrar como automatizar a leitura e consolidação de extratos bancários em formato CSV, utilizando Python e a biblioteca `pandas` para manipulação de dados.
+A leitura e consolidação de extratos bancários é uma tarefa essencial para a gestão financeira de empresas, permitindo o acompanhamento de receitas, despesas e saldos. Neste exemplo, vamos mostrar como automatizar a leitura de extratos bancários em formato CSV e a consolidação das informações em um relatório financeiro.
 
 ## 10.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
 - Leia um ou mais arquivos CSV contendo extratos bancários.
-- Consolide as informações em um único DataFrame, facilitando a análise e a geração de relatórios.
-- Calcule saldos e identifique movimentações relevantes, como despesas e receitas.
+- Consolide as informações em um único relatório, com o resumo das receitas e despesas.
 
 ## 10.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `ler_extrato_csv()`: Para ler o arquivo CSV do extrato bancário.
-- `consolidar_extratos()`: Para consolidar as informações de múltiplos extratos em um único DataFrame.
-- `calcular_saldos()`: Para calcular saldos e identificar movimentações relevantes.
+- `ler_extrato()`: Para ler o arquivo CSV do extrato bancário.
+- `consolidar_extratos()`: Para consolidar as informações de múltiplos extratos.
+- `gerar_relatorio()`: Para gerar o relatório financeiro.
 
 ## 10.3. Exemplo de Código
 
@@ -1749,112 +1777,96 @@ O código será estruturado em funções, para facilitar a leitura e a manutenç
 import pandas as pd
 import glob
 
-# Função para ler o extrato bancário em CSV
-def ler_extrato_csv(caminho_arquivo):
+# Função para ler o extrato bancário
+def ler_extrato(caminho_arquivo):
     return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
 
-# Função para consolidar extratos bancários
+# Função para consolidar extratos
 def consolidar_extratos(pasta_extratos):
     arquivos = glob.glob(f"{pasta_extratos}/*.csv")
-    lista_df = [ler_extrato_csv(arquivo) for arquivo in arquivos]
-    return pd.concat(lista_df, ignore_index=True)
+    extratos = [ler_extrato(arquivo) for arquivo in arquivos]
+    return pd.concat(extratos, ignore_index=True)
 
-# Função para calcular saldos e identificar movimentações
-def calcular_saldos(df):
-    df['Data'] = pd.to_datetime(df['Data'], format='%d/%m/%Y')
-    df.sort_values(by='Data', inplace=True)
-    df['Saldo'] = df['Valor'].cumsum()
-    return df
+# Função para gerar o relatório financeiro
+def gerar_relatorio(df_consolidado):
+    relatorio = df_consolidado.groupby('Tipo')['Valor'].sum().reset_index()
+    relatorio.to_csv('relatorio_financeiro.csv', index=False, sep=';')
+    print("Relatório financeiro gerado: relatorio_financeiro.csv")
 
 # Exemplo de uso
 pasta_extratos = 'extratos_bancarios'
 df_consolidado = consolidar_extratos(pasta_extratos)
-df_com_saldos = calcular_saldos(df_consolidado)
-
-print("Extratos bancários consolidados e saldos calculados:")
-print(df_com_saldos)
+gerar_relatorio(df_consolidado)
 ```
 
 ## 10.4. Considerações Finais
 
-A automação da leitura e consolidação de extratos bancários pode trazer ganhos significativos de eficiência e precisão para escritórios de contabilidade, além de facilitar a geração de relatórios e a análise das movimentações financeiras. Com o uso de Python e pandas, é possível integrar essas informações aos sistemas contábeis, melhorando a gestão financeira dos clientes.
+A automação da leitura e consolidação de extratos bancários pode trazer maior eficiência e precisão para a gestão financeira de empresas, facilitando o acompanhamento de receitas e despesas. Com o uso de arquivos CSV e a automação do processamento de dados, é possível simplificar e otimizar essa tarefa contábil.
 
 ***
 
 # 11. Geração automática de guias de impostos
 
-A geração de guias de impostos é uma tarefa essencial na contabilidade, utilizada para formalizar o pagamento de tributos e garantir a conformidade fiscal das empresas. Neste exemplo, vamos mostrar como automatizar a geração de guias de impostos, utilizando Python para preencher automaticamente os dados nas guias e facilitar o processo de pagamento.
+A geração de guias de impostos é uma obrigação periódica para empresas, sendo essencial para a regularidade fiscal e o cumprimento das obrigações tributárias. Neste exemplo, vamos mostrar como automatizar a geração de guias de impostos, utilizando Python para calcular os valores devidos e gerar os documentos necessários.
 
 ## 11.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
-- Leia os dados necessários para a geração da guia de impostos a partir de um arquivo CSV ou Excel.
-- Preencha automaticamente os campos da guia de impostos, como DARF, GPS, entre outros.
-- Salve a guia de impostos gerada em formato PDF ou imprima diretamente.
+- Calcule os valores de impostos devidos com base nas receitas e despesas informadas.
+- Gere as guias de pagamento dos impostos de forma automática.
 
 ## 11.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `ler_dados_impostos()`: Para ler os dados necessários a partir de um arquivo CSV ou Excel.
-- `preencher_guia()`: Para preencher automaticamente os campos da guia de impostos.
-- `salvar_guia_pdf()`: Para salvar a guia de impostos gerada em formato PDF.
+- `calcular_impostos()`: Para calcular os impostos devidos.
+- `gerar_guia_pagamento()`: Para gerar a guia de pagamento do imposto.
 
 ## 11.3. Exemplo de Código
 
 ```python
-import pandas as pd
-from fpdf import FPDF
+# Função para calcular os impostos devidos
+def calcular_impostos(receitas, despesas, aliquota_imposto):
+    lucro = receitas - despesas
+    imposto_devido = lucro * aliquota_imposto
+    return imposto_devido
 
-# Função para ler os dados dos impostos
-def ler_dados_impostos(caminho_arquivo):
-    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
-
-# Função para preencher a guia de impostos (exemplo com DARF)
-def preencher_guia(dados):
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.set_font("Arial", size=12)
-    
-    # Preencher campos da guia (exemplo)
-    pdf.cell(0, 10, f"Nome: {dados['Nome']}", ln=True)
-    pdf.cell(0, 10, f"CPF/CNPJ: {dados['CPF_CNPJ']}", ln=True)
-    pdf.cell(0, 10, f"Valor do Imposto: R$ {dados['Valor_Imposto']}", ln=True)
-    
-    # Salvar o PDF
-    caminho_pdf = f"guia_imposto_{dados['Nome']}.pdf"
-    pdf.output(caminho_pdf)
-    return caminho_pdf
+# Função para gerar a guia de pagamento do imposto
+def gerar_guia_pagamento(imposto_devido, caminho_saida):
+    with open(caminho_saida, 'w') as file:
+        file.write(f"Guia de Pagamento de Imposto\n")
+        file.write(f"Valor do Imposto Devido: R$ {imposto_devido:.2f}\n")
+    print(f"Guia de pagamento gerada: {caminho_saida}")
 
 # Exemplo de uso
-caminho_arquivo = 'dados_impostos.csv'
-dados_impostos = ler_dados_impostos(caminho_arquivo)
+receitas = 10000
+despesas = 5000
+aliquota_imposto = 0.15  # 15%
 
-for _, row in dados_impostos.iterrows():
-    caminho_guia = preencher_guia(row)
-    print(f"Guia de imposto gerada: {caminho_guia}")
+imposto_devido = calcular_impostos(receitas, despesas, aliquota_imposto)
+gerar_guia_pagamento(imposto_devido, 'guia_pagamento_imposto.txt')
 ```
 
 ## 11.4. Considerações Finais
 
-A automação da geração de guias de impostos pode trazer maior eficiência e segurança para escritórios de contabilidade, reduzindo o risco de erros no preenchimento das guias e garantindo a conformidade fiscal. Com o uso de Python e bibliotecas como pandas e FPDF, é possível integrar essas informações aos sistemas contábeis e facilitar o processo de pagamento dos tributos.
+A automação da geração de guias de impostos pode trazer maior agilidade e precisão para o cumprimento das obrigações tributárias das empresas, reduzindo o risco de erros e atrasos. Com o uso de cálculos automáticos e a geração de documentos, é possível simplificar e otimizar essa tarefa contábil.
 
 ***
 
 # 12. Envio automático de boletos por e-mail
 
-O envio de boletos por e-mail é uma prática comum em escritórios de contabilidade, utilizada para facilitar o recebimento de pagamentos pelos clientes. Neste exemplo, vamos mostrar como automatizar o envio de boletos por e-mail, utilizando Python para ler os dados dos boletos e enviar as mensagens de cobrança de forma programática.
+O envio de boletos por e-mail é uma prática comum e eficiente para a cobrança de clientes, facilitando o recebimento e melhorando o fluxo de caixa das empresas. Neste exemplo, vamos mostrar como automatizar o envio de boletos por e-mail, utilizando Python para gerar os boletos e enviá-los automaticamente para os clientes.
 
 ## 12.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
-- Leia os dados dos boletos a serem enviados a partir de um arquivo CSV ou Excel.
-- Envie um e-mail para cada cliente, com o boleto em anexo e as instruções de pagamento.
+- Gere boletos bancários com base nas informações de cobrança.
+- Envie os boletos gerados como anexos em e-mails para os clientes.
 
 ## 12.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `ler_dados_boletos()`: Para ler os dados dos boletos a partir de um arquivo CSV ou Excel.
-- `enviar_boleto_email()`: Para enviar o e-mail com o boleto em anexo.
+- `gerar_boleto()`: Para gerar o boleto bancário.
+- `enviar_boleto_email()`: Para enviar o boleto por e-mail.
 
 ## 12.3. Exemplo de Código
 
@@ -1865,61 +1877,59 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
-import os
 
-# Função para ler os dados dos boletos
-def ler_dados_boletos(caminho_arquivo):
-    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+# Função para gerar o boleto bancário
+def gerar_boleto(dados_boleto, caminho_saida):
+    df_boleto = pd.DataFrame([dados_boleto])
+    df_boleto.to_csv(caminho_saida, index=False, sep=';')
+    print(f"Boleto gerado: {caminho_saida}")
 
-# Função para enviar o e-mail com o boleto
-def enviar_boleto_email(dados):
-    smtp_user = 'seu_email@gmail.com'
-    smtp_password = 'sua_senha'
-    
+# Função para enviar o boleto por e-mail
+def enviar_boleto_email(destinatario, assunto, corpo, caminho_boleto, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
     # Criar o objeto de mensagem
     msg = MIMEMultipart()
-    msg['Subject'] = f"Boleto - {dados['Descrição']}"
+    msg['Subject'] = assunto
     msg['From'] = smtp_user
-    msg['To'] = dados['Email']
-    
+    msg['To'] = destinatario
     # Adicionar o corpo do e-mail
-    corpo = f"Prezado(a) {dados['Nome']},\n\nSegue em anexo o boleto referente a {dados['Descrição']}." \
-            f"\nValor: R$ {dados['Valor']}\nVencimento: {dados['Vencimento']}"
     msg.attach(MIMEText(corpo, 'plain'))
-    
-    # Adicionar o anexo (boleto)
-    caminho_anexo = dados['Caminho_Boleto']
-    with open(caminho_anexo, 'rb') as anexo:
+    # Adicionar o anexo
+    with open(caminho_boleto, 'rb') as anexo:
         parte = MIMEBase('application', 'octet-stream')
         parte.set_payload(anexo.read())
         encoders.encode_base64(parte)
-        parte.add_header('Content-Disposition', f'attachment; filename={os.path.basename(caminho_anexo)}')
+        parte.add_header('Content-Disposition', f'attachment; filename={caminho_boleto.split("/")[-1]}')
         msg.attach(parte)
-    
     # Enviar o e-mail
-    with smtplib.SMTP('smtp.gmail.com', 587) as server:
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
         server.starttls()
         server.login(smtp_user, smtp_password)
         server.send_message(msg)
 
 # Exemplo de uso
-caminho_arquivo = 'dados_boletos.csv'
-dados_boletos = ler_dados_boletos(caminho_arquivo)
+dados_boleto = {
+    'Cliente': 'João da Silva',
+    'Valor': 150.00,
+    'Vencimento': '2025-06-10'
+}
+caminho_boleto = 'boleto_joao_silva.csv'
+gerar_boleto(dados_boleto, caminho_boleto)
 
-for _, row in dados_boletos.iterrows():
-    enviar_boleto_email(row)
-    print(f"Boleto enviado para: {row['Email']}")
+# Enviar o boleto por e-mail (descomente a linha abaixo para enviar o e-mail)
+# enviar_boleto_email('joao@email.com', 'Seu Boleto', 'Segue em anexo o boleto.', caminho_boleto, 'seu_email@gmail.com', 'sua_senha')
 ```
 
 ## 12.4. Considerações Finais
 
-A automação do envio de boletos por e-mail pode trazer maior eficiência e agilidade para escritórios de contabilidade, facilitando o recebimento de pagamentos e melhorando a comunicação com os clientes. Com o uso de Python e bibliotecas como pandas e smtplib, é possível integrar essas informações aos sistemas contábeis e automatizar todo o processo de cobrança.
+A automação do envio de boletos por e-mail pode trazer maior eficiência e agilidade para o processo de cobrança, melhorando o fluxo de caixa e a relação com os clientes. Com o uso de geração automática de boletos e envio programático por e-mail, é possível simplificar e otimizar essa tarefa financeira.
 
 ***
 
 # Escritório de Logística
 
-Os escritórios de logística são responsáveis pela gestão eficiente da cadeia de suprimentos, envolvendo o planejamento, a execução e o controle do fluxo de materiais e informações. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e visibilidade nas operações logísticas.
+Os escritórios de logística são responsáveis pelo planejamento, execução e controle de operações de transporte e armazenamento de mercadorias, visando a eficiência e a redução de custos. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e rastreabilidade.
 
 Nesta seção, apresentamos exemplos práticos de automação voltados para escritórios de logística, com o objetivo de demonstrar como as técnicas de programação e automação podem ser aplicadas para resolver problemas específicos dessa área.
 
@@ -1933,19 +1943,19 @@ Esperamos que esta seção inspire você a identificar novas oportunidades de au
 
 # 13. Leitura e geração de manifestos (XML, PDF)
 
-A leitura e geração de manifestos é uma tarefa comum na logística, utilizada para documentar e acompanhar o transporte de mercadorias. Neste exemplo, vamos mostrar como automatizar a leitura e geração de manifestos em formatos XML e PDF, utilizando Python e as bibliotecas `xml.etree.ElementTree` e `FPDF` para manipulação de arquivos.
+A leitura e geração de manifestos é uma atividade importante para o transporte de mercadorias, sendo essencial para a conformidade fiscal e o rastreamento das operações de transporte. Neste exemplo, vamos mostrar como automatizar a leitura de manifestos em formato XML e PDF, e a geração de novos manifestos com base nas informações lidas.
 
 ## 13.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
-- Leia um arquivo XML contendo os dados do manifesto.
-- Gere um arquivo PDF com as informações do manifesto, formatado para impressão.
+- Leia um manifesto em formato XML, extraindo as informações relevantes.
+- Gere um novo manifesto em formato PDF, com as informações extraídas.
 
 ## 13.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `ler_manifesto_xml()`: Para ler o arquivo XML do manifesto.
-- `gerar_manifesto_pdf()`: Para gerar o arquivo PDF com as informações do manifesto.
+- `ler_manifesto_xml()`: Para ler o manifesto em formato XML.
+- `gerar_manifesto_pdf()`: Para gerar o novo manifesto em formato PDF.
 
 ## 13.3. Exemplo de Código
 
@@ -1953,140 +1963,121 @@ O código será estruturado em funções, para facilitar a leitura e a manutenç
 import xml.etree.ElementTree as ET
 from fpdf import FPDF
 
-# Função para ler o manifesto em XML
+# Função para ler o manifesto em formato XML
 def ler_manifesto_xml(caminho_arquivo):
     tree = ET.parse(caminho_arquivo)
     root = tree.getroot()
-    dados_manifesto = {}
-    
-    # Extrair informações do XML (exemplo)
-    dados_manifesto['remetente'] = root.find('remetente').text
-    dados_manifesto['destinatario'] = root.find('destinatario').text
-    dados_manifesto['peso'] = root.find('peso').text
-    dados_manifesto['valor_frete'] = root.find('valor_frete').text
-    
+    dados_manifesto = {
+        'remetente': root.find('remetente').text,
+        'destinatario': root.find('destinatario').text,
+        'peso': root.find('peso').text,
+        'valor_frete': root.find('valor_frete').text
+    }
     return dados_manifesto
 
-# Função para gerar o manifesto em PDF
-def gerar_manifesto_pdf(dados, caminho_saida):
+# Função para gerar o manifesto em formato PDF
+def gerar_manifesto_pdf(dados_manifesto, caminho_saida):
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font("Arial", size=12)
-    
-    # Preencher campos do manifesto (exemplo)
-    pdf.cell(0, 10, f"Remetente: {dados['remetente']}", ln=True)
-    pdf.cell(0, 10, f"Destinatário: {dados['destinatario']}", ln=True)
-    pdf.cell(0, 10, f"Peso: {dados['peso']} kg", ln=True)
-    pdf.cell(0, 10, f"Valor do Frete: R$ {dados['valor_frete']}", ln=True)
-    
-    # Salvar o PDF
+    for chave, valor in dados_manifesto.items():
+        pdf.cell(0, 10, f"{chave}: {valor}", ln=True)
     pdf.output(caminho_saida)
+    print(f"Manifesto gerado: {caminho_saida}")
 
 # Exemplo de uso
-caminho_arquivo_xml = 'manifesto.xml'
-caminho_saida_pdf = 'manifesto.pdf'
-
-dados_manifesto = ler_manifesto_xml(caminho_arquivo_xml)
-gerar_manifesto_pdf(dados_manifesto, caminho_saida_pdf)
-
-print(f"Manifesto gerado com sucesso: {caminho_saida_pdf}")
+caminho_xml = 'manifesto.xml'
+caminho_pdf = 'manifesto.pdf'
+dados_manifesto = ler_manifesto_xml(caminho_xml)
+gerar_manifesto_pdf(dados_manifesto, caminho_pdf)
 ```
 
 ## 13.4. Considerações Finais
 
-A automação da leitura e geração de manifestos pode trazer ganhos significativos de eficiência e precisão para escritórios de logística, além de facilitar a geração de relatórios e a análise das movimentações financeiras. Com o uso de Python e bibliotecas como pandas e FPDF, é possível integrar essas informações aos sistemas logísticos e melhorar a gestão do transporte de mercadorias.
+A automação da leitura e geração de manifestos pode trazer maior eficiência e precisão para as operações de transporte, facilitando o cumprimento das obrigações fiscais e o rastreamento das mercadorias. Com o uso de arquivos XML e PDF, e a automação do processamento e geração de documentos, é possível simplificar e otimizar essa tarefa logística.
 
 ***
 
 # 14. Roteirização com base em distância (API Google Maps ou OpenRoute)
 
-A roteirização é uma atividade essencial na logística, utilizada para planejar as rotas mais eficientes para o transporte de mercadorias. Neste exemplo, vamos mostrar como automatizar a roteirização com base em distância, utilizando Python e a API do Google Maps ou OpenRoute.
+A roteirização é uma atividade fundamental para a otimização do transporte de mercadorias, permitindo a definição das melhores rotas a serem seguidas pelos veículos. Neste exemplo, vamos mostrar como automatizar a roteirização com base em distância, utilizando APIs como Google Maps ou OpenRoute.
 
 ## 14.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
 - Receba uma lista de endereços de origem e destino.
-- Calcule a rota mais eficiente com base na distância entre os pontos.
-- Gere um relatório com as rotas e distâncias calculadas.
+- Calcule a rota mais curta ou mais rápida entre os pontos, utilizando a API escolhida.
+- Exiba o resultado com as informações da rota, como distância e tempo estimado.
 
 ## 14.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `calcular_distancia_google_maps()`: Para calcular a distância entre dois endereços usando a API do Google Maps.
-- `calcular_distancia_openroute()`: Para calcular a distância entre dois endereços usando a API OpenRoute.
-- `gerar_relatorio_roteirizacao()`: Para gerar um relatório com as rotas e distâncias calculadas.
+- `calcular_rota_google_maps()`: Para calcular a rota utilizando a API do Google Maps.
+- `calcular_rota_openroute()`: Para calcular a rota utilizando a API do OpenRoute.
 
 ## 14.3. Exemplo de Código
 
 ```python
 import requests
-import pandas as pd
 
-# Função para calcular a distância usando a API do Google Maps
-def calcular_distancia_google_maps(origem, destino, api_key):
-    url = f"https://maps.googleapis.com/maps/api/directions/json?origin={origem}&destination={destino}&key={api_key}"
+# Função para calcular a rota utilizando a API do Google Maps
+def calcular_rota_google_maps(origem, destino, chave_api):
+    url = f"https://maps.googleapis.com/maps/api/directions/json?origin={origem}&destination={destino}&key={chave_api}"
     response = requests.get(url)
     dados = response.json()
-    
     if dados['status'] == 'OK':
-        distancia = dados['routes'][0]['legs'][0]['distance']['value']  # em metros
-        return distancia / 1000  # converter para km
+        rota = dados['routes'][0]
+        distancia = rota['legs'][0]['distance']['text']
+        tempo = rota['legs'][0]['duration']['text']
+        return f"Distância: {distancia}, Tempo: {tempo}"
     else:
-        raise Exception("Erro ao calcular a distância com o Google Maps.")
+        return "Erro ao calcular a rota."
 
-# Função para calcular a distância usando a API OpenRoute
-def calcular_distancia_openroute(origem, destino):
-    url = f"https://api.openrouteservice.org/v2/directions/driving-car?start={origem}&end={destino}"
-    headers = {
-        'Authorization': 'sua_chave_api_openroute',
-        'Content-Type': 'application/json'
-    }
-    response = requests.get(url, headers=headers)
+# Função para calcular a rota utilizando a API do OpenRoute
+def calcular_rota_openroute(origem, destino):
+    url = f"https://api.openrouteservice.org/v2/directions/driving-car?api_key=sua_chave_api&start={origem}&end={destino}"
+    response = requests.get(url)
     dados = response.json()
-    
-    if 'routes' in dados:
-        distancia = dados['routes'][0]['summary']['length']  # em metros
-        return distancia / 1000  # converter para km
+    if dados['routes']:
+        rota = dados['routes'][0]
+        distancia = rota['summary']['length']
+        tempo = rota['summary']['duration']
+        return f"Distância: {distancia} metros, Tempo: {tempo} segundos"
     else:
-        raise Exception("Erro ao calcular a distância com o OpenRoute.")
+        return "Erro ao calcular a rota."
 
 # Exemplo de uso
 origem = "-23.550520, -46.633308"  # São Paulo
 destino = "-22.906847, -43.172896"  # Rio de Janeiro
-api_key_google_maps = "sua_chave_api_google_maps"
-
-# Calcular distância com Google Maps
-distancia_google_maps = calcular_distancia_google_maps(origem, destino, api_key_google_maps)
-print(f"Distância (Google Maps): {distancia_google_maps} km")
-
-# Calcular distância com OpenRoute
-distancia_openroute = calcular_distancia_openroute(origem, destino)
-print(f"Distância (OpenRoute): {distancia_openroute} km")
+# Calcular rota pelo Google Maps
+resultado_google_maps = calcular_rota_google_maps(origem, destino, 'sua_chave_api_google_maps')
+print("Google Maps:", resultado_google_maps)
+# Calcular rota pelo OpenRoute
+resultado_openroute = calcular_rota_openroute(origem, destino)
+print("OpenRoute:", resultado_openroute)
 ```
 
 ## 14.4. Considerações Finais
 
-A automação da roteirização com base em distância pode trazer ganhos significativos de eficiência e economia para escritórios de logística, permitindo o planejamento de rotas mais curtas e econômicas. Com o uso de Python e APIs de serviços de mapas, é possível integrar essas informações aos sistemas de gestão logística e melhorar a tomada de decisões.
+A automação da roteirização com base em distância pode trazer ganhos significativos de eficiência e economia para as operações de transporte, permitindo a definição de rotas otimizadas e a redução de custos com combustível e tempo de viagem. Com o uso de APIs de mapeamento e a automação do processamento das informações, é possível simplificar e otimizar essa tarefa logística.
 
 ***
 
 # 15. Acompanhamento de entregas via planilhas atualizadas
 
-O acompanhamento de entregas é uma atividade importante na logística, utilizada para monitorar o status das entregas e garantir a satisfação dos clientes. Neste exemplo, vamos mostrar como automatizar o acompanhamento de entregas, utilizando Python para ler planilhas atualizadas e enviar notificações sobre o status das entregas.
+O acompanhamento de entregas é uma atividade importante para garantir a satisfação dos clientes e a eficiência das operações de logística. Neste exemplo, vamos mostrar como automatizar o acompanhamento de entregas, utilizando Python para ler planilhas atualizadas com o status das entregas e enviar notificações automáticas.
 
 ## 15.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
-- Leia uma planilha com as informações das entregas, contendo dados como número do pedido, cliente, endereço de entrega, status da entrega, entre outros.
-- Verifique quais entregas estão com status de "pendente" ou "atrasada".
-- Envie uma notificação por e-mail ou mensagem para o responsável pela entrega, informando sobre a situação da entrega.
+- Leia uma planilha com as informações das entregas, incluindo o status da entrega.
+- Envie notificações automáticas para os clientes, informando sobre o status da entrega.
 
 ## 15.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
 - `ler_planilha_entregas()`: Para ler a planilha com as informações das entregas.
-- `verificar_status_entregas()`: Para verificar o status das entregas e identificar pendências.
-- `enviar_notificacao_entrega()`: Para enviar notificações sobre o status das entregas.
+- `enviar_notificacoes()`: Para enviar as notificações automáticas.
 
 ## 15.3. Exemplo de Código
 
@@ -2099,55 +2090,43 @@ from email.mime.text import MIMEText
 def ler_planilha_entregas(caminho_arquivo):
     return pd.read_excel(caminho_arquivo)
 
-# Função para verificar o status das entregas
-def verificar_status_entregas(df):
-    entregas_pendentes = df[df['Status'] == 'Pendente']
-    entregas_atrasadas = df[df['Status'] == 'Atrasada']
-    return entregas_pendentes, entregas_atrasadas
-
-# Função para enviar notificação sobre a entrega
-def enviar_notificacao_entrega(entregas, tipo, smtp_user, smtp_password):
-    for _, row in entregas.iterrows():
-        destinatario = row['Responsável']
-        assunto = f"Notificação de Entrega - Pedido {row['Número do Pedido']}"
-        corpo = f"Prezado(a),\n\nInformamos que a entrega do pedido {row['Número do Pedido']} está com status: {tipo}." \
-                f"\nPor favor, tome as providências necessárias."
-
-        # Criar o objeto de mensagem
+# Função para enviar notificações automáticas
+def enviar_notificacoes(df_entregas, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    for _, row in df_entregas.iterrows():
+        destinatario = row['Email']
+        assunto = f"Atualização sobre sua entrega - {row['Código da Entrega']}"
+        corpo = f"Prezado(a),\n\nInformamos que o status da sua entrega {row['Código da Entrega']} foi atualizado para: {row['Status']}.\n\nAtenciosamente,"
+        
         msg = MIMEText(corpo)
         msg['Subject'] = assunto
         msg['From'] = smtp_user
         msg['To'] = destinatario
         
-        # Enviar o e-mail
-        with smtplib.SMTP('smtp.gmail.com', 587) as server:
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
             server.starttls()
             server.login(smtp_user, smtp_password)
             server.send_message(msg)
 
 # Exemplo de uso
-caminho_arquivo = 'entregas.xlsx'
-df_entregas = ler_planilha_entregas(caminho_arquivo)
-entregas_pendentes, entregas_atrasadas = verificar_status_entregas(df_entregas)
+caminho_planilha = 'entregas_atualizadas.xlsx'
+df_entregas = ler_planilha_entregas(caminho_planilha)
+# Enviar notificações (descomente a linha abaixo para enviar os e-mails)
+# enviar_notificacoes(df_entregas, 'seu_email@gmail.com', 'sua_senha')
 
-# Enviar notificações (descomente para enviar e-mails)
-# smtp_user = 'seu_email@gmail.com'
-# smtp_password = 'sua_senha'
-# enviar_notificacao_entrega(entregas_pendentes, 'Pendente', smtp_user, smtp_password)
-# enviar_notificacao_entrega(entregas_atrasadas, 'Atrasada', smtp_user, smtp_password)
-
-print("Entregas pendentes e atrasadas identificadas.")
+print("Processamento concluído.")
 ```
 
 ## 15.4. Considerações Finais
 
-A automação do acompanhamento de entregas pode trazer maior eficiência e satisfação dos clientes para escritórios de logística, permitindo o monitoramento em tempo real das entregas e a comunicação proativa com os clientes. Com o uso de Python e bibliotecas como pandas e smtplib, é possível integrar essas informações aos sistemas de gestão logística e melhorar a experiência do cliente.
+A automação do acompanhamento de entregas pode trazer maior eficiência e agilidade para as operações de logística, melhorando a comunicação com os clientes e a gestão das entregas. Com o uso de planilhas atualizadas e o envio automático de notificações por e-mail, é possível simplificar e otimizar essa tarefa logística.
 
 ***
 
 # E-commerce e Vendas Online
 
-Os escritórios que atuam com e-commerce e vendas online enfrentam desafios específicos relacionados à gestão de pedidos, controle de estoque, emissão de notas fiscais e comunicação com clientes. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e eficiência nas operações de vendas online.
+Os escritórios e empresas que atuam no segmento de e-commerce e vendas online enfrentam desafios específicos relacionados à gestão de pedidos, controle de estoque, emissão de notas fiscais e atendimento ao cliente. A automação pode trazer benefícios significativos para a rotina dessas empresas, permitindo maior agilidade, precisão e eficiência.
 
 Nesta seção, apresentamos exemplos práticos de automação voltados para e-commerce e vendas online, com o objetivo de demonstrar como as técnicas de programação e automação podem ser aplicadas para resolver problemas específicos dessa área.
 
@@ -2161,116 +2140,111 @@ Esperamos que esta seção inspire você a identificar novas oportunidades de au
 
 # 16. Leitura de pedidos de marketplaces
 
-A leitura de pedidos de marketplaces é uma tarefa comum e importante para escritórios que gerenciam vendas online. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade e precisão na gestão dos pedidos.
-
-Neste exemplo, vamos mostrar como automatizar a leitura de pedidos de marketplaces, utilizando Python e a biblioteca `pandas` para manipulação de dados.
+A leitura e processamento de pedidos de marketplaces é uma tarefa importante para empresas que vendem produtos em plataformas como Mercado Livre, Amazon e outros. Neste exemplo, vamos mostrar como automatizar a leitura de pedidos recebidos em um marketplace, utilizando Python para processar as informações e gerar relatórios.
 
 ## 16.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
-- Leia um arquivo CSV ou Excel contendo os pedidos dos marketplaces.
-- Extraia as informações relevantes dos pedidos, como número do pedido, cliente, produtos, quantidade, valor total, entre outros.
-- Gere um relatório com os pedidos lidos e as informações extraídas.
+- Leia um arquivo com os pedidos recebidos, contendo informações como produto, quantidade, preço e dados do cliente.
+- Gere um relatório com o resumo dos pedidos, incluindo o total de vendas e a lista de produtos mais vendidos.
 
 ## 16.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `ler_pedidos_marketplace()`: Para ler o arquivo dos pedidos.
-- `extrair_informacoes_pedidos()`: Para extrair as informações relevantes dos pedidos.
-- `gerar_relatorio_pedidos()`: Para gerar um relatório com os pedidos lidos.
+- `ler_pedidos()`: Para ler o arquivo com os pedidos recebidos.
+- `gerar_relatorio_pedidos()`: Para gerar o relatório com o resumo dos pedidos.
 
 ## 16.3. Exemplo de Código
 
 ```python
 import pandas as pd
 
-# Função para ler os pedidos dos marketplaces
-def ler_pedidos_marketplace(caminho_arquivo):
+# Função para ler os pedidos recebidos
+def ler_pedidos(caminho_arquivo):
     return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
 
-# Função para extrair as informações relevantes dos pedidos
-def extrair_informacoes_pedidos(df):
-    relatorio = df[['Número do Pedido', 'Cliente', 'Produto', 'Quantidade', 'Valor Total']]
-    return relatorio
+# Função para gerar o relatório com o resumo dos pedidos
+def gerar_relatorio_pedidos(df_pedidos):
+    relatorio = df_pedidos.groupby('Produto').agg({'Quantidade': 'sum', 'Preço': 'mean'}).reset_index()
+    relatorio['Total Vendas'] = relatorio['Quantidade'] * relatorio['Preço']
+    relatorio.to_csv('relatorio_pedidos.csv', index=False, sep=';')
+    print("Relatório de pedidos gerado: relatorio_pedidos.csv")
 
 # Exemplo de uso
 caminho_arquivo = 'pedidos_marketplace.csv'
-df_pedidos = ler_pedidos_marketplace(caminho_arquivo)
-relatorio_pedidos = extrair_informacoes_pedidos(df_pedidos)
-
-print("Pedidos lidos com sucesso:")
-print(relatorio_pedidos)
+df_pedidos = ler_pedidos(caminho_arquivo)
+gerar_relatorio_pedidos(df_pedidos)
 ```
 
 ## 16.4. Considerações Finais
 
-A automação da leitura de pedidos de marketplaces pode trazer ganhos significativos de eficiência e precisão para escritórios que gerenciam vendas online, facilitando a gestão dos pedidos e a geração de relatórios. Com o uso de Python e pandas, é possível integrar essas informações aos sistemas de gestão de vendas e melhorar a operação do e-commerce.
+A automação da leitura e processamento de pedidos de marketplaces pode trazer maior eficiência e agilidade para as operações de vendas online, facilitando o acompanhamento dos pedidos e a geração de relatórios. Com o uso de arquivos CSV e a automação do processamento de dados, é possível simplificar e otimizar essa tarefa comercial.
 
 ***
 
 # 17. Atualização automática de estoque em Excel/ERP simples
 
-A atualização de estoque é uma tarefa crítica para escritórios que atuam com e-commerce e vendas online, pois garante que as informações sobre a disponibilidade dos produtos estejam sempre atualizadas. Neste exemplo, vamos mostrar como automatizar a atualização de estoque em Excel ou em um ERP simples, utilizando Python e a biblioteca `pandas` para manipulação de dados.
+A atualização de estoque é uma atividade crítica para empresas de e-commerce e vendas online, sendo essencial para garantir a disponibilidade dos produtos e evitar perdas financeiras. Neste exemplo, vamos mostrar como automatizar a atualização de estoque em planilhas Excel ou em um ERP simples, utilizando Python para ler os dados de vendas e atualizar as quantidades em estoque.
 
 ## 17.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
-- Leia um arquivo CSV ou Excel contendo as movimentações de estoque (entradas e saídas de produtos).
-- Calcule o saldo atual de estoque para cada produto.
-- Atualize o arquivo de estoque com as novas quantidades.
+- Leia um arquivo com os dados de vendas, contendo informações como produto, quantidade vendida e data da venda.
+- Atualize automaticamente as quantidades em estoque em uma planilha Excel ou em um ERP simples.
 
 ## 17.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `ler_movimentacoes_estoque()`: Para ler o arquivo das movimentações de estoque.
-- `calcular_saldo_estoque()`: Para calcular o saldo atual de estoque.
-- `atualizar_estoque()`: Para atualizar o arquivo de estoque com as novas quantidades.
+- `ler_vendas()`: Para ler o arquivo com os dados de vendas.
+- `atualizar_estoque()`: Para atualizar as quantidades em estoque.
 
 ## 17.3. Exemplo de Código
 
 ```python
 import pandas as pd
 
-# Função para ler as movimentações de estoque
-def ler_movimentacoes_estoque(caminho_arquivo):
+# Função para ler os dados de vendas
+def ler_vendas(caminho_arquivo):
     return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
 
-# Função para calcular o saldo atual de estoque
-def calcular_saldo_estoque(df_movimentacoes):
-    saldo = df_movimentacoes.groupby('Produto')['Quantidade'].sum().reset_index()
-    saldo.rename(columns={'Quantidade': 'Saldo Atual'}, inplace=True)
-    return saldo
+# Função para atualizar o estoque
+def atualizar_estoque(df_vendas, caminho_estoque):
+    df_estoque = pd.read_excel(caminho_estoque)
+    for _, row in df_vendas.iterrows():
+        produto = row['Produto']
+        quantidade_vendida = row['Quantidade']
+        df_estoque.loc[df_estoque['Produto'] == produto, 'Estoque'] -= quantidade_vendida
+    df_estoque.to_excel(caminho_estoque, index=False)
+    print("Estoque atualizado com sucesso.")
 
 # Exemplo de uso
-caminho_arquivo = 'movimentacoes_estoque.csv'
-df_movimentacoes = ler_movimentacoes_estoque(caminho_arquivo)
-saldo_estoque = calcular_saldo_estoque(df_movimentacoes)
-
-print("Saldo atual de estoque:")
-print(saldo_estoque)
+caminho_vendas = 'vendas.csv'
+caminho_estoque = 'estoque.xlsx'
+df_vendas = ler_vendas(caminho_vendas)
+atualizar_estoque(df_vendas, caminho_estoque)
 ```
 
 ## 17.4. Considerações Finais
 
-A automação da atualização de estoque pode trazer maior eficiência e precisão para escritórios que atuam com e-commerce e vendas online, garantindo que as informações de estoque estejam sempre atualizadas e disponíveis para consulta. Com o uso de Python e pandas, é possível integrar essas informações aos sistemas de gestão de vendas e melhorar a operação do e-commerce.
+A automação da atualização de estoque pode trazer maior eficiência e precisão para a gestão de estoques em empresas de e-commerce e vendas online, facilitando o acompanhamento das vendas e a atualização das quantidades em estoque. Com o uso de arquivos CSV e Excel, e a automação do processamento de dados, é possível simplificar e otimizar essa tarefa comercial.
 
 ***
 
 # 18. Envio de notas fiscais e respostas automáticas a clientes
 
-O envio de notas fiscais e respostas automáticas a clientes é uma tarefa importante para escritórios de contabilidade e e-commerce, pois garante a comunicação eficiente e a formalização das transações comerciais. Neste exemplo, vamos mostrar como automatizar o envio de notas fiscais e respostas automáticas a clientes, utilizando Python para ler os dados das notas fiscais e enviar as mensagens por e-mail de forma programática.
+O envio de notas fiscais e respostas automáticas a clientes é uma prática importante para garantir a conformidade fiscal e melhorar o atendimento ao cliente. Neste exemplo, vamos mostrar como automatizar o envio de notas fiscais eletrônicas e respostas automáticas a clientes, utilizando Python para gerar os documentos e enviá-los por e-mail.
 
 ## 18.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
-- Leia os dados das notas fiscais a serem enviadas a partir de um arquivo CSV ou Excel.
-- Envie um e-mail para cada cliente, com a nota fiscal em anexo e as instruções de pagamento.
+- Gere notas fiscais eletrônicas com base nas informações de vendas.
+- Envie as notas fiscais geradas e respostas automáticas por e-mail para os clientes.
 
 ## 18.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `ler_dados_notas_fiscais()`: Para ler os dados das notas fiscais a partir de um arquivo CSV ou Excel.
-- `enviar_nota_fiscal_email()`: Para enviar o e-mail com a nota fiscal em anexo.
+- `gerar_nota_fiscal()`: Para gerar a nota fiscal eletrônica.
+- `enviar_nota_fiscal_email()`: Para enviar a nota fiscal e a resposta automática por e-mail.
 
 ## 18.3. Exemplo de Código
 
@@ -2281,61 +2255,61 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
-import os
 
-# Função para ler os dados das notas fiscais
-def ler_dados_notas_fiscais(caminho_arquivo):
-    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+# Função para gerar a nota fiscal eletrônica
+def gerar_nota_fiscal(dados_venda, caminho_saida):
+    df_nota = pd.DataFrame([dados_venda])
+    df_nota.to_csv(caminho_saida, index=False, sep=';')
+    print(f"Nota fiscal gerada: {caminho_saida}")
 
-# Função para enviar o e-mail com a nota fiscal
-def enviar_nota_fiscal_email(dados):
-    smtp_user = 'seu_email@gmail.com'
-    smtp_password = 'sua_senha'
-    
+# Função para enviar a nota fiscal por e-mail
+def enviar_nota_fiscal_email(destinatario, assunto, corpo, caminho_nota, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
     # Criar o objeto de mensagem
     msg = MIMEMultipart()
-    msg['Subject'] = f"Nota Fiscal - Pedido {dados['Número do Pedido']}"
+    msg['Subject'] = assunto
     msg['From'] = smtp_user
-    msg['To'] = dados['Email']
-    
+    msg['To'] = destinatario
     # Adicionar o corpo do e-mail
-    corpo = f"Prezado(a) {dados['Nome']},\n\nSegue em anexo a nota fiscal referente ao seu pedido {dados['Número do Pedido']}." \
-            f"\nValor: R$ {dados['Valor']}\nVencimento: {dados['Vencimento']}"
     msg.attach(MIMEText(corpo, 'plain'))
-    
-    # Adicionar o anexo (nota fiscal)
-    caminho_anexo = dados['Caminho_Nota_Fiscal']
-    with open(caminho_anexo, 'rb') as anexo:
+    # Adicionar o anexo
+    with open(caminho_nota, 'rb') as anexo:
         parte = MIMEBase('application', 'octet-stream')
         parte.set_payload(anexo.read())
         encoders.encode_base64(parte)
-        parte.add_header('Content-Disposition', f'attachment; filename={os.path.basename(caminho_anexo)}')
+        parte.add_header('Content-Disposition', f'attachment; filename={caminho_nota.split("/")[-1]}')
         msg.attach(parte)
-    
     # Enviar o e-mail
-    with smtplib.SMTP('smtp.gmail.com', 587) as server:
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
         server.starttls()
         server.login(smtp_user, smtp_password)
         server.send_message(msg)
 
 # Exemplo de uso
-caminho_arquivo = 'dados_notas_fiscais.csv'
-dados_notas_fiscais = ler_dados_notas_fiscais(caminho_arquivo)
+dados_venda = {
+    'Cliente': 'João da Silva',
+    'Produto': 'Notebook',
+    'Quantidade': 1,
+    'Valor Unitário': 5000.00,
+    'CNPJ': '12.345.678/0001-95'
+}
+caminho_nota = 'nota_fiscal_joao_silva.csv'
+gerar_nota_fiscal(dados_venda, caminho_nota)
 
-for _, row in dados_notas_fiscais.iterrows():
-    enviar_nota_fiscal_email(row)
-    print(f"Nota fiscal enviada para: {row['Email']}")
+# Enviar a nota fiscal por e-mail (descomente a linha abaixo para enviar o e-mail)
+# enviar_nota_fiscal_email('joao@email.com', 'Sua Nota Fiscal', 'Segue em anexo a nota fiscal.', caminho_nota, 'seu_email@gmail.com', 'sua_senha')
 ```
 
 ## 18.4. Considerações Finais
 
-A automação do envio de notas fiscais e respostas automáticas a clientes pode trazer maior eficiência e agilidade para escritórios de contabilidade e e-commerce, facilitando a comunicação e a formalização das transações comerciais. Com o uso de Python e bibliotecas como pandas e smtplib, é possível integrar essas informações aos sistemas de gestão de vendas e melhorar a operação do e-commerce.
+A automação do envio de notas fiscais e respostas automáticas a clientes pode trazer maior eficiência e agilidade para o processo de faturamento e atendimento ao cliente, garantindo a conformidade fiscal e melhorando a experiência do cliente. Com o uso de geração automática de notas fiscais e envio programático por e-mail, é possível simplificar e otimizar essa tarefa financeira e comercial.
 
 ***
 
 # Escritórios que prestam serviços para repartições públicas e órgãos governamentais
 
-Os escritórios que prestam serviços para repartições públicas e órgãos governamentais enfrentam desafios específicos relacionados à burocracia, ao cumprimento de prazos e à necessidade de conformidade com normas e regulamentos. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e transparência nas operações.
+Os escritórios que prestam serviços para repartições públicas e órgãos governamentais enfrentam desafios específicos relacionados à gestão de documentos, cumprimento de prazos, atendimento a requisitos legais e normativos, entre outros. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e conformidade.
 
 Nesta seção, apresentamos exemplos práticos de automação voltados para escritórios que prestam serviços para repartições públicas e órgãos governamentais, com o objetivo de demonstrar como as técnicas de programação e automação podem ser aplicadas para resolver problemas específicos dessa área.
 
@@ -2349,21 +2323,19 @@ Esperamos que esta seção inspire você a identificar novas oportunidades de au
 
 # 19. Controle Automatizado de Protocolos em Repartição Pública
 
-O controle de protocolos em repartições públicas é uma atividade importante para garantir a tramitação adequada dos processos e a transparência nas ações governamentais. Neste exemplo, vamos mostrar como automatizar o controle de protocolos em repartições públicas, utilizando Python para ler e processar os dados dos protocolos e enviar notificações sobre o andamento dos processos.
+O controle de protocolos em repartições públicas é uma atividade importante para garantir a tramitação adequada de processos e documentos. Neste exemplo, vamos mostrar como automatizar o controle de protocolos em uma repartição pública, utilizando Python para ler planilhas com os dados dos protocolos e enviar notificações automáticas.
 
 ## 19.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
-- Leia uma planilha com os dados dos protocolos, contendo informações como número do protocolo, interessado, assunto, data de entrada, entre outros.
-- Verifique quais protocolos estão com pendências ou prazos a vencer.
-- Envie uma notificação por e-mail ou mensagem para o responsável pelo protocolo, informando sobre a situação.
+- Leia uma planilha com os dados dos protocolos, contendo informações como número do protocolo, descrição, data de entrada e situação.
+- Envie notificações automáticas para os responsáveis, informando sobre a situação dos protocolos.
 
 ## 19.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
 - `ler_planilha_protocolos()`: Para ler a planilha com os dados dos protocolos.
-- `verificar_situacao_protocolos()`: Para verificar a situação dos protocolos e identificar pendências.
-- `enviar_notificacao_protocolo()`: Para enviar notificações sobre a situação dos protocolos.
+- `enviar_notificacoes_protocolos()`: Para enviar as notificações automáticas.
 
 ## 19.3. Exemplo de Código
 
@@ -2376,259 +2348,628 @@ from email.mime.text import MIMEText
 def ler_planilha_protocolos(caminho_arquivo):
     return pd.read_excel(caminho_arquivo)
 
-# Função para verificar a situação dos protocolos
-def verificar_situacao_protocolos(df):
-    protocolos_pendentes = df[df['Situação'] == 'Pendente']
-    return protocolos_pendentes
-
-# Função para enviar notificação sobre o protocolo
-def enviar_notificacao_protocolo(protocolos, smtp_user, smtp_password):
-    for _, row in protocolos.iterrows():
-        destinatario = row['Responsável']
-        assunto = f"Notificação de Protocolo - {row['Número do Protocolo']}"
-        corpo = f"Prezado(a),\n\nInformamos que o protocolo {row['Número do Protocolo']} está com situação: {row['Situação']}." \
-                f"\nPor favor, tome as providências necessárias."
-
-        # Criar o objeto de mensagem
+# Função para enviar notificações automáticas
+def enviar_notificacoes_protocolos(df_protocolos, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    for _, row in df_protocolos.iterrows():
+        destinatario = row['Email']
+        assunto = f"Atualização sobre seu Protocolo - {row['Número do Protocolo']}"
+        corpo = f"Prezado(a),\n\nInformamos que a situação do seu protocolo {row['Número do Protocolo']} foi atualizado para: {row['Situação']}.\n\nAtenciosamente,"
+        
         msg = MIMEText(corpo)
         msg['Subject'] = assunto
         msg['From'] = smtp_user
         msg['To'] = destinatario
         
-        # Enviar o e-mail
-        with smtplib.SMTP('smtp.gmail.com', 587) as server:
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
             server.starttls()
             server.login(smtp_user, smtp_password)
             server.send_message(msg)
 
 # Exemplo de uso
-caminho_arquivo = 'protocolos_reparticao_publica.xlsx'
-df_protocolos = ler_planilha_protocolos(caminho_arquivo)
-protocolos_pendentes = verificar_situacao_protocolos(df_protocolos)
+caminho_planilha = 'protocolos_reparticao_publica.xlsx'
+df_protocolos = ler_planilha_protocolos(caminho_planilha)
+# Enviar notificações (descomente a linha abaixo para enviar os e-mails)
+# enviar_notificacoes_protocolos(df_protocolos, 'seu_email@gmail.com', 'sua_senha')
 
-# Enviar notificações (descomente para enviar e-mails)
-# smtp_user = 'seu_email@gmail.com'
-# smtp_password = 'sua_senha'
-# enviar_notificacao_protocolo(protocolos_pendentes, smtp_user, smtp_password)
-
-print("Protocolos pendentes identificados.")
+print("Processamento concluído.")
 ```
 
 ## 19.4. Considerações Finais
 
-A automação do controle de protocolos em repartições públicas pode trazer maior eficiência e transparência para os processos administrativos, permitindo o monitoramento em tempo real dos protocolos e a comunicação proativa com os cidadãos. Com o uso de Python e bibliotecas como pandas e smtplib, é possível integrar essas informações aos sistemas de gestão pública e melhorar a prestação de serviços.
+A automação do controle de protocolos em repartições públicas pode trazer maior eficiência e segurança para a tramitação de processos e documentos, garantindo o cumprimento de prazos e a comunicação adequada entre as partes envolvidas. Com o uso de planilhas e o envio automático de notificações por e-mail, é possível simplificar e otimizar essa tarefa administrativa.
 
 ***
 
 # 20. Conversor de tabelas PDF → Excel
 
-A conversão de tabelas em PDF para Excel é uma tarefa comum em escritórios que lidam com dados financeiros, orçamentos e relatórios. Neste exemplo, vamos mostrar como automatizar a conversão de tabelas em PDF para Excel, utilizando Python e a biblioteca `tabula-py` para extração de tabelas de arquivos PDF.
+A conversão de tabelas em PDF para Excel é uma tarefa comum em escritórios que lidam com dados financeiros, orçamentos, relatórios e outros documentos que contêm tabelas. Neste exemplo, vamos mostrar como automatizar a conversão de tabelas em PDF para Excel, utilizando Python para extrair os dados das tabelas e salvá-los em um arquivo Excel.
 
 ## 20.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
 - Leia um arquivo PDF contendo uma tabela.
-- Extraia a tabela do PDF e a converta para o formato Excel.
-- Salve a tabela convertida em um arquivo Excel.
+- Extraia os dados da tabela e os salve em um arquivo Excel.
 
 ## 20.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `ler_tabela_pdf()`: Para ler a tabela de um arquivo PDF.
+- `ler_tabela_pdf()`: Para ler a tabela do arquivo PDF.
 - `salvar_tabela_excel()`: Para salvar a tabela em um arquivo Excel.
 
 ## 20.3. Exemplo de Código
 
 ```python
-import tabula
+import pdfplumber
+import pandas as pd
 
 # Função para ler a tabela do PDF
 def ler_tabela_pdf(caminho_arquivo):
-    # Lê a tabela do PDF e retorna como DataFrame
-    df = tabula.read_pdf(caminho_arquivo, pages='all')
-    return df
+    with pdfplumber.open(caminho_arquivo) as pdf:
+        primeira_pagina = pdf.pages[0]
+        tabela = primeira_pagina.extract_table()
+    return tabela
 
-# Função para salvar a tabela em Excel
-def salvar_tabela_excel(df, caminho_saida):
-    # Salva o DataFrame como arquivo Excel
-    df.to_excel(caminho_saida, index=False)
+# Função para salvar a tabela em um arquivo Excel
+def salvar_tabela_excel(tabela, caminho_saida):
+    df_tabela = pd.DataFrame(tabela[1:], columns=tabela[0])
+    df_tabela.to_excel(caminho_saida, index=False)
+    print(f"Tabela salva em Excel: {caminho_saida}")
 
 # Exemplo de uso
-caminho_arquivo_pdf = 'tabela.pdf'
-caminho_saida_excel = 'tabela_convertida.xlsx'
-
-# Ler a tabela do PDF
-tabela_df = ler_tabela_pdf(caminho_arquivo_pdf)
-
-# Salvar a tabela como Excel
-salvar_tabela_excel(tabela_df, caminho_saida_excel)
-
-print(f"Tabela convertida com sucesso: {caminho_saida_excel}")
+caminho_pdf = 'tabela.pdf'
+caminho_excel = 'tabela.xlsx'
+tabela_extraida = ler_tabela_pdf(caminho_pdf)
+salvar_tabela_excel(tabela_extraida, caminho_excel)
 ```
 
 ## 20.4. Considerações Finais
 
-A automação da conversão de tabelas em PDF para Excel pode trazer ganhos significativos de eficiência e precisão para escritórios que lidam com dados financeiros e relatórios. Com o uso de Python e bibliotecas como tabula-py, é possível integrar essas informações aos sistemas de gestão e facilitar a análise e o processamento dos dados.
+A automação da conversão de tabelas em PDF para Excel pode trazer maior eficiência e precisão para o trabalho com dados em escritórios, facilitando a análise e o compartilhamento das informações. Com o uso de arquivos PDF e Excel, e a automação do processamento e conversão de dados, é possível simplificar e otimizar essa tarefa de manipulação de dados.
 
 ***
 
-# 21. Organizador de arquivos em pastas por cliente
+# 21. Roteirização com base em distância (API Google Maps ou OpenRoute)
 
-A organização de arquivos em pastas por cliente é uma tarefa importante para garantir a fácil localização e acesso aos documentos. Neste exemplo, vamos mostrar como automatizar a organização de arquivos em pastas por cliente, utilizando Python para ler os dados dos arquivos e mover os documentos para as pastas correspondentes.
+A roteirização é uma atividade fundamental para a otimização do transporte de mercadorias, permitindo a definição das melhores rotas a serem seguidas pelos veículos. Neste exemplo, vamos mostrar como automatizar a roteirização com base em distância, utilizando APIs como Google Maps ou OpenRoute.
 
 ## 21.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
-- Leia uma planilha com as informações dos arquivos, contendo dados como nome do arquivo, cliente, data, entre outros.
-- Crie pastas para cada cliente, caso ainda não existam.
-- Mova os arquivos para as pastas correspondentes, organizando os documentos por cliente.
+- Receba uma lista de endereços de origem e destino.
+- Calcule a rota mais curta ou mais rápida entre os pontos, utilizando a API escolhida.
+- Exiba o resultado com as informações da rota, como distância e tempo estimado.
 
 ## 21.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `ler_dados_arquivos()`: Para ler a planilha com as informações dos arquivos.
-- `criar_pastas_clientes()`: Para criar pastas para cada cliente.
-- `mover_arquivos_para_pastas()`: Para mover os arquivos para as pastas correspondentes.
+- `calcular_rota_google_maps()`: Para calcular a rota utilizando a API do Google Maps.
+- `calcular_rota_openroute()`: Para calcular a rota utilizando a API do OpenRoute.
 
 ## 21.3. Exemplo de Código
 
 ```python
-import pandas as pd
-import os
-import shutil
+import requests
 
-# Função para ler os dados dos arquivos
-def ler_dados_arquivos(caminho_arquivo):
-    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+# Função para calcular a rota utilizando a API do Google Maps
+def calcular_rota_google_maps(origem, destino, chave_api):
+    url = f"https://maps.googleapis.com/maps/api/directions/json?origin={origem}&destination={destino}&key={chave_api}"
+    response = requests.get(url)
+    dados = response.json()
+    if dados['status'] == 'OK':
+        rota = dados['routes'][0]
+        distancia = rota['legs'][0]['distance']['text']
+        tempo = rota['legs'][0]['duration']['text']
+        return f"Distância: {distancia}, Tempo: {tempo}"
+    else:
+        return "Erro ao calcular a rota."
 
-# Função para criar pastas para cada cliente
-def criar_pastas_clientes(df, pasta_base):
-    for cliente in df['Cliente'].unique():
-        caminho_pasta = os.path.join(pasta_base, cliente)
-        os.makedirs(caminho_pasta, exist_ok=True)
-
-# Função para mover os arquivos para as pastas correspondentes
-def mover_arquivos_para_pastas(df, pasta_base):
-    for _, row in df.iterrows():
-        nome_arquivo = row['Arquivo']
-        cliente = row['Cliente']
-        caminho_origem = os.path.join(pasta_base, nome_arquivo)
-        caminho_destino = os.path.join(pasta_base, cliente, nome_arquivo)
-        shutil.move(caminho_origem, caminho_destino)
+# Função para calcular a rota utilizando a API do OpenRoute
+def calcular_rota_openroute(origem, destino):
+    url = f"https://api.openrouteservice.org/v2/directions/driving-car?api_key=sua_chave_api&start={origem}&end={destino}"
+    response = requests.get(url)
+    dados = response.json()
+    if dados['routes']:
+        rota = dados['routes'][0]
+        distancia = rota['summary']['length']
+        tempo = rota['summary']['duration']
+        return f"Distância: {distancia} metros, Tempo: {tempo} segundos"
+    else:
+        return "Erro ao calcular a rota."
 
 # Exemplo de uso
-caminho_arquivo = 'dados_arquivos.csv'
-pasta_base = 'arquivos_clientes'
-
-df_arquivos = ler_dados_arquivos(caminho_arquivo)
-criar_pastas_clientes(df_arquivos, pasta_base)
-mover_arquivos_para_pastas(df_arquivos, pasta_base)
-
-print("Arquivos organizados em pastas por cliente.")
+origem = "-23.550520, -46.633308"  # São Paulo
+destino = "-22.906847, -43.172896"  # Rio de Janeiro
+# Calcular rota pelo Google Maps
+resultado_google_maps = calcular_rota_google_maps(origem, destino, 'sua_chave_api_google_maps')
+print("Google Maps:", resultado_google_maps)
+# Calcular rota pelo OpenRoute
+resultado_openroute = calcular_rota_openroute(origem, destino)
+print("OpenRoute:", resultado_openroute)
 ```
 
 ## 21.4. Considerações Finais
 
-A automação da organização de arquivos em pastas por cliente pode trazer maior eficiência e agilidade para escritórios, facilitando a localização e o acesso aos documentos. Com o uso de Python e bibliotecas como pandas e shutil, é possível integrar essas informações aos sistemas de gestão e melhorar a organização dos arquivos.
+A automação da roteirização com base em distância pode trazer ganhos significativos de eficiência e economia para as operações de transporte, permitindo a definição de rotas otimizadas e a redução de custos com combustível e tempo de viagem. Com o uso de APIs de mapeamento e a automação do processamento das informações, é possível simplificar e otimizar essa tarefa logística.
 
 ***
 
-# 22. Dashboard de pagamentos
+# 22. Acompanhamento de entregas via planilhas
 
-A criação de um dashboard de pagamentos é uma tarefa importante para acompanhar e gerenciar as receitas e despesas de um escritório. Neste exemplo, vamos mostrar como automatizar a criação de um dashboard de pagamentos, utilizando Python e a biblioteca `dash` para a construção de aplicações web interativas.
+O acompanhamento de entregas é uma atividade importante para garantir a satisfação dos clientes e a eficiência das operações de logística. Neste exemplo, vamos mostrar como automatizar o acompanhamento de entregas, utilizando Python para ler planilhas com os dados das entregas e enviar notificações automáticas.
 
 ## 22.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
-- Leia os dados de pagamentos a receber e a pagar a partir de um arquivo CSV ou Excel.
-- Calcule o saldo atual e projete o fluxo de caixa futuro.
-- Exiba um dashboard interativo com gráficos e tabelas resumindo as informações financeiras.
+- Leia uma planilha com os dados das entregas, contendo informações como código da entrega, cliente, endereço, data e status.
+- Envie notificações automáticas para os clientes, informando sobre o status da entrega.
 
 ## 22.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
-- `ler_dados_pagamentos()`: Para ler os dados de pagamentos a partir de um arquivo CSV ou Excel.
-- `calcular_fluxo_caixa()`: Para calcular o fluxo de caixa com base nos pagamentos recebidos e a pagar.
-- `criar_dashboard()`: Para criar o dashboard interativo com o `dash`.
+- `ler_planilha_entregas()`: Para ler a planilha com os dados das entregas.
+- `enviar_notificacoes_entregas()`: Para enviar as notificações automáticas.
 
 ## 22.3. Exemplo de Código
 
 ```python
 import pandas as pd
-from dash import Dash, dcc, html
-import plotly.express as px
+import smtplib
+from email.mime.text import MIMEText
 
-# Função para ler os dados de pagamentos
-def ler_dados_pagamentos(caminho_arquivo):
-    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+# Função para ler a planilha de entregas
+def ler_planilha_entregas(caminho_arquivo):
+    return pd.read_excel(caminho_arquivo)
 
-# Função para calcular o fluxo de caixa
-def calcular_fluxo_caixa(df):
-    df['Data'] = pd.to_datetime(df['Data'], format='%d/%m/%Y')
-    df.sort_values(by='Data', inplace=True)
-    df['Fluxo de Caixa'] = df['Valor'].cumsum()
-    return df
-
-# Função para criar o dashboard
-def criar_dashboard(df):
-    app = Dash(__name__)
-    
-    fig = px.line(df, x='Data', y='Fluxo de Caixa', title='Fluxo de Caixa')
-    
-    app.layout = html.Div(children=[
-        html.H1(children='Dashboard de Pagamentos'),
-        dcc.Graph(
-            id='fluxo-caixa-grafico',
-            figure=fig
-        )
-    ])
-    
-    app.run_server(debug=True)
+# Função para enviar notificações automáticas
+def enviar_notificacoes_entregas(df_entregas, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    for _, row in df_entregas.iterrows():
+        destinatario = row['Email']
+        assunto = f"Atualização sobre sua entrega - {row['Código da Entrega']}"
+        corpo = f"Prezado(a),\n\nInformamos que o status da sua entrega {row['Código da Entrega']} foi atualizado para: {row['Status']}.\n\nAtenciosamente,"
+        
+        msg = MIMEText(corpo)
+        msg['Subject'] = assunto
+        msg['From'] = smtp_user
+        msg['To'] = destinatario
+        
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_password)
+            server.send_message(msg)
 
 # Exemplo de uso
-caminho_arquivo = 'dados_pagamentos.csv'
-df_pagamentos = ler_dados_pagamentos(caminho_arquivo)
-df_fluxo_caixa = calcular_fluxo_caixa(df_pagamentos)
+caminho_planilha = 'entregas.xlsx'
+df_entregas = ler_planilha_entregas(caminho_planilha)
+# Enviar notificações (descomente a linha abaixo para enviar os e-mails)
+# enviar_notificacoes_entregas(df_entregas, 'seu_email@gmail.com', 'sua_senha')
 
-# Criar o dashboard (descomente para executar)
-# criar_dashboard(df_fluxo_caixa)
+print("Processamento concluído.")
 ```
 
 ## 22.4. Considerações Finais
 
-A automação da criação de um dashboard de pagamentos pode trazer maior eficiência e visibilidade para a gestão financeira de um escritório, permitindo o acompanhamento em tempo real das receitas e despesas. Com o uso de Python e bibliotecas como pandas e dash, é possível integrar essas informações aos sistemas de gestão financeira e melhorar a tomada de decisões.
+A automação do acompanhamento de entregas pode trazer maior eficiência e agilidade para as operações de logística, melhorando a comunicação com os clientes e a gestão das entregas. Com o uso de planilhas e o envio automático de notificações por e-mail, é possível simplificar e otimizar essa tarefa logística.
 
 ***
 
-# Anexos
+# 23. Leitura de pedidos de marketplaces
 
-## Figuras e diagramas
+A leitura e processamento de pedidos de marketplaces é uma tarefa importante para empresas que vendem produtos em plataformas como Mercado Livre, Amazon e outros. Neste exemplo, vamos mostrar como automatizar a leitura de pedidos recebidos em um marketplace, utilizando Python para processar as informações e gerar relatórios.
 
-- **Figura 1** – Exemplo de fluxo de automação com Python
-  - `figuras/fluxo_automacao_python.png`
-- **Figura 2** – Estrutura de um projeto de automação
-  - `figuras/estrutura_projeto_automacao.png`
+## 23.1. Objetivo
 
-## Referências
+O objetivo deste exemplo é criar um script que:
+- Leia um arquivo com os pedidos recebidos, contendo informações como produto, quantidade, preço e dados do cliente.
+- Gere um relatório com o resumo dos pedidos, incluindo o total de vendas e a lista de produtos mais vendidos.
 
-- Python Software Foundation. Python Language Reference, version 3.9.
-- Van Rossum, G., & Drake, F. L. (2009). Python 3 Reference Manual. CreateSpace.
+## 23.2. Estrutura do Código
 
-## Códigos em Python
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_pedidos()`: Para ler o arquivo com os pedidos recebidos.
+- `gerar_relatorio_pedidos()`: Para gerar o relatório com o resumo dos pedidos.
 
-- **Exemplo Prático 01** – Análise de vendas de produtos online (CSV)  
-  `codes/01_exemplo_pratico_vendas_online.py`
-- **Exemplo Prático 02** – Geração de relatórios financeiros (Excel)  
-  `codes/02_exemplo_pratico_relatorio_financeiro.py`
-- **Exemplo Prático 03** – Controle de inadimplência em aluguéis (Excel + E-mail)  
-  `codes/03_exemplo_pratico_alugueis_com_email.py`
-- **Exemplo Prático 04** – Envio de e-mails automatizados (Python + SMTP)  
-  `codes/04_exemplo_pratico_envio_email.py`
-- **Exemplo Prático 05** – Extração de texto de um PDF  
-  `codes/05_exemplo_pratico_extracao_pdf.py`
-- **Exemplo Prático 06** – Leitura e modificação de um arquivo Word  
-  `codes/06_exemplo_pratico_modificacao_word.py`
-- **Exemplo Prático 07** – Automação de Excel com Pandas  
-  `codes/07_exemplo_pratico_automacao_excel.py`
-- **Exemplo Prático 08** – Geração e envio de múltiplos relatórios diários por e-mail  
-  `codes/08_exemplo_pratico_envio_relatorio_diario.py`
+## 23.3. Exemplo de Código
+
+```python
+import pandas as pd
+
+# Função para ler os pedidos recebidos
+def ler_pedidos(caminho_arquivo):
+    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+
+# Função para gerar o relatório com o resumo dos pedidos
+def gerar_relatorio_pedidos(df_pedidos):
+    relatorio = df_pedidos.groupby('Produto').agg({'Quantidade': 'sum', 'Preço': 'mean'}).reset_index()
+    relatorio['Total Vendas'] = relatorio['Quantidade'] * relatorio['Preço']
+    relatorio.to_csv('relatorio_pedidos.csv', index=False, sep=';')
+    print("Relatório de pedidos gerado: relatorio_pedidos.csv")
+
+# Exemplo de uso
+caminho_arquivo = 'pedidos_marketplace.csv'
+df_pedidos = ler_pedidos(caminho_arquivo)
+gerar_relatorio_pedidos(df_pedidos)
+```
+
+## 23.4. Considerações Finais
+
+A automação da leitura e processamento de pedidos de marketplaces pode trazer maior eficiência e agilidade para as operações de vendas online, facilitando o acompanhamento dos pedidos e a geração de relatórios. Com o uso de arquivos CSV e a automação do processamento de dados, é possível simplificar e otimizar essa tarefa comercial.
+
+***
+
+# 24. Atualização automática de estoque
+
+A atualização de estoque é uma atividade crítica para empresas de e-commerce e vendas online, sendo essencial para garantir a disponibilidade dos produtos e evitar perdas financeiras. Neste exemplo, vamos mostrar como automatizar a atualização de estoque em planilhas Excel ou em um ERP simples, utilizando Python para ler os dados de vendas e atualizar as quantidades em estoque.
+
+## 24.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia um arquivo com os dados de vendas, contendo informações como produto, quantidade vendida e data da venda.
+- Atualize automaticamente as quantidades em estoque em uma planilha Excel ou em um ERP simples.
+
+## 24.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_vendas()`: Para ler o arquivo com os dados de vendas.
+- `atualizar_estoque()`: Para atualizar as quantidades em estoque.
+
+## 24.3. Exemplo de Código
+
+```python
+import pandas as pd
+
+# Função para ler os dados de vendas
+def ler_vendas(caminho_arquivo):
+    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+
+# Função para atualizar o estoque
+def atualizar_estoque(df_vendas, caminho_estoque):
+    df_estoque = pd.read_excel(caminho_estoque)
+    for _, row in df_vendas.iterrows():
+        produto = row['Produto']
+        quantidade_vendida = row['Quantidade']
+        df_estoque.loc[df_estoque['Produto'] == produto, 'Estoque'] -= quantidade_vendida
+    df_estoque.to_excel(caminho_estoque, index=False)
+    print("Estoque atualizado com sucesso.")
+
+# Exemplo de uso
+caminho_vendas = 'vendas.csv'
+caminho_estoque = 'estoque.xlsx'
+df_vendas = ler_vendas(caminho_vendas)
+atualizar_estoque(df_vendas, caminho_estoque)
+```
+
+## 24.4. Considerações Finais
+
+A automação da atualização de estoque pode trazer maior eficiência e precisão para a gestão de estoques em empresas de e-commerce e vendas online, facilitando o acompanhamento das vendas e a atualização das quantidades em estoque. Com o uso de arquivos CSV e Excel, e a automação do processamento de dados, é possível simplificar e otimizar essa tarefa comercial.
+
+***
+
+# 25. Envio de notas fiscais e respostas automáticas a clientes
+
+O envio de notas fiscais e respostas automáticas a clientes é uma prática importante para garantir a conformidade fiscal e melhorar o atendimento ao cliente. Neste exemplo, vamos mostrar como automatizar o envio de notas fiscais eletrônicas e respostas automáticas a clientes, utilizando Python para gerar os documentos e enviá-los por e-mail.
+
+## 25.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Gere notas fiscais eletrônicas com base nas informações de vendas.
+- Envie as notas fiscais geradas e respostas automáticas por e-mail para os clientes.
+
+## 25.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `gerar_nota_fiscal()`: Para gerar a nota fiscal eletrônica.
+- `enviar_nota_fiscal_email()`: Para enviar a nota fiscal e a resposta automática por e-mail.
+
+## 25.3. Exemplo de Código
+
+```python
+import pandas as pd
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+
+# Função para gerar a nota fiscal eletrônica
+def gerar_nota_fiscal(dados_venda, caminho_saida):
+    df_nota = pd.DataFrame([dados_venda])
+    df_nota.to_csv(caminho_saida, index=False, sep=';')
+    print(f"Nota fiscal gerada: {caminho_saida}")
+
+# Função para enviar a nota fiscal por e-mail
+def enviar_nota_fiscal_email(destinatario, assunto, corpo, caminho_nota, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    # Criar o objeto de mensagem
+    msg = MIMEMultipart()
+    msg['Subject'] = assunto
+    msg['From'] = smtp_user
+    msg['To'] = destinatario
+    # Adicionar o corpo do e-mail
+    msg.attach(MIMEText(corpo, 'plain'))
+    # Adicionar o anexo
+    with open(caminho_nota, 'rb') as anexo:
+        parte = MIMEBase('application', 'octet-stream')
+        parte.set_payload(anexo.read())
+        encoders.encode_base64(parte)
+        parte.add_header('Content-Disposition', f'attachment; filename={caminho_nota.split("/")[-1]}')
+        msg.attach(parte)
+    # Enviar o e-mail
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(smtp_user, smtp_password)
+        server.send_message(msg)
+
+# Exemplo de uso
+dados_venda = {
+    'Cliente': 'João da Silva',
+    'Produto': 'Notebook',
+    'Quantidade': 1,
+    'Valor Unitário': 5000.00,
+    'CNPJ': '12.345.678/0001-95'
+}
+caminho_nota = 'nota_fiscal_joao_silva.csv'
+gerar_nota_fiscal(dados_venda, caminho_nota)
+
+# Enviar a nota fiscal por e-mail (descomente a linha abaixo para enviar o e-mail)
+# enviar_nota_fiscal_email('joao@email.com', 'Sua Nota Fiscal', 'Segue em anexo a nota fiscal.', caminho_nota, 'seu_email@gmail.com', 'sua_senha')
+```
+
+## 25.4. Considerações Finais
+
+A automação do envio de notas fiscais e respostas automáticas a clientes pode trazer maior eficiência e agilidade para o processo de faturamento e atendimento ao cliente, garantindo a conformidade fiscal e melhorando a experiência do cliente. Com o uso de geração automática de notas fiscais e envio programático por e-mail, é possível simplificar e otimizar essa tarefa financeira e comercial.
+
+***
+
+# Escritórios que prestam serviços para repartições públicas e órgãos governamentais
+
+Os escritórios que prestam serviços para repartições públicas e órgãos governamentais enfrentam desafios específicos relacionados à gestão de documentos, cumprimento de prazos, atendimento a requisitos legais e normativos, entre outros. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e conformidade.
+
+Nesta seção, apresentamos exemplos práticos de automação voltados para escritórios que prestam serviços para repartições públicas e órgãos governamentais, com o objetivo de demonstrar como as técnicas de programação e automação podem ser aplicadas para resolver problemas específicos dessa área.
+
+Os exemplos foram escolhidos com base em situações comuns enfrentadas por profissionais que atuam com serviços públicos e buscam mostrar, de forma prática e didática, como a automação pode trazer ganhos significativos de produtividade, precisão e eficiência.
+
+Ao final de cada exemplo, você encontrará dicas e sugestões para adaptar as soluções apresentadas à sua realidade, além de exercícios práticos para consolidar o aprendizado.
+
+Esperamos que esta seção inspire você a identificar novas oportunidades de automação em sua rotina profissional e a explorar todo o potencial da programação e da inteligência artificial para transformar o seu trabalho.
+
+***
+
+# 19. Controle Automatizado de Protocolos em Repartição Pública
+
+O controle de protocolos em repartições públicas é uma atividade importante para garantir a tramitação adequada de processos e documentos. Neste exemplo, vamos mostrar como automatizar o controle de protocolos em uma repartição pública, utilizando Python para ler planilhas com os dados dos protocolos e enviar notificações automáticas.
+
+## 19.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia uma planilha com os dados dos protocolos, contendo informações como número do protocolo, descrição, data de entrada e situação.
+- Envie notificações automáticas para os responsáveis, informando sobre a situação dos protocolos.
+
+## 19.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_planilha_protocolos()`: Para ler a planilha com os dados dos protocolos.
+- `enviar_notificacoes_protocolos()`: Para enviar as notificações automáticas.
+
+## 19.3. Exemplo de Código
+
+```python
+import pandas as pd
+import smtplib
+from email.mime.text import MIMEText
+
+# Função para ler a planilha de protocolos
+def ler_planilha_protocolos(caminho_arquivo):
+    return pd.read_excel(caminho_arquivo)
+
+# Função para enviar notificações automáticas
+def enviar_notificacoes_protocolos(df_protocolos, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    for _, row in df_protocolos.iterrows():
+        destinatario = row['Email']
+        assunto = f"Atualização sobre seu Protocolo - {row['Número do Protocolo']}"
+        corpo = f"Prezado(a),\n\nInformamos que a situação do seu protocolo {row['Número do Protocolo']} foi atualizado para: {row['Situação']}.\n\nAtenciosamente,"
+        
+        msg = MIMEText(corpo)
+        msg['Subject'] = assunto
+        msg['From'] = smtp_user
+        msg['To'] = destinatario
+        
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_password)
+            server.send_message(msg)
+
+# Exemplo de uso
+caminho_planilha = 'protocolos_reparticao_publica.xlsx'
+df_protocolos = ler_planilha_protocolos(caminho_planilha)
+# Enviar notificações (descomente a linha abaixo para enviar os e-mails)
+# enviar_notificacoes_protocolos(df_protocolos, 'seu_email@gmail.com', 'sua_senha')
+
+print("Processamento concluído.")
+```
+
+## 19.4. Considerações Finais
+
+A automação do controle de protocolos em repartições públicas pode trazer maior eficiência e segurança para a tramitação de processos e documentos, garantindo o cumprimento de prazos e a comunicação adequada entre as partes envolvidas. Com o uso de planilhas e o envio automático de notificações por e-mail, é possível simplificar e otimizar essa tarefa administrativa.
+
+***
+
+# 20. Conversor de tabelas PDF → Excel
+
+A conversão de tabelas em PDF para Excel é uma tarefa comum em escritórios que lidam com dados financeiros, orçamentos, relatórios e outros documentos que contêm tabelas. Neste exemplo, vamos mostrar como automatizar a conversão de tabelas em PDF para Excel, utilizando Python para extrair os dados das tabelas e salvá-los em um arquivo Excel.
+
+## 20.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia um arquivo PDF contendo uma tabela.
+- Extraia os dados da tabela e os salve em um arquivo Excel.
+
+## 20.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_tabela_pdf()`: Para ler a tabela do arquivo PDF.
+- `salvar_tabela_excel()`: Para salvar a tabela em um arquivo Excel.
+
+## 20.3. Exemplo de Código
+
+```python
+import pdfplumber
+import pandas as pd
+
+# Função para ler a tabela do PDF
+def ler_tabela_pdf(caminho_arquivo):
+    with pdfplumber.open(caminho_arquivo) as pdf:
+        primeira_pagina = pdf.pages[0]
+        tabela = primeira_pagina.extract_table()
+    return tabela
+
+# Função para salvar a tabela em um arquivo Excel
+def salvar_tabela_excel(tabela, caminho_saida):
+    df_tabela = pd.DataFrame(tabela[1:], columns=tabela[0])
+    df_tabela.to_excel(caminho_saida, index=False)
+    print(f"Tabela salva em Excel: {caminho_saida}")
+
+# Exemplo de uso
+caminho_pdf = 'tabela.pdf'
+caminho_excel = 'tabela.xlsx'
+tabela_extraida = ler_tabela_pdf(caminho_pdf)
+salvar_tabela_excel(tabela_extraida, caminho_excel)
+```
+
+## 20.4. Considerações Finais
+
+A automação da conversão de tabelas em PDF para Excel pode trazer maior eficiência e precisão para o trabalho com dados em escritórios, facilitando a análise e o compartilhamento das informações. Com o uso de arquivos PDF e Excel, e a automação do processamento e conversão de dados, é possível simplificar e otimizar essa tarefa de manipulação de dados.
+
+***
+
+# 21. Roteirização com base em distância (API Google Maps ou OpenRoute)
+
+A roteirização é uma atividade fundamental para a otimização do transporte de mercadorias, permitindo a definição das melhores rotas a serem seguidas pelos veículos. Neste exemplo, vamos mostrar como automatizar a roteirização com base em distância, utilizando APIs como Google Maps ou OpenRoute.
+
+## 21.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Receba uma lista de endereços de origem e destino.
+- Calcule a rota mais curta ou mais rápida entre os pontos, utilizando a API escolhida.
+- Exiba o resultado com as informações da rota, como distância e tempo estimado.
+
+## 21.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `calcular_rota_google_maps()`: Para calcular a rota utilizando a API do Google Maps.
+- `calcular_rota_openroute()`: Para calcular a rota utilizando a API do OpenRoute.
+
+## 21.3. Exemplo de Código
+
+```python
+import requests
+
+# Função para calcular a rota utilizando a API do Google Maps
+def calcular_rota_google_maps(origem, destino, chave_api):
+    url = f"https://maps.googleapis.com/maps/api/directions/json?origin={origem}&destination={destino}&key={chave_api}"
+    response = requests.get(url)
+    dados = response.json()
+    if dados['status'] == 'OK':
+        rota = dados['routes'][0]
+        distancia = rota['legs'][0]['distance']['text']
+        tempo = rota['legs'][0]['duration']['text']
+        return f"Distância: {distancia}, Tempo: {tempo}"
+    else:
+        return "Erro ao calcular a rota."
+
+# Função para calcular a rota utilizando a API do OpenRoute
+def calcular_rota_openroute(origem, destino):
+    url = f"https://api.openrouteservice.org/v2/directions/driving-car?api_key=sua_chave_api&start={origem}&end={destino}"
+    response = requests.get(url)
+    dados = response.json()
+    if dados['routes']:
+        rota = dados['routes'][0]
+        distancia = rota['summary']['length']
+        tempo = rota['summary']['duration']
+        return f"Distância: {distancia} metros, Tempo: {tempo} segundos"
+    else:
+        return "Erro ao calcular a rota."
+
+# Exemplo de uso
+origem = "-23.550520, -46.633308"  # São Paulo
+destino = "-22.906847, -43.172896"  # Rio de Janeiro
+# Calcular rota pelo Google Maps
+resultado_google_maps = calcular_rota_google_maps(origem, destino, 'sua_chave_api_google_maps')
+print("Google Maps:", resultado_google_maps)
+# Calcular rota pelo OpenRoute
+resultado_openroute = calcular_rota_openroute(origem, destino)
+print("OpenRoute:", resultado_openroute)
+```
+
+## 21.4. Considerações Finais
+
+A automação da roteirização com base em distância pode trazer ganhos significativos de eficiência e economia para as operações de transporte, permitindo a definição de rotas otimizadas e a redução de custos com combustível e tempo de viagem. Com o uso de APIs de mapeamento e a automação do processamento das informações, é possível simplificar e otimizar essa tarefa logística.
+
+***
+
+# 22. Acompanhamento de entregas via planilhas
+
+O acompanhamento de entregas é uma atividade importante para garantir a satisfação dos clientes e a eficiência das operações de logística. Neste exemplo, vamos mostrar como automatizar o acompanhamento de entregas, utilizando Python para ler planilhas com os dados das entregas e enviar notificações automáticas.
+
+## 22.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia uma planilha com os dados das entregas, contendo informações como código da entrega, cliente, endereço, data e status.
+- Envie notificações automáticas para os clientes, informando sobre o status da entrega.
+
+## 22.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_planilha_entregas()`: Para ler a planilha com os dados das entregas.
+- `enviar_notificacoes()`: Para enviar as notificações automáticas.
+
+## 22.3. Exemplo de Código
+
+```python
+import pandas as pd
+import smtplib
+from email.mime.text import MIMEText
+
+# Função para ler a planilha de entregas
+def ler_planilha_entregas(caminho_arquivo):
+    return pd.read_excel(caminho_arquivo)
+
+# Função para enviar notificações automáticas
+def enviar_notificacoes(df_entregas, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    for _, row in df_entregas.iterrows():
+        destinatario = row['Email']
+        assunto = f"Atualização sobre sua entrega - {row['Código da Entrega']}"
+        corpo = f"Prezado(a),\n\nInformamos que o status da sua entrega {row['Código da Entrega']} foi atualizado para: {row['Status']}.\n\nAtenciosamente,"
+        
+        msg = MIMEText(corpo)
+        msg['Subject'] = assunto
+        msg['From'] = smtp_user
+        msg['To'] = destinatario
+        
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_password)
+            server.send_message(msg)
+
+# Exemplo de uso
+caminho_planilha = 'entregas.xlsx'
+df_entregas = ler_planilha_entregas(caminho_planilha)
+# Enviar notificações (descomente a linha abaixo para enviar os e-mails)
+# enviar_notificacoes(df_entregas, 'seu_email@gmail.com', 'sua_senha')
+
+print("Processamento concluído.")
+```
+
+## 22.4. Considerações Finais
+
+A automação do acompanhamento de entregas pode trazer maior eficiência e agilidade para as operações de logística, melhorando a comunicação com os clientes e a gestão das entregas. Com o uso de planilhas e o envio automático de notificações por e-mail, é possível simplificar e otimizar essa tarefa logística.
+
+***
