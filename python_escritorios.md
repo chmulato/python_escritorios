@@ -183,7 +183,7 @@ Antes de iniciar os exemplos práticos, é importante preparar o ambiente de des
 
 Abra o terminal do VS Code (atalho: `Ctrl + ``) e execute os comandos abaixo para instalar as principais bibliotecas que serão usadas nos exemplos:
 
-```sh
+```bash
 pip install pandas openpyxl
 ```
 
