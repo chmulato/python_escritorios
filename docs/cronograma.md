@@ -47,3 +47,15 @@
 - [X] **2025-07-14:** Dashboard de pagamentos
 - [ ] **2025-07-15:** Web scraper de preços da concorrência
 - [ ] **2025-07-16:** Calculadora de impostos com interface simples
+
+# Validação
+
+O cronograma está em acordo com o conteúdo do livro `python_escritorios.md`:
+
+- Todos os tópicos da Parte 1 (fundamentos) e Parte 2 (casos reais) estão presentes e seguem a mesma ordem do sumário do livro.
+- Os exemplos práticos e projetos listados no cronograma correspondem aos capítulos e exemplos do livro.
+- Os temas de cada dia estão alinhados com os títulos e objetivos dos capítulos do livro.
+- Os projetos práticos adicionais (relatórios, organizador de arquivos, dashboard, etc.) também estão contemplados no conteúdo do livro.
+
+**Conclusão:**  
+O cronograma cobre todo o conteúdo do livro e está adequado para um estudo progressivo e completo dos exemplos e capítulos propostos.
