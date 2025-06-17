@@ -72,32 +72,39 @@ Programador de Computador
 ## Parte 2 – Casos Reais por Tipo de Escritório
 
 ### Escritório de Advocacia
+
 7. Gerador automático de procurações e petições a partir de modelos  
 8. Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)  
 9. Consulta a sites de tribunais  
 
 ### Escritório de Contabilidade
+
 10. Leitura e consolidação de extratos bancários (CSV)  
 11. Geração automática de guias de impostos  
 12. Envio automático de boletos por e-mail  
 
 ### Escritório de Logística
+
 13. Leitura e geração de manifestos (XML, PDF)  
 14. Roteirização com base em distância (API Google Maps ou OpenRoute)  
 15. Acompanhamento de entregas via planilhas atualizadas  
 
 ### E-commerce e Vendas Online
+
 16. Leitura de pedidos de marketplaces  
 17. Atualização automática de estoque em Excel/ERP simples  
 18. Envio de notas fiscais e respostas automáticas a clientes  
 
-## Projetos Práticos
+### Escritórios que prestam serviços para repartições públicas e órgãos governamentais
 
-19. Organizador de arquivos em pastas por cliente  
-20. Conversor de tabelas PDF → Excel  
-21. Dashboard de pagamentos  
-22. Web scraper de preços da concorrência  
-23. Calculadora de impostos com interface simples  
+19. Controle Automatizado de Protocolos em Repartição Pública  
+   - Leitura de protocolos em planilhas, geração de relatórios e envio de notificações por e-mail.  
+20. Conversor de tabelas PDF → Excel
+    - Extração de dados de tabelas em arquivos PDF e conversão para planilhas Excel, facilitando a análise de dados.
+21. Organizador de arquivos em pastas por cliente
+   - Classificação e movimentação de arquivos em pastas específicas com base no cliente.
+22. Dashboard de pagamentos
+   - Criação de um painel simples para visualizar pagamentos pendentes e recebidos, utilizando gráficos básicos.
 
 ## Anexos
 
