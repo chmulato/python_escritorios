@@ -117,6 +117,10 @@ Programador de Computador
    `codes/03_exemplo_pratico_alugueis_com_email.py`
 - Exemplo Prático 04 - Envio de e-mails automatizados (Python + SMTP)
    `codes/04_exemplo_pratico_envio_email.py`
+- Exemplo Prático 05 - Extração de texto de um PDF
+   `codes/05_exemplo_pratico_extracao_pdf.py`
+- Exemplo Prático 06 - Leitura e modificação de um arquivo Word
+   `codes/06_exemplo_pratico_modificacao_word.py`
 
 ***
 
@@ -388,6 +392,7 @@ Uma empresa de aluguel de imóveis mantém uma planilha chamada `alugueis.xlsx` 
 **Planilha de exemplo (`alugueis.xlsx`):**
 
 ```plaintext
+|-----------|-------------------|--------------|--------------------|----------------|
 | Imóvel    | Inquilino         | Valor Mensal | Data de Vencimento | Pago (Sim/Não) |
 |-----------|-------------------|--------------|--------------------|----------------|
 | Apto 101  | João da Silva     | 1800         | 2025-06-10         | Sim            |
@@ -398,6 +403,7 @@ Uma empresa de aluguel de imóveis mantém uma planilha chamada `alugueis.xlsx` 
 | Loja 307  | Carla Mendes      | 3500         | 2025-06-25         | Sim            |
 | Apto 110  | Felipe Gonçalves  | 2100         | 2025-06-14         | Não            |
 | Casa 208  | Luciana Ferreira  | 2600         | 2025-06-22         | Não            |
+|-----------|-------------------|--------------|--------------------|----------------|
 ```
 
 **Desafio:**  
@@ -495,6 +501,7 @@ O código completo para geração do relatório de inadimplentes e envio real de
 4. **Exemplo de Planilha de Aluguéis com E-mail dos Inquilinos**
 
 ```plaintext
+|-----------|-------------------|--------------|--------------------|----------------|----------------------|
 | Imóvel    | Inquilino         | Valor Mensal | Data de Vencimento | Pago (Sim/Não) | E-mail               |
 |-----------|-------------------|--------------|--------------------|----------------|----------------------|
 | Apto 101  | João da Silva     | 1800         | 2025-06-10         | Sim            | joao@email.com       |
@@ -505,6 +512,7 @@ O código completo para geração do relatório de inadimplentes e envio real de
 | Loja 307  | Carla Mendes      | 3500         | 2025-06-25         | Sim            | carla@email.com      |
 | Apto 110  | Felipe Gonçalves  | 2100         | 2025-06-14         | Não            | felipe@email.com     |
 | Casa 208  | Luciana Ferreira  | 2600         | 2025-06-22         | Não            | luciana@email.com    |
+|-----------|-------------------|--------------|--------------------|----------------|----------------------|
 ```
 
 **Atenção:**  
@@ -519,15 +527,145 @@ Com este exercício, você praticou a leitura e escrita de arquivos Excel, filtr
 
 ***
 
-#### 3.6.3. **Extração de texto de um PDF:**  
-   Ler um arquivo PDF e extrair todo o texto, salvando o conteúdo em um arquivo `.txt`.
+### 3.6.3. Exercício: Extração de Texto de um PDF
+
+**História Fictícia:**  
+A repartição pública “Prefeitura Municipal de Campo Largo, do Estado do Paraná” recebe diariamente diversos documentos em PDF, como ofícios, requerimentos e certidões. A servidora Ana precisa extrair rapidamente o texto de um ofício em PDF para copiar o conteúdo para um sistema interno, mas fazer isso manualmente toma muito tempo.
+
+**Desafio:**  
+Ajude Ana a automatizar esse processo criando um script Python que:
+
+1. Leia um arquivo PDF chamado `oficio_exemplo.pdf` localizado na pasta `codes`.
+2. Extraia todo o texto do documento.
+3. Salve o texto extraído em um arquivo chamado `oficio_extraido.txt` na mesma pasta.
+4. Mostre na tela as primeiras linhas do texto extraído.
+
+**Dica:**  
+Utilize a biblioteca `PyPDF2` para a extração de texto de arquivos PDF.
+
+**Código Python:** 
+
+```python
+import PyPDF2
+
+# Caminho do arquivo PDF
+pdf_path = r'C:\dev\python_escritorios\codes\oficio_exemplo.pdf'
+txt_path = r'C:\dev\python_escritorios\codes\oficio_extraido.txt'
+
+# Abrir o PDF e extrair texto
+with open(pdf_path, 'rb') as file:
+    reader = PyPDF2.PdfReader(file)
+    texto = ""
+    for page in reader.pages:
+        texto += page.extract_text()
+
+# Salvar o texto extraído em um arquivo .txt
+with open(txt_path, 'w', encoding='utf-8') as f:
+    f.write(texto)
+
+# Mostrar as primeiras linhas do texto extraído
+print("Primeiras linhas do texto extraído:")
+print('\n'.join(texto.splitlines()[:10]))
+```
+
+**Observação:**  
+Certifique-se de instalar a biblioteca com `pip install PyPDF2` antes de executar o script.
+
+**Resultado esperado:**
+
+```plaintext
+OFÍCIO Nº 123/2025 – GAB/PMNE  
+ 
+Campo Largo, 17 de junho de 2025.  
+ 
+Ao   
+Senhor Diretor do Departamento de Recursos Humanos   
+Prefeitura Municipal de Campo Largo  
+ 
+Assunto: Solicitação de atualização cadastral  
+ 
+Prezado Senhor,  
+ 
+Solicito, por meio deste ofício, a gentileza de proceder à atualização dos dados 
+cadastrais do servidor João da Silva, matrícula 4567, lotado no setor de Protocolo. 
+Informo que houve alteração de endereço residencial e número de telefone para 
+contato.  
+ 
+Segue em anexo a documentação comprobatória.  
+ 
+Atenciosamente,  
+ 
+Maria Souza   
+Chefe de Gabinete   
+Prefeitura Municipal de Campo Largo
+```
+
+**Conclusão:**
+
+Com este exercício, você praticou a leitura de arquivos PDF e a extração de texto usando Python. Essa habilidade é útil para automatizar a coleta de informações de documentos oficiais, economizando tempo e aumentando a eficiência no trabalho com repartições públicas.
 
 
 ***
 
-#### 3.6.4. **Leitura e modificação de um arquivo Word:**  
-   Abrir um documento Word, listar todos os parágrafos, adicionar um novo parágrafo ao final e salvar o documento com outro nome.
+#### 3.6.4. Leitura e modificação de um arquivo Word
 
+**História Fictícia:**  
+O escritório de advocacia “Silva & Associados” recebe frequentemente minutas de contratos em formato Word, enviadas por clientes e parceiros. A advogada Júlia precisa revisar rapidamente esses contratos para garantir que todos contenham uma cláusula padrão de confidencialidade. Para agilizar o processo, ela deseja um script Python que leia o arquivo Word do contrato, verifique se a cláusula está presente e, caso não esteja, adicione automaticamente a cláusula ao final do documento.
+
+**Desafio:**  
+Crie um script Python que:
+
+1. Leia um arquivo Word chamado `contrato_exemplo.docx` localizado na pasta `codes`.
+2. Verifique se o texto da cláusula de confidencialidade está presente.
+3. Caso não esteja, adicione a seguinte cláusula ao final do documento:
+
+   > **Cláusula de Confidencialidade:** As partes se comprometem a manter em sigilo todas as informações trocadas em razão deste contrato, não podendo divulgá-las a terceiros sem prévia autorização por escrito.
+
+4. Salve o documento modificado como `contrato_confidencial.docx` na mesma pasta.
+
+**Dica:**  
+Utilize a biblioteca `python-docx` para manipulação de arquivos Word.
+
+**Código Python**:
+
+```python
+from docx import Document
+# Caminho do arquivo Word
+doc_path = r'C:\dev\python_escritorios\codes\contrato_exemplo.docx'
+doc_novo_path = r'C:\dev\python_escritorios\codes\contrato_confidencial.docx' 
+# Cláusula de confidencialidade
+clausa_confidencialidade = (
+    "Cláusula de Confidencialidade: As partes se comprometem a manter em sigilo "
+    "todas as informações trocadas em razão deste contrato, não podendo divulgá-las "
+    "a terceiros sem prévia autorização por escrito."
+)
+# Abrir o documento Word
+doc = Document(doc_path)
+# Verificar se a cláusula já existe
+clausula_presente = any(clausa_confidencialidade in par.text for par in doc.paragraphs)
+if not clausula_presente:
+    # Adicionar a cláusula de confidencialidade ao final do documento
+    doc.add_paragraph(clausa_confidencialidade)
+    print("Cláusula de confidencialidade adicionada ao contrato.")
+else:
+    print("Cláusula de confidencialidade já está presente no contrato.")
+# Salvar o documento modificado
+doc.save(doc_novo_path)
+# Exibir mensagem de conclusão
+print(f"Documento modificado salvo como '{doc_novo_path}'")
+```
+
+**Resultado esperado:**
+
+```plaintext
+Cláusula de confidencialidade adicionada ao contrato.
+Documento modificado salvo como 'C:\dev\python_escritorios\codes\contrato_confidencial.docx'
+```
+
+**Conclusão:**
+
+Com este exercício, você praticou a leitura e modificação de arquivos Word usando Python. Essa habilidade é útil para automatizar a revisão de documentos legais, garantindo que cláusulas importantes estejam sempre presentes, economizando tempo e aumentando a eficiência no trabalho de advogados e escritórios de advocacia.
 
 ***
+
 
