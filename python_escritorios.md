@@ -374,11 +374,18 @@ Uma empresa de aluguel de imóveis mantém uma planilha chamada `alugueis.xlsx` 
 - Pago (Sim/Não)
 
 **Planilha de exemplo (`alugueis.xlsx`):**
-```
-| Imóvel       | Inquilino   | Valor Mensal | Data de Vencimento | Pago (Sim/Não) |
-| Apartamento 101 | João Silva  | 1200         | 2025-06-05         | Não            |
-| Casa 202    | Maria Souza | 1500         | 2025-06-10         | Sim            |
-| Apartamento 303 | Ana Costa   | 1300         | 2025-06-15         | Não            |
+
+```plaintext
+| Imóvel    | Inquilino         | Valor Mensal | Data de Vencimento | Pago (Sim/Não) |
+|-----------|-------------------|--------------|--------------------|----------------|
+| Apto 101  | João da Silva     | 1800         | 2025-06-10         | Sim            |
+| Casa 202  | Maria Souza       | 2500         | 2025-06-15         | Não            |
+| Loja 303  | Pedro Lima        | 3200         | 2025-06-20         | Não            |
+| Apto 104  | Ana Martins       | 2000         | 2025-06-12         | Sim            |
+| Casa 205  | Bruno Carvalho    | 2700         | 2025-06-18         | Não            |
+| Loja 307  | Carla Mendes      | 3500         | 2025-06-25         | Sim            |
+| Apto 110  | Felipe Gonçalves  | 2100         | 2025-06-14         | Não            |
+| Casa 208  | Luciana Ferreira  | 2600         | 2025-06-22         | Não            |
 ```
 
 **Desafio:**  
@@ -389,7 +396,7 @@ Crie um script Python que:
 3. Gere um novo arquivo Excel chamado `relatorio_inadimplentes.xlsx` apenas com os inadimplentes.
 4. Simule o envio de um e-mail para cada inquilino inadimplente, informando o valor devido e a data de vencimento.
 
-**Exemplo de Código:**
+**Exemplo de Código Python:**
 
 ```python
 import pandas as pd
@@ -468,7 +475,7 @@ Além de gerar o relatório de inadimplentes, é possível automatizar o envio d
 
 2. **Utilize a biblioteca `smtplib`** do Python para enviar e-mails automáticos. É recomendado utilizar uma conta de e-mail dedicada e, no caso do Gmail, gerar uma senha de aplicativo para maior segurança.
 
-3. **Exemplo de código:**  
+3. **Exemplo de código Python:**  
 O código completo para geração do relatório de inadimplentes e envio real de e-mails está disponível no arquivo:
 
 `codes/02_exemplo_pratico_alugueis_com_email.py`
@@ -504,5 +511,12 @@ Com este exercício, você praticou a leitura e escrita de arquivos Excel, filtr
 #### 3.6.3. **Extração de texto de um PDF:**  
    Ler um arquivo PDF e extrair todo o texto, salvando o conteúdo em um arquivo `.txt`.
 
+
+***
+
 #### 3.6.4. **Leitura e modificação de um arquivo Word:**  
    Abrir um documento Word, listar todos os parágrafos, adicionar um novo parágrafo ao final e salvar o documento com outro nome.
+
+
+***
+
