@@ -125,6 +125,8 @@ Programador de Computador
    - `codes/07_exemplo_pratico_envio_relatorio_diario.py`
 - Exemplo Prático 08 - Geração e envio de múltiplos relatórios diários por e-mail (múltiplos arquivos)
    - `codes/08_exemplo_pratico_envio_relatorio_diario.py`
+- Exemplo Prático Extra - Geração e envio automático de relatório de vendas (dados fictícios em um arquivo)
+   - `codes/08_exemplo_pratico_envio_automatico_relatorio.py`
 
 ***
 
@@ -974,8 +976,6 @@ print("E-mail enviado com sucesso!")
 #     os.remove(excel_path)
 #     print(f"Arquivo {excel_path} removido após o envio.")
 ```
-
-**Resultado esperado:**
 ```plaintext
 Dados de Vendas Gerados:
            data   produto  quantidade  preco_unitario

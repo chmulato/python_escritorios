@@ -33,8 +33,11 @@
 
 ## Projetos Práticos
 
-- [ ] **2025-07-05:** Organizador de arquivos em pastas por cliente
-- [ ] **2025-07-06:** Conversor de tabelas PDF → Excel
-- [ ] **2025-07-07:** Dashboard de pagamentos
-- [ ] **2025-07-08:** Web scraper de preços da concorrência
-- [ ] **2025-07-09:** Calculadora de impostos com interface simples
+- [X] **2025-07-05:** Envio de relatório diário de vendas por e-mail (planilha pronta)
+- [X] **2025-07-06:** Geração e envio de múltiplos relatórios diários por e-mail (múltiplos arquivos)
+- [X] **2025-07-07:** Geração e envio automático de relatório de vendas (dados fictícios em um arquivo)
+- [ ] **2025-07-08:** Organizador de arquivos em pastas por cliente
+- [ ] **2025-07-09:** Conversor de tabelas PDF → Excel
+- [ ] **2025-07-10:** Dashboard de pagamentos
+- [ ] **2025-07-11:** Web scraper de preços da concorrência
+- [ ] **2025-07-12:** Calculadora de impostos com interface simples
