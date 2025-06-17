@@ -1558,7 +1558,7 @@ import glob
 
 # Função para ler o extrato bancário
 def ler_extrato(caminho_arquivo):
-    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1)
+    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
 
 # Função para consolidar extratos
 def consolidar_extratos(pasta_extratos):
@@ -2094,14 +2094,14 @@ O controle de protocolos em repartições públicas é uma atividade importante 
 
 O objetivo deste exemplo é criar um script que:
 - Leia uma planilha com os dados dos protocolos, contendo informações como número do protocolo, descrição, data de entrada e situação.
-- Verifique quais protocolos estão com a situação pendente ou próxima do vencimento.
-- Envie um e-mail de alerta para o responsável pelo protocolo, informando sobre a pendência ou o vencimento iminente.
+- Verifique quais protocolos estão próximos do vencimento (por exemplo, faltando 3 dias ou menos).
+- Envie um e-mail de alerta para o responsável pelo protocolo, informando sobre o prazo iminente.
 
 ## 19.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
 - `ler_planilha_protocolos()`: Para ler a planilha com os dados dos protocolos.
-- `verificar_protocolos_pendentes()`: Para identificar quais protocolos estão pendentes ou próximos do vencimento.
+- `verificar_protocolos_proximos_vencimento()`: Para verificar quais protocolos estão próximos do vencimento.
 - `enviar_alertas_protocolos()`: Para enviar os e-mails de alerta.
 
 ## 19.3. Exemplo de Código
@@ -2116,8 +2116,8 @@ from datetime import datetime, timedelta
 def ler_planilha_protocolos(caminho_arquivo):
     return pd.read_excel(caminho_arquivo)
 
-# Função para verificar protocolos pendentes ou próximos do vencimento
-def verificar_protocolos_pendentes(df, dias_aviso=3):
+# Função para verificar protocolos próximos do vencimento
+def verificar_protocolos_proximos_vencimento(df, dias_aviso=3):
     hoje = datetime.now()
     proximos_protocolos = df[(df['Data de Vencimento'] - hoje).dt.days <= dias_aviso]
     return proximos_protocolos
@@ -2129,7 +2129,7 @@ def enviar_alertas_protocolos(df_protocolos, smtp_user, smtp_password):
     for _, row in df_protocolos.iterrows():
         destinatario = row['Email']
         assunto = f"Aviso de Protocolo - {row['Número do Protocolo']}"
-        corpo = f"Prezado(a),\n\nEste é um aviso de que o protocolo {row['Número do Protocolo']} está pendente ou próximo do vencimento.\nData de Vencimento: {row['Data de Vencimento'].strftime('%d/%m/%Y')}\n\nAtenciosamente,"
+        corpo = f"Prezado(a),\n\nEste é um aviso de que o protocolo {row['Número do Protocolo']} está próximo do vencimento.\nData de Vencimento: {row['Data de Vencimento'].strftime('%d/%m/%Y')}\n\nAtenciosamente,"
         
         msg = MIMEText(corpo)
         msg['Subject'] = assunto
@@ -2144,10 +2144,10 @@ def enviar_alertas_protocolos(df_protocolos, smtp_user, smtp_password):
 # Exemplo de uso
 caminho_planilha = 'protocolos_reparticao_publica.xlsx'
 df_protocolos = ler_planilha_protocolos(caminho_planilha)
-df_protocolos_pendentes = verificar_protocolos_pendentes(df_protocolos)
+df_protocolos_proximos = verificar_protocolos_proximos_vencimento(df_protocolos)
 
 # Enviar alertas (descomente a linha abaixo para enviar os e-mails)
-# enviar_alertas_protocolos(df_protocolos_pendentes, 'seu_email@gmail.com', 'sua_senha')
+# enviar_alertas_protocolos(df_protocolos_proximos, 'seu_email@gmail.com', 'sua_senha')
 
 print("Processamento concluído.")
 ```
@@ -2332,123 +2332,234 @@ A automação do acompanhamento de entregas pode trazer maior eficiência e agil
 
 ***
 
-# 23. Conclusão
+# 23. Leitura de pedidos de marketplaces
 
-A automação de processos em escritórios que prestam serviços para repartições públicas e órgãos governamentais pode trazer ganhos significativos de eficiência, precisão e conformidade. Com o uso de ferramentas como Python, planilhas e APIs, é possível simplificar tarefas administrativas, melhorar a comunicação com os clientes e otimizar a gestão de documentos e processos.
-A implementação de soluções automatizadas pode reduzir o tempo gasto em atividades repetitivas, minimizar erros humanos e garantir que os prazos sejam cumpridos de forma mais eficaz.
-Além disso, a automação pode facilitar o acesso e a análise de dados, permitindo uma tomada de decisão mais informada e ágil. Com o avanço da tecnologia e a crescente demanda por eficiência nos serviços públicos, a automação se torna uma ferramenta indispensável para os profissionais que atuam nesse setor.
+A leitura e processamento de pedidos de marketplaces é uma tarefa importante para empresas que vendem produtos em plataformas como Mercado Livre, Amazon e outros. Neste exemplo, vamos mostrar como automatizar a leitura de pedidos recebidos em um marketplace, utilizando Python para processar as informações e gerar relatórios.
+
+## 23.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia um arquivo com os pedidos recebidos, contendo informações como produto, quantidade, preço e dados do cliente.
+- Gere um relatório com o resumo dos pedidos, incluindo o total de vendas e a lista de produtos mais vendidos.
+
+## 23.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_pedidos()`: Para ler o arquivo com os pedidos recebidos.
+- `gerar_relatorio_pedidos()`: Para gerar o relatório com o resumo dos pedidos.
+
+## 23.3. Exemplo de Código
+
+```python
+import pandas as pd
+
+# Função para ler os pedidos recebidos
+def ler_pedidos(caminho_arquivo):
+    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+
+# Função para gerar o relatório com o resumo dos pedidos
+def gerar_relatorio_pedidos(df_pedidos):
+    relatorio = df_pedidos.groupby('Produto').agg({'Quantidade': 'sum', 'Preço': 'mean'}).reset_index()
+    relatorio['Total Vendas'] = relatorio['Quantidade'] * relatorio['Preço']
+    relatorio.to_csv('relatorio_pedidos.csv', index=False, sep=';')
+    print("Relatório de pedidos gerado: relatorio_pedidos.csv")
+
+# Exemplo de uso
+caminho_arquivo = 'pedidos_marketplace.csv'
+df_pedidos = ler_pedidos(caminho_arquivo)
+gerar_relatorio_pedidos(df_pedidos)
+```
+
+## 23.4. Considerações Finais
+
+A automação da leitura e processamento de pedidos de marketplaces pode trazer maior eficiência e agilidade para as operações de vendas online, facilitando o acompanhamento dos pedidos e a geração de relatórios. Com o uso de arquivos CSV e a automação do processamento de dados, é possível simplificar e otimizar essa tarefa comercial.
 
 ***
 
-# 24. Agradecimentos
+# 24. Atualização automática de estoque
 
-Agradecemos a todos os leitores e profissionais que contribuíram para a elaboração deste material. Esperamos que os exemplos apresentados tenham sido úteis e inspiradores, e que possam ser aplicados na prática para melhorar a eficiência e a produtividade em seus escritórios.
+A atualização de estoque é uma atividade crítica para empresas de e-commerce e vendas online, sendo essencial para garantir a disponibilidade dos produtos e evitar perdas financeiras. Neste exemplo, vamos mostrar como automatizar a atualização de estoque em planilhas Excel ou em um ERP simples, utilizando Python para ler os dados de vendas e atualizar as quantidades em estoque.
+
+## 24.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia um arquivo com os dados de vendas, contendo informações como produto, quantidade vendida e data da venda.
+- Atualize automaticamente as quantidades em estoque em uma planilha Excel ou em um ERP simples.
+
+## 24.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_vendas()`: Para ler o arquivo com os dados de vendas.
+- `atualizar_estoque()`: Para atualizar as quantidades em estoque.
+
+## 24.3. Exemplo de Código
+
+```python
+import pandas as pd
+
+# Função para ler os dados de vendas
+def ler_vendas(caminho_arquivo):
+    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+
+# Função para atualizar o estoque
+def atualizar_estoque(df_vendas, caminho_estoque):
+    df_estoque = pd.read_excel(caminho_estoque)
+    for _, row in df_vendas.iterrows():
+        produto = row['Produto']
+        quantidade_vendida = row['Quantidade']
+        df_estoque.loc[df_estoque['Produto'] == produto, 'Estoque'] -= quantidade_vendida
+    df_estoque.to_excel(caminho_estoque, index=False)
+    print("Estoque atualizado com sucesso.")
+
+# Exemplo de uso
+caminho_vendas = 'vendas.csv'
+caminho_estoque = 'estoque.xlsx'
+df_vendas = ler_vendas(caminho_vendas)
+atualizar_estoque(df_vendas, caminho_estoque)
+```
+
+## 24.4. Considerações Finais
+
+A automação da atualização de estoque pode trazer maior eficiência e precisão para a gestão de estoques em empresas de e-commerce e vendas online, facilitando o acompanhamento das vendas e a atualização das quantidades em estoque. Com o uso de arquivos CSV e Excel, e a automação do processamento de dados, é possível simplificar e otimizar essa tarefa comercial.
 
 ***
 
-# 25. Referências Bibliográficas (Formato ABNT)
+# 25. Envio de notas fiscais e respostas automáticas a clientes
 
-PYTHON SOFTWARE FOUNDATION. Python Documentation. Disponível em: <https://docs.python.org/3/>. Acesso em: 17 jun. 2025.
+O envio de notas fiscais e respostas automáticas a clientes é uma prática importante para garantir a conformidade fiscal e melhorar o atendimento ao cliente. Neste exemplo, vamos mostrar como automatizar o envio de notas fiscais eletrônicas e respostas automáticas a clientes, utilizando Python para gerar os documentos e enviá-los por e-mail.
 
-MCKINNEY, Wes. Python for Data Analysis. 3. ed. Sebastopol: O'Reilly Media, 2022.
+## 25.1. Objetivo
 
-VANDERPLAS, Jake. Python Data Science Handbook. Sebastopol: O'Reilly Media, 2016.
+O objetivo deste exemplo é criar um script que:
+- Gere notas fiscais eletrônicas com base nas informações de vendas.
+- Envie as notas fiscais geradas e respostas automáticas por e-mail para os clientes.
 
-REITZ, Kenneth; SCHLUSSER, Tanya. The Hitchhiker’s Guide to Python. Sebastopol: O’Reilly Media, 2021.
+## 25.2. Estrutura do Código
 
-LUTZ, Mark. Learning Python. 5. ed. Sebastopol: O’Reilly Media, 2013.
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `gerar_nota_fiscal()`: Para gerar a nota fiscal eletrônica.
+- `enviar_nota_fiscal_email()`: Para enviar a nota fiscal e a resposta automática por e-mail.
 
-SWEIGART, Al. Automate the Boring Stuff with Python. 2. ed. San Francisco: No Starch Press, 2019.
+## 25.3. Exemplo de Código
 
-PANDAS DEVELOPMENT TEAM. Pandas Documentation. Disponível em: <https://pandas.pydata.org/docs/>. Acesso em: 17 jun. 2025.
+```python
+import pandas as pd
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
 
-REQUESTS. Requests: HTTP for Humans. Disponível em: <https://docs.python-requests.org/en/latest/>. Acesso em: 17 jun. 2025.
+# Função para gerar a nota fiscal eletrônica
+def gerar_nota_fiscal(dados_venda, caminho_saida):
+    df_nota = pd.DataFrame([dados_venda])
+    df_nota.to_csv(caminho_saida, index=False, sep=';')
+    print(f"Nota fiscal gerada: {caminho_saida}")
 
-RICHARDSON, Leonard. BeautifulSoup Documentation. Disponível em: <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>. Acesso em: 17 jun. 2025.
+# Função para enviar a nota fiscal por e-mail
+def enviar_nota_fiscal_email(destinatario, assunto, corpo, caminho_nota, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    # Criar o objeto de mensagem
+    msg = MIMEMultipart()
+    msg['Subject'] = assunto
+    msg['From'] = smtp_user
+    msg['To'] = destinatario
+    # Adicionar o corpo do e-mail
+    msg.attach(MIMEText(corpo, 'plain'))
+    # Adicionar o anexo
+    with open(caminho_nota, 'rb') as anexo:
+        parte = MIMEBase('application', 'octet-stream')
+        parte.set_payload(anexo.read())
+        encoders.encode_base64(parte)
+        parte.add_header('Content-Disposition', f'attachment; filename={caminho_nota.split("/")[-1]}')
+        msg.attach(parte)
+    # Enviar o e-mail
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(smtp_user, smtp_password)
+        server.send_message(msg)
 
-SELENIUMHQ. Selenium with Python Documentation. Disponível em: <https://selenium-python.readthedocs.io/>. Acesso em: 17 jun. 2025.
+# Exemplo de uso
+dados_venda = {
+    'Cliente': 'João da Silva',
+    'Produto': 'Notebook',
+    'Quantidade': 1,
+    'Valor Unitário': 5000.00,
+    'CNPJ': '12.345.678/0001-95'
+}
+caminho_nota = 'nota_fiscal_joao_silva.csv'
+gerar_nota_fiscal(dados_venda, caminho_nota)
 
-PYWEBIO. PyWebIO Documentation. Disponível em: <https://pywebio.readthedocs.io/>. Acesso em: 17 jun. 2025.
+# Enviar a nota fiscal por e-mail (descomente a linha abaixo para enviar o e-mail)
+# enviar_nota_fiscal_email('joao@email.com', 'Sua Nota Fiscal', 'Segue em anexo a nota fiscal.', caminho_nota, 'seu_email@gmail.com', 'sua_senha')
+```
 
-TKDOCS. Tkinter Documentation. Disponível em: <https://tkdocs.com/>. Acesso em: 17 jun. 2025.
+## 25.4. Considerações Finais
 
-PYPDF2. PyPDF2 Documentation. Disponível em: <https://pypdf2.readthedocs.io/>. Acesso em: 17 jun. 2025.
-
-PDFPLUMBER. pdfplumber Documentation. Disponível em: <https://github.com/jsvine/pdfplumber>. Acesso em: 17 jun. 2025.
-
-OPENPYXL. OpenPyXL Documentation. Disponível em: <https://openpyxl.readthedocs.io/>. Acesso em: 17 jun. 2025.
-
-PYTHON-DOCX. python-docx Documentation. Disponível em: <https://python-docx.readthedocs.io/>. Acesso em: 17 jun. 2025.
-
-FPDF. FPDF Documentation. Disponível em: <http://www.fpdf.org/>. Acesso em: 17 jun. 2025.
-
-FAKER. Faker Documentation. Disponível em: <https://faker.readthedocs.io/>. Acesso em: 17 jun. 2025.
-
-GOOGLE DEVELOPERS. Google Maps Platform Documentation. Disponível em: <https://developers.google.com/maps/documentation>. Acesso em: 17 jun. 2025.
-
-OPENROUTESERVICE. API Documentation. Disponível em: <https://openrouteservice.org/sign-up/>. Acesso em: 17 jun. 2025.
+A automação do envio de notas fiscais e respostas automáticas a clientes pode trazer maior eficiência e agilidade para o processo de faturamento e atendimento ao cliente, garantindo a conformidade fiscal e melhorando a experiência do cliente. Com o uso de geração automática de notas fiscais e envio programático por e-mail, é possível simplificar e otimizar essa tarefa financeira e comercial.
 
 ***
 
 # 26. ADENDO: Códigos em Python
 
-- **Exemplo Prático 01** – Análise de vendas de produtos online (CSV)  
-  [`codes/01_exemplo_pratico_vendas_online.py`](codes/01_exemplo_pratico_vendas_online.py)
-- **Exemplo Prático 02** – Geração de relatórios financeiros (Excel)  
-  [`codes/02_exemplo_pratico_relatorio_financeiro.py`](codes/02_exemplo_pratico_relatorio_financeiro.py)
-- **Exemplo Prático 03** – Controle de inadimplência em aluguéis (Excel + E-mail)  
-  [`codes/03_exemplo_pratico_alugueis_com_email.py`](codes/03_exemplo_pratico_alugueis_com_email.py)
-- **Exemplo Prático 04** – Envio de e-mails automatizados (Python + SMTP)  
-  [`codes/04_exemplo_pratico_envio_email.py`](codes/04_exemplo_pratico_envio_email.py)
-- **Exemplo Prático 05** – Extração de texto de um PDF  
-  [`codes/05_exemplo_pratico_extracao_pdf.py`](codes/05_exemplo_pratico_extracao_pdf.py)
-- **Exemplo Prático 06** – Leitura e modificação de um arquivo Word  
-  [`codes/06_exemplo_pratico_modificacao_word.py`](codes/06_exemplo_pratico_modificacao_word.py)
-- **Exemplo Prático 07** – Automação de Excel com Pandas  
-  [`codes/07_exemplo_pratico_automacao_excel.py`](codes/07_exemplo_pratico_automacao_excel.py)
-- **Exemplo Prático 08** – Geração e envio de múltiplos relatórios diários por e-mail  
-  [`codes/08_exemplo_pratico_envio_relatorio_diario.py`](codes/08_exemplo_pratico_envio_relatorio_diario.py)
-- **Exemplo Prático 09** – Web scraping básico com BeautifulSoup  
-  [`codes/09_exemplo_pratico_webscraping.py`](codes/09_exemplo_pratico_webscraping.py)
-- **Exemplo Prático 10** – Extração de tabelas HTML para Excel  
-  [`codes/10_exemplo_pratico_tabela_html_excel.py`](codes/10_exemplo_pratico_tabela_html_excel.py)
-- **Exemplo Prático 11** – Automação de sites com Selenium  
-  [`codes/11_exemplo_pratico_selenium.py`](codes/11_exemplo_pratico_selenium.py)
-- **Exemplo Prático 12** – Interface gráfica simples com Tkinter  
-  [`codes/12_exemplo_pratico_tkinter.py`](codes/12_exemplo_pratico_tkinter.py)
-- **Exemplo Prático 13** – Interface web simples com PyWebIO  
-  [`codes/13_exemplo_pratico_pywebio.py`](codes/13_exemplo_pratico_pywebio.py)
-- **Exemplo Prático 14** – Gerador automático de procurações e petições  
-  [`codes/14_exemplo_pratico_gerador_procuracao.py`](codes/14_exemplo_pratico_gerador_procuracao.py)
-- **Exemplo Prático 15** – Controle de prazos processuais com alertas  
-  [`codes/15_exemplo_pratico_prazos_alerta.py`](codes/15_exemplo_pratico_prazos_alerta.py)
-- **Exemplo Prático 16** – Consulta automatizada a sites de tribunais  
-  [`codes/16_exemplo_pratico_consulta_tribunal.py`](codes/16_exemplo_pratico_consulta_tribunal.py)
-- **Exemplo Prático 17** – Leitura e consolidação de extratos bancários  
-  [`codes/17_exemplo_pratico_extratos_bancarios.py`](codes/17_exemplo_pratico_extratos_bancarios.py)
-- **Exemplo Prático 18** – Geração automática de guias de impostos  
-  [`codes/18_exemplo_pratico_guia_imposto.py`](codes/18_exemplo_pratico_guia_imposto.py)
-- **Exemplo Prático 19** – Envio automático de boletos por e-mail  
-  [`codes/19_exemplo_pratico_envio_boleto.py`](codes/19_exemplo_pratico_envio_boleto.py)
-- **Exemplo Prático 20** – Leitura e geração de manifestos (XML, PDF)  
-  [`codes/20_exemplo_pratico_manifesto.py`](codes/20_exemplo_pratico_manifesto.py)
-- **Exemplo Prático 21** – Roteirização com base em distância (API)  
-  [`codes/21_exemplo_pratico_roteirizacao.py`](codes/21_exemplo_pratico_roteirizacao.py)
-- **Exemplo Prático 22** – Acompanhamento de entregas via planilhas  
-  [`codes/22_exemplo_pratico_entregas.py`](codes/22_exemplo_pratico_entregas.py)
-- **Exemplo Prático 23** – Leitura de pedidos de marketplaces  
-  [`codes/23_exemplo_pratico_pedidos_marketplace.py`](codes/23_exemplo_pratico_pedidos_marketplace.py)
-- **Exemplo Prático 24** – Atualização automática de estoque  
-  [`codes/24_exemplo_pratico_estoque.py`](codes/24_exemplo_pratico_estoque.py)
-- **Exemplo Prático 25** – Envio de notas fiscais e respostas automáticas  
-  [`codes/25_exemplo_pratico_nota_fiscal.py`](codes/25_exemplo_pratico_nota_fiscal.py)
-- **Exemplo Prático 26** – Controle automatizado de protocolos  
-  [`codes/26_exemplo_pratico_protocolos.py`](codes/26_exemplo_pratico_protocolos.py)
-- **Exemplo Prático 27** – Conversor de tabelas PDF para Excel  
-  [`codes/27_exemplo_pratico_pdf_para_excel.py`](codes/27_exemplo_pratico_pdf_para_excel.py)
-- **Exemplo Prático 28** – Organizador de arquivos em pastas por cliente  
-  [`codes/28_exemplo_pratico_organizador_arquivos.py`](codes/28_exemplo_pratico_organizador_arquivos.py)
-- **Exemplo Prático 29** – Dashboard de pagamentos  
-  [`codes/29_exemplo_pratico_dashboard_pagamentos.py`](codes/29_exemplo_pratico_dashboard_pagamentos.py)
-- **Exemplo Prático 30** – Calculadora de impostos com interface  
-  [`codes/30_exemplo_pratico_calculadora_impostos.py`](codes/30_exemplo_pratico_calculadora_impostos.py)
+- Exemplo Prático 01 – Análise de vendas de produtos online (CSV)  
+  codes/01_exemplo_pratico_vendas_online.py
+- Exemplo Prático 02 – Geração de relatórios financeiros (Excel)  
+  codes/02_exemplo_pratico_relatorio_financeiro.py
+- Exemplo Prático 03 – Controle de inadimplência em aluguéis (Excel + E-mail)  
+  codes/03_exemplo_pratico_alugueis_com_email.py
+- Exemplo Prático 04 – Envio de e-mails automatizados (Python + SMTP)  
+  codes/04_exemplo_pratico_envio_email.py
+- Exemplo Prático 05 – Extração de texto de um PDF  
+  codes/05_exemplo_pratico_extracao_pdf.py
+- Exemplo Prático 06 – Leitura e modificação de um arquivo Word  
+  codes/06_exemplo_pratico_modificacao_word.py
+- Exemplo Prático 07 – Automação de Excel com Pandas  
+  codes/07_exemplo_pratico_automacao_excel.py
+- Exemplo Prático 08 – Geração e envio de múltiplos relatórios diários por e-mail  
+  codes/08_exemplo_pratico_envio_relatorio_diario.py
+- Exemplo Prático 09 – Web scraping básico com BeautifulSoup  
+  codes/09_exemplo_pratico_webscraping.py
+- Exemplo Prático 10 – Extração de tabelas HTML para Excel  
+  codes/10_exemplo_pratico_tabela_html_excel.py
+- Exemplo Prático 11 – Automação de sites com Selenium  
+  codes/11_exemplo_pratico_selenium.py
+- Exemplo Prático 12 – Interface gráfica simples com Tkinter  
+  codes/12_exemplo_pratico_tkinter.py
+- Exemplo Prático 13 – Interface web simples com PyWebIO  
+  codes/13_exemplo_pratico_pywebio.py
+- Exemplo Prático 14 – Gerador automático de procurações e petições  
+  codes/14_exemplo_pratico_gerador_procuracao.py
+- Exemplo Prático 15 – Controle de prazos processuais com alertas  
+  codes/15_exemplo_pratico_prazos_alerta.py
+- Exemplo Prático 16 – Consulta automatizada a sites de tribunais  
+  codes/16_exemplo_pratico_consulta_tribunal.py
+- Exemplo Prático 17 – Leitura e consolidação de extratos bancários  
+  codes/17_exemplo_pratico_extratos_bancarios.py
+- Exemplo Prático 18 – Geração automática de guias de impostos  
+  codes/18_exemplo_pratico_guia_imposto.py
+- Exemplo Prático 19 – Envio automático de boletos por e-mail  
+  codes/19_exemplo_pratico_envio_boleto.py
+- Exemplo Prático 20 – Leitura e geração de manifestos (XML, PDF)  
+  codes/20_exemplo_pratico_manifesto.py
+- Exemplo Prático 21 – Roteirização com base em distância (API)  
+  codes/21_exemplo_pratico_roteirizacao.py
+- Exemplo Prático 22 – Acompanhamento de entregas via planilhas  
+  codes/22_exemplo_pratico_entregas.py
+- Exemplo Prático 23 – Leitura de pedidos de marketplaces  
+  codes/23_exemplo_pratico_pedidos_marketplace.py
+- Exemplo Prático 24 – Atualização automática de estoque  
+  codes/24_exemplo_pratico_estoque.py
+- Exemplo Prático 25 – Envio de notas fiscais e respostas automáticas  
+  codes/25_exemplo_pratico_nota_fiscal.py
+- Exemplo Prático 26 – Controle automatizado de protocolos  
+  codes/26_exemplo_pratico_protocolos.py
+- Exemplo Prático 27 – Conversor de tabelas PDF para Excel  
+  codes/27_exemplo_pratico_pdf_para_excel.py
+- Exemplo Prático 28 – Organizador de arquivos em pastas por cliente  
+  codes/28_exemplo_pratico_organizador_arquivos.py
+- Exemplo Prático 29 – Dashboard de pagamentos  
+  codes/29_exemplo_pratico_dashboard_pagamentos.py
+- Exemplo Prático 30 – Calculadora de impostos com interface  
+  codes/30_exemplo_pratico_calculadora_impostos.py
