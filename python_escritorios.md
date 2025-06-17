@@ -152,7 +152,7 @@ Ao dominar esses fundamentos, você estará preparado para aplicar a automação
 
 ***
 
-## 1. Introdução à automação com Python
+# 1. Introdução à automação com Python
 
 Automação é o processo de usar tecnologia para executar tarefas de forma automática, reduzindo a necessidade de intervenção manual. No contexto dos escritórios, isso significa transformar atividades repetitivas e demoradas em processos rápidos, precisos e eficientes.
 
@@ -178,22 +178,22 @@ Ao longo deste livro, você verá como essas e outras tarefas podem ser automati
 
 ***
 
-## 2. Instalação de Ambiente: VS Code, Python e Bibliotecas Úteis
+# 2. Instalação de Ambiente: VS Code, Python e Bibliotecas Úteis
 
 Antes de iniciar os exemplos práticos, é importante preparar o ambiente de desenvolvimento. Siga os passos abaixo:
 
-### 2.1. Instale o Visual Studio Code (VS Code)
+## 2.1. Instale o Visual Studio Code (VS Code)
 
 - Acesse: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 - Baixe e instale a versão adequada para o seu sistema operacional (Windows, macOS ou Linux).
 
-### 2.2. Instale o Python
+## 2.2. Instale o Python
 
 - Acesse: [https://www.python.org/downloads/](https://www.python.org/downloads/)
 - Baixe a versão mais recente do Python 3.x.
 - Durante a instalação, marque a opção **"Add Python to PATH"**.
 
-### 2.3. Instale Bibliotecas Úteis
+## 2.3. Instale Bibliotecas Úteis
 
 Abra o terminal do VS Code (atalho: `Ctrl + ``) e execute os comandos abaixo para instalar as principais bibliotecas que serão usadas nos exemplos:
 
@@ -204,7 +204,7 @@ pip install pandas openpyxl
 - `pandas`: Manipulação de dados e leitura de planilhas Excel.
 - `openpyxl`: Leitura e escrita de arquivos `.xlsx` (Excel).
 
-### 2.4. (Opcional) Instale Extensões no VS Code
+## 2.4. (Opcional) Instale Extensões no VS Code
 
 - **Python** (Microsoft): Suporte a sintaxe, depuração e execução de scripts Python.
 - **Jupyter**: Para notebooks interativos, se desejar.
@@ -215,11 +215,11 @@ pip install pandas openpyxl
 
 ***
 
-## 3. Trabalhando com arquivos (Excel, CSV, PDF, Word)
+# 3. Trabalhando com arquivos (Excel, CSV, PDF, Word)
 
 Nesta seção, você aprenderá a manipular diferentes tipos de arquivos comuns no ambiente de escritório, como Excel, CSV, PDF e Word. Essas habilidades são essenciais para automatizar tarefas que envolvem leitura, escrita e processamento de dados.
 
-### 3.1. Arquivos CSV
+## 3.1. Arquivos CSV
 
 Para ler e escrever arquivos CSV, use o módulo csv ou o pandas:
 ```python
@@ -237,7 +237,7 @@ with open('saida.csv', mode='w', newline='', encoding='utf-8') as file:
     escritor.writerow(['Maria', 25])
 ```
 
-### 3.2. Arquivos Excel
+## 3.2. Arquivos Excel
 
 Para manipular arquivos Excel, use a biblioteca `pandas` ou `openpyxl`. Aqui está um exemplo com `pandas`:
 
@@ -250,7 +250,7 @@ print(df.head())  # Exibe as primeiras linhas do DataFrame
 df.to_excel('saida.xlsx', index=False, sheet_name='Resultados')
 ```
 
-### 3.3. Arquivos PDF
+## 3.3. Arquivos PDF
 
 Para ler arquivos PDF, você pode usar a biblioteca `PyPDF2`. Aqui está um exemplo simples:
 
@@ -263,7 +263,7 @@ with open('documento.pdf', 'rb') as file:
         print(pagina.extract_text())  # Extrai o texto de cada página
 ```
 
-### 3.4. Arquivos Word
+## 3.4. Arquivos Word
 
 Para manipular arquivos Word, use a biblioteca `python-docx`. Veja como ler e escrever documentos:
 
@@ -280,7 +280,7 @@ doc_novo.add_paragraph('Este é um parágrafo de exemplo.')
 doc_novo.save('novo_documento.docx')  # Salva o novo documento
 ```
 
-### 3.5. Configurando as dependências do ambiente Python
+## 3.5. Configurando as dependências do ambiente Python
 
 Para trabalhar com arquivos Excel, CSV, PDF e Word, você precisa instalar algumas bibliotecas extras. Siga os passos abaixo:
 
@@ -313,11 +313,13 @@ Assim, seu ambiente estará pronto para manipular arquivos desses tipos em Pytho
 
 ***
 
-### 3.6. Exercícios Práticos
+## 3.6. Exercícios Práticos
 
 Nesta seção, você encontrará exercícios práticos para aplicar os conceitos aprendidos sobre manipulação de arquivos. Esses exercícios são projetados para serem desafiadores e ajudarão a consolidar seu conhecimento em automação de tarefas comuns em escritórios.
 
-#### 3.6.1. Exercício prático: Análise de vendas de produtos online (CSV)
+***
+
+### 3.6.1. Exercício prático: Análise de vendas de produtos online (CSV)
 
 **História:**  
 Você trabalha no setor de análise de dados de uma loja online. Recebeu um arquivo `vendas.csv` contendo o histórico de vendas do último mês. Cada linha do arquivo representa uma venda, com as seguintes colunas: `data`, `produto`, `quantidade`, `preco_unitario`.
@@ -375,7 +377,10 @@ Monitor,900
 **Conclusão**
 Com este exercício, você praticou a leitura de arquivos CSV, manipulação de dados com pandas e geração de relatórios. Essas habilidades são fundamentais para automatizar análises de vendas e outras tarefas relacionadas a dados em escritórios.
 
-## 3.6.2. Automatizando Relatórios de Inadimplência em Aluguéis com Python e Excel
+
+***
+
+### 3.6.2. Automatizando Relatórios de Inadimplência em Aluguéis com Python e Excel
 
 **História:**
 Neste exercício, vamos aplicar a integração entre Python e Excel para resolver um problema comum em empresas de aluguel de imóveis: o controle de inadimplência.
@@ -607,7 +612,7 @@ Com este exercício, você praticou a leitura de arquivos PDF e a extração de 
 
 ***
 
-#### 3.6.4. Leitura e modificação de um arquivo Word
+### 3.6.4. Leitura e modificação de um arquivo Word
 
 **História Fictícia:**  
 O escritório de advocacia “Silva & Associados” recebe frequentemente minutas de contratos em formato Word, enviadas por clientes e parceiros. A advogada Júlia precisa revisar rapidamente esses contratos para garantir que todos contenham uma cláusula padrão de confidencialidade. Para agilizar o processo, ela deseja um script Python que leia o arquivo Word do contrato, verifique se a cláusula está presente e, caso não esteja, adicione automaticamente a cláusula ao final do documento.
