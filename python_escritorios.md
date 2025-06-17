@@ -805,42 +805,11 @@ from email import encoders
 import pandas as pd
 from datetime import datetime
 import os
-
 # Configurações do servidor SMTP
 smtp_server = 'smtp.gmail.com'
 smtp_port = 587
 smtp_user = 'seu_email@gmail.com'
 smtp_password = 'sua_senha'
-
-# Caminho do arquivo Excel
-excel_path = r'C:\dev\python_escritorios\codes\relatorio_vendas.xlsx'
-
-# 1. Geração de dados fictícios de vendas
-fake = Faker('pt_BR')
-dados_vendas = []
-for _ in range(10):  # Gerar 10 registros fictícios
-    dados_vendas.append({
-        'data': fake.date_this_month(),
-        'produto': fake.word(),
-        'quantidade': fake.random_int(min=1, max=10),
-        'preco_unitario': fake.random_int(min=50, max=500)
-    })
-
-# Criar DataFrame
-df_vendas = pd.DataFrame(dados_vendas)
-
-# 2. Salvando dados em um arquivo Excel (.xlsx)
-df_vendas.to_excel(excel_path, index=False, sheet_name='Vendas')
-
-# 3. Exibindo dados no console para cópia manual para o Excel
-print("Dados de Vendas Gerados:")
-print(df_vendas)
-
-# 4. Envio do relatório como anexo por e-mail
-data_atual = datetime.now().strftime('%d/%m/%Y')
-assunto = f'Relatório de Vendas - {data_atual}'
-corpo = 'Prezada Ana, segue em anexo o relatório de vendas do dia.'
-
 # Função para enviar e-mail com anexo
 def enviar_email_com_anexo(destinatario, assunto, corpo, caminho_anexo):
     # Criar o objeto de mensagem
@@ -862,14 +831,31 @@ def enviar_email_com_anexo(destinatario, assunto, corpo, caminho_anexo):
         server.starttls()
         server.login(smtp_user, smtp_password)
         server.send_message(msg)
+# Caminho do arquivo Excel
+excel_path = r'C:\dev\python_escritorios\codes\relatorio_vendas.xlsx'
+
+# Ler o arquivo Excel existente
+if os.path.exists(excel_path):
+    df_vendas = pd.read_excel(excel_path)
+    print(f"Arquivo de vendas encontrado em: {excel_path}")
+    # Exibir os dados de vendas no console para copiar e colar no Excel
+    print("\nCopie e cole os dados abaixo no Excel, se desejar:")
+    print(df_vendas.to_csv(sep='\t', index=False))
+else:
+    print(f"Arquivo {excel_path} não encontrado. Certifique-se de que a planilha existe com os dados prontos.")
+    exit(1)
 
 # Enviar o e-mail com o relatório
+data_atual = datetime.now().strftime('%d/%m/%Y')
+assunto = f'Relatório de Vendas - {data_atual}'
+corpo = 'Prezada Ana, segue em anexo o relatório de vendas do dia anterior.'
 enviar_email_com_anexo(
     'ana@techsolutions.com',
     assunto,
     corpo,
     excel_path
 )
+print("E-mail enviado com sucesso!")
 ```
 
 **Resultado esperado:**
@@ -920,7 +906,6 @@ Automatizar o processo de geração e envio do relatório diário de vendas, seg
 
 ```python
 import pandas as pd
-from faker import Faker
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -938,47 +923,44 @@ smtp_password = 'sua_senha'
 # Caminho do arquivo Excel
 excel_path = r'C:\dev\python_escritorios\codes\relatorio_vendas.xlsx'
 
-# 1. Geração de dados fictícios de vendas
-fake = Faker('pt_BR')
-dados_vendas = []
-for _ in range(10):
-    dados_vendas.append({
-        'data': fake.date_this_month(),
-        'produto': fake.word(),
-        'quantidade': fake.random_int(min=1, max=10),
-        'preco_unitario': fake.random_int(min=50, max=500)
-    })
+# Ler o arquivo Excel existente
+if os.path.exists(excel_path):
+    df_vendas = pd.read_excel(excel_path)
+    print(f"Arquivo de vendas encontrado em: {excel_path}")
+    # Exibir os dados de vendas no console para copiar e colar no Excel
+    print("\nCopie e cole os dados abaixo no Excel, se desejar:")
+    print(df_vendas.to_csv(sep='\t', index=False))
+else:
+    print(f"Arquivo {excel_path} não encontrado. Certifique-se de que a planilha existe com os dados prontos.")
+    exit(1)
 
-# 2. Criar DataFrame e salvar em Excel
-df_vendas = pd.DataFrame(dados_vendas)
-df_vendas.to_excel(excel_path, index=False, sheet_name='Vendas')
-
-# 3. Exibir dados no console
-print("Dados de Vendas Gerados:")
-print(df_vendas)
-
-# 4. Envio do relatório como anexo por e-mail
+# Envio do relatório como anexo por e-mail
 data_atual = datetime.now().strftime('%d/%m/%Y')
 assunto = f'Relatório de Vendas - {data_atual}'
 corpo = 'Prezada Ana, segue em anexo o relatório de vendas do dia.'
 
 def enviar_email_com_anexo(destinatario, assunto, corpo, caminho_anexo):
+    # Criar o objeto de mensagem
     msg = MIMEMultipart()
     msg['Subject'] = assunto
     msg['From'] = smtp_user
     msg['To'] = destinatario
+    # Adicionar o corpo do e-mail
     msg.attach(MIMEText(corpo, 'plain'))
+    # Adicionar o anexo
     with open(caminho_anexo, 'rb') as anexo:
         parte = MIMEBase('application', 'octet-stream')
         parte.set_payload(anexo.read())
         encoders.encode_base64(parte)
         parte.add_header('Content-Disposition', f'attachment; filename={caminho_anexo.split("/")[-1]}')
         msg.attach(parte)
+    # Enviar o e-mail
     with smtplib.SMTP(smtp_server, smtp_port) as server:
         server.starttls()
         server.login(smtp_user, smtp_password)
         server.send_message(msg)
 
+# Enviar o e-mail com o relatório
 enviar_email_com_anexo(
     'ana@techsolutions.com',
     assunto,
@@ -987,6 +969,10 @@ enviar_email_com_anexo(
 )
 
 print("E-mail enviado com sucesso!")
+# Limpeza do arquivo Excel após o envio (opcional, remova se não desejar)
+# if os.path.exists(excel_path):
+#     os.remove(excel_path)
+#     print(f"Arquivo {excel_path} removido após o envio.")
 ```
 
 **Resultado esperado:**
