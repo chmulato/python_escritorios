@@ -113,6 +113,16 @@ Este projeto está licenciado sob a licença MIT.
 
 A licença MIT é uma licença de software livre e permissiva. Ela permite que qualquer pessoa use, copie, modifique, mescle, publique, distribua, sublicencie e/ou venda cópias do software, desde que o aviso de copyright e a permissão sejam incluídos em todas as cópias ou partes substanciais do software. O software é fornecido "no estado em que se encontra", sem garantias de qualquer tipo.
 
+## Curiosidades
+
+### O que é Pythookup?
+
+**Pythookup** é uma palavra criada especialmente para este livro, unindo “Python” — a linguagem de programação que democratizou a automação — com “hookup”, termo em inglês que significa conexão, ligação ou ponto de encontro.
+
+Neste contexto, **Pythookup** representa a ideia de conectar pessoas, ideias e soluções por meio do Python. É o ponto de encontro entre profissionais de escritório e a tecnologia, onde a criatividade se une à automação para transformar rotinas, otimizar processos e abrir portas para novas possibilidades.
+
+Ao longo deste livro, você verá que **Pythookup** é mais do que um nome: é um convite para se conectar ao universo da automação, aprender de forma prática e descobrir como o Python pode ser o elo entre o seu conhecimento e o futuro do trabalho.
+
 ***
 
 ![Contra-Capa do livro Python para Escritórios Inteligentes](images/contra_capa.png)

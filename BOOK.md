@@ -33,18 +33,6 @@ Programador de Computador
 
 ***
 
-#### Pythookup: Conectando Profissionais de Escritório à Automação com Python
-
-##### O que é Pythookup?
-
-**Pythookup** é uma palavra criada especialmente para este livro, unindo “Python” — a linguagem de programação que democratizou a automação — com “hookup”, termo em inglês que significa conexão, ligação ou ponto de encontro.
-
-Neste contexto, **Pythookup** representa a ideia de conectar pessoas, ideias e soluções por meio do Python. É o ponto de encontro entre profissionais de escritório e a tecnologia, onde a criatividade se une à automação para transformar rotinas, otimizar processos e abrir portas para novas possibilidades.
-
-Ao longo deste livro, você verá que **Pythookup** é mais do que um nome: é um convite para se conectar ao universo da automação, aprender de forma prática e descobrir como o Python pode ser o elo entre o seu conhecimento e o futuro do trabalho.
-
-***
-
 # Prefácio
 
 Vivemos um tempo em que a tecnologia deixou de ser apenas uma ferramenta de especialistas para se tornar uma aliada indispensável em todas as profissões. Nos escritórios, onde o tempo é precioso e as demandas crescem a cada dia, a automação surge como uma ponte entre o trabalho repetitivo e a criatividade, entre o esforço manual e a inteligência estratégica.
