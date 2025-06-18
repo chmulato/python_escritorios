@@ -33,9 +33,9 @@ Programador de Computador
 
 ***
 
-# Pythookup: Conectando Profissionais de Escritório à Automação com Python
+#### Pythookup: Conectando Profissionais de Escritório à Automação com Python
 
-# O que é Pythookup?
+##### O que é Pythookup?
 
 **Pythookup** é uma palavra criada especialmente para este livro, unindo “Python” — a linguagem de programação que democratizou a automação — com “hookup”, termo em inglês que significa conexão, ligação ou ponto de encontro.
 
