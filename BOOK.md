@@ -2348,21 +2348,35 @@ Agradecemos a todos os leitores e profissionais que contribuíram para a elabora
 
 ***
 
-# 25. Referências Bibliográficas (Formato ABNT)
+# 25. Referências Bibliográficas (Formato ABNT) – Ordem Alfabética
 
-PYTHON SOFTWARE FOUNDATION. Python Documentation. Disponível em: <https://docs.python.org/3/>. Acesso em: 17 jun. 2025.
+FAKER. Faker Documentation. Disponível em: <https://faker.readthedocs.io/>. Acesso em: 17 jun. 2025.
 
-MCKINNEY, Wes. Python for Data Analysis. 3. ed. Sebastopol: O'Reilly Media, 2022.
+FPDF. FPDF Documentation. Disponível em: <http://www.fpdf.org/>. Acesso em: 17 jun. 2025.
 
-VANDERPLAS, Jake. Python Data Science Handbook. Sebastopol: O'Reilly Media, 2016.
-
-REITZ, Kenneth; SCHLUSSER, Tanya. The Hitchhiker’s Guide to Python. Sebastopol: O’Reilly Media, 2021.
+GOOGLE DEVELOPERS. Google Maps Platform Documentation. Disponível em: <https://developers.google.com/maps/documentation>. Acesso em: 17 jun. 2025.
 
 LUTZ, Mark. Learning Python. 5. ed. Sebastopol: O’Reilly Media, 2013.
 
-SWEIGART, Al. Automate the Boring Stuff with Python. 2. ed. San Francisco: No Starch Press, 2019.
+MCKINNEY, Wes. Python for Data Analysis. 3. ed. Sebastopol: O'Reilly Media, 2022.
+
+OPENPYXL. OpenPyXL Documentation. Disponível em: <https://openpyxl.readthedocs.io/>. Acesso em: 17 jun. 2025.
+
+OPENROUTESERVICE. API Documentation. Disponível em: <https://openrouteservice.org/sign-up/>. Acesso em: 17 jun. 2025.
 
 PANDAS DEVELOPMENT TEAM. Pandas Documentation. Disponível em: <https://pandas.pydata.org/docs/>. Acesso em: 17 jun. 2025.
+
+PDFPLUMBER. pdfplumber Documentation. Disponível em: <https://github.com/jsvine/pdfplumber>. Acesso em: 17 jun. 2025.
+
+PYTHON SOFTWARE FOUNDATION. Python Documentation. Disponível em: <https://docs.python.org/3/>. Acesso em: 17 jun. 2025.
+
+PYTHON-DOCX. python-docx Documentation. Disponível em: <https://python-docx.readthedocs.io/>. Acesso em: 17 jun. 2025.
+
+PYPDF2. PyPDF2 Documentation. Disponível em: <https://pypdf2.readthedocs.io/>. Acesso em: 17 jun. 2025.
+
+PYWEBIO. PyWebIO Documentation. Disponível em: <https://pywebio.readthedocs.io/>. Acesso em: 17 jun. 2025.
+
+REITZ, Kenneth; SCHLUSSER, Tanya. The Hitchhiker’s Guide to Python. Sebastopol: O’Reilly Media, 2021.
 
 REQUESTS. Requests: HTTP for Humans. Disponível em: <https://docs.python-requests.org/en/latest/>. Acesso em: 17 jun. 2025.
 
@@ -2370,25 +2384,11 @@ RICHARDSON, Leonard. BeautifulSoup Documentation. Disponível em: <https://www.c
 
 SELENIUMHQ. Selenium with Python Documentation. Disponível em: <https://selenium-python.readthedocs.io/>. Acesso em: 17 jun. 2025.
 
-PYWEBIO. PyWebIO Documentation. Disponível em: <https://pywebio.readthedocs.io/>. Acesso em: 17 jun. 2025.
+SWEIGART, Al. Automate the Boring Stuff with Python. 2. ed. San Francisco: No Starch Press, 2019.
 
 TKDOCS. Tkinter Documentation. Disponível em: <https://tkdocs.com/>. Acesso em: 17 jun. 2025.
 
-PYPDF2. PyPDF2 Documentation. Disponível em: <https://pypdf2.readthedocs.io/>. Acesso em: 17 jun. 2025.
-
-PDFPLUMBER. pdfplumber Documentation. Disponível em: <https://github.com/jsvine/pdfplumber>. Acesso em: 17 jun. 2025.
-
-OPENPYXL. OpenPyXL Documentation. Disponível em: <https://openpyxl.readthedocs.io/>. Acesso em: 17 jun. 2025.
-
-PYTHON-DOCX. python-docx Documentation. Disponível em: <https://python-docx.readthedocs.io/>. Acesso em: 17 jun. 2025.
-
-FPDF. FPDF Documentation. Disponível em: <http://www.fpdf.org/>. Acesso em: 17 jun. 2025.
-
-FAKER. Faker Documentation. Disponível em: <https://faker.readthedocs.io/>. Acesso em: 17 jun. 2025.
-
-GOOGLE DEVELOPERS. Google Maps Platform Documentation. Disponível em: <https://developers.google.com/maps/documentation>. Acesso em: 17 jun. 2025.
-
-OPENROUTESERVICE. API Documentation. Disponível em: <https://openrouteservice.org/sign-up/>. Acesso em: 17 jun. 2025.
+VANDERPLAS, Jake. Python Data Science Handbook. Sebastopol: O'Reilly Media, 2016.
 
 ***
 
