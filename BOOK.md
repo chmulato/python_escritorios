@@ -33,6 +33,34 @@ Programador de Computador
 
 ***
 
+# Pythookup: Conectando Profissionais de Escritório à Automação com Python
+
+# O que é Pythookup?
+
+**Pythookup** é uma palavra criada especialmente para este livro, unindo “Python” — a linguagem de programação que democratizou a automação — com “hookup”, termo em inglês que significa conexão, ligação ou ponto de encontro.
+
+Neste contexto, **Pythookup** representa a ideia de conectar pessoas, ideias e soluções por meio do Python. É o ponto de encontro entre profissionais de escritório e a tecnologia, onde a criatividade se une à automação para transformar rotinas, otimizar processos e abrir portas para novas possibilidades.
+
+Ao longo deste livro, você verá que **Pythookup** é mais do que um nome: é um convite para se conectar ao universo da automação, aprender de forma prática e descobrir como o Python pode ser o elo entre o seu conhecimento e o futuro do trabalho.
+
+***
+
+# Prefácio
+
+Vivemos um tempo em que a tecnologia deixou de ser apenas uma ferramenta de especialistas para se tornar uma aliada indispensável em todas as profissões. Nos escritórios, onde o tempo é precioso e as demandas crescem a cada dia, a automação surge como uma ponte entre o trabalho repetitivo e a criatividade, entre o esforço manual e a inteligência estratégica.
+
+Este livro nasce do desejo de mostrar que a automação não é privilégio de grandes empresas ou de programadores experientes. Ela está ao alcance de todos que desejam transformar sua rotina, ganhar tempo e abrir espaço para o que realmente importa: pensar, criar, inovar e servir melhor.
+
+Ao longo destas páginas, você encontrará não apenas códigos e exemplos práticos, mas também uma nova forma de enxergar os desafios do dia a dia. Cada script, cada exercício, é um convite para experimentar, errar, aprender e, principalmente, evoluir. Python, com sua simplicidade e poder, será seu companheiro nessa jornada — e a inteligência artificial, uma porta para possibilidades antes inimagináveis.
+
+Que este livro inspire você a dar o primeiro passo, a superar o medo do desconhecido e a descobrir que, com curiosidade e dedicação, é possível reinventar o trabalho no escritório. Que cada automação criada seja uma vitória sobre o tempo perdido e um passo rumo a uma vida profissional mais leve, produtiva e gratificante.
+
+Boa leitura, bons estudos e, acima de tudo, ótimas descobertas!
+
+**Christian Vladimir Uhdre Mulato**
+
+***
+
 # Apresentação
 
 Vivemos uma era em que a tecnologia e a inteligência artificial podem transformar o dia a dia dos escritórios, tornando tarefas repetitivas mais rápidas, precisas e menos cansativas. No entanto, muitos profissionais ainda gastam horas com atividades manuais que poderiam ser facilmente automatizadas.
