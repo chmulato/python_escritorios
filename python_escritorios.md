@@ -93,9 +93,9 @@ Programador de Computador
 
 ### Escritórios para repartições públicas e órgãos governamentais
 19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF → Excel](#20-conversor-de-tabelas-pdf--excel)  
+20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
 21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Dashboard de pagamentos](#22-dashboard-de-pagamentos)  
+22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
 
 ---
 
