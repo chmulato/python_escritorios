@@ -1,5 +1,7 @@
 ![Capa do livro Python para Escritórios Inteligentes](images/capa.png)
 
+***
+
 # Automação de Tarefas para Escritórios com Python e Inteligência Artificial
 
 Exemplos práticos para advocacia, contabilidade, logística, repartições públicas e e-commerce.
@@ -110,3 +112,7 @@ Os exemplos práticos estão organizados na pasta `codes/`:
 Este projeto está licenciado sob a licença MIT.
 
 A licença MIT é uma licença de software livre e permissiva. Ela permite que qualquer pessoa use, copie, modifique, mescle, publique, distribua, sublicencie e/ou venda cópias do software, desde que o aviso de copyright e a permissão sejam incluídos em todas as cópias ou partes substanciais do software. O software é fornecido "no estado em que se encontra", sem garantias de qualquer tipo.
+
+***
+
+![Contra-Capa do livro Python para Escritórios Inteligentes](images/contra_capa.png)
