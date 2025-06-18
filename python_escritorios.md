@@ -62,993 +62,65 @@ Programador de Computador
 
 ## Parte 1 – Fundamentos da Automação
 
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
+1. [Introdução à automação com Python](#1-introducao-a-automacao-com-python)
+2. [Instalação de ambiente: VS Code, Python, bibliotecas úteis](#2-instalacao-de-ambiente-vs-code-python-e-bibliotecas-uteis)
+3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)
+4. [Automação de e-mails e notificações](#4-automacao-de-e-mails-e-notificacoes)
+5. [Web scraping e automação de sites](#5-web-scraping-e-automacao-de-sites)
+6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criacao-de-interfaces-graficas-simples-tkinter-ou-pywebio)
 
 ## Parte 2 – Casos Reais por Tipo de Escritório
 
 ### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
+
+7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automatico-de-procuracoes-e-peticoes-a-partir-de-modelos)
+8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)
+9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)
 
 ### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
+
+10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidacao-de-extratos-bancarios-csv)
+11. [Geração automática de guias de impostos](#11-geracao-automatica-de-guias-de-impostos)
+12. [Envio automático de boletos por e-mail](#12-envio-automatico-de-boletos-por-e-mail)
 
 ### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
+
+13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geracao-de-manifestos-xml-pdf)
+14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirizacao-com-base-em-distancia-api-google-maps-ou-openroute)
+15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)
 
 ### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
 
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
+16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)
+17. [Atualização automática de estoque em Excel/ERP simples](#17-atualizacao-automatica-de-estoque-em-excelerp-simples)
+18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automaticas-a-clientes)
 
----
+### Escritórios que prestam serviços para repartições públicas e órgãos governamentais
 
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
+19. [Controle Automatizado de Protocolos em Repartição Pública](#19-controle-automatizado-de-protocolos-em-reparticao-publica)
+20. [Conversor de tabelas PDF → Excel](#20-conversor-de-tabelas-pdf--excel)
+21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)
+22. [Dashboard de pagamentos](#22-dashboard-de-pagamentos)
 
 ***
 
 # Introdução
 
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
+A automação de tarefas rotineiras é uma das maiores oportunidades para escritórios que desejam ganhar produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com vasta comunidade, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
 
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
+Este livro foi pensado para ser um guia prático, direto ao ponto, e acessível mesmo para quem nunca programou antes. O conteúdo está dividido em duas partes principais, para facilitar o aprendizado e a aplicação dos conceitos:
 
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
+## Parte I – Fundamentos da Automação
 
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
+Na primeira parte, você aprenderá os conceitos essenciais para começar a automatizar tarefas com Python. Aqui, abordamos desde a instalação do ambiente, passando pelo trabalho com arquivos, automação de e-mails, web scraping e até a criação de interfaces gráficas simples. O objetivo é construir uma base sólida, permitindo que você entenda como Python pode ser aplicado em diferentes situações do cotidiano de um escritório.
 
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
+## Parte II – Casos Reais por Tipo de Escritório
 
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
+Na segunda parte, apresentamos exemplos práticos e projetos voltados para áreas específicas: advocacia, contabilidade, logística e e-commerce. Cada capítulo traz situações reais enfrentadas nesses segmentos e mostra, passo a passo, como resolvê-las com Python. Assim, você poderá adaptar as soluções para a sua realidade, independentemente do ramo de atuação.
 
-Boa leitura e ótimos projetos!
+Ao final, você encontrará projetos práticos para consolidar o aprendizado e estimular a criatividade na busca por novas automações.
 
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
-
-***
-
-# Sumário
-
-## Parte 1 – Fundamentos da Automação
-
-1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)  
-2. [Instalação de ambiente: VS Code, Python e bibliotecas úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)  
-3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)  
-4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)  
-5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)  
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)  
-
-## Parte 2 – Casos Reais por Tipo de Escritório
-
-### Escritório de Advocacia
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)  
-8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)  
-9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)  
-
-### Escritório de Contabilidade
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)  
-11. [Geração automática de guias de impostos](#11-geraçã-automática-de-guias-de-impostos)  
-12. [Envio automático de boletos por e-mail](#12-envio-automático-de-boletos-por-e-mail)  
-
-### Escritório de Logística
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geraçã-de-manifestos-xml-pdf)  
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirização-com-base-em-distância-api-google-maps-ou-openroute)  
-15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)  
-
-### E-commerce e Vendas Online
-16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)  
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualização-automática-de-estoque-em-excelerp-simples)  
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automáticas-a-clientes)  
-
-### Escritórios para repartições públicas e órgãos governamentais
-19. [Controle automatizado de protocolos em repartição pública](#19-controle-automatizado-de-protocolos-em-repartição-pública)  
-20. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)  
-21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)  
-22. [Conversor de tabelas PDF para Excel](#20-conversor-de-tabelas-pdf--excel)
-
----
-
-23. [Conclusão](#23-conclusão)  
-24. [Agradecimentos](#24-agradecimentos)  
-25. [Referências Bibliográficas (Formato ABNT)](#25-referências-bibliográficas-formato-abnt)  
-26. [Adendo: Códigos em Python](#26-adendo-códigos-em-python)
-
-***
-
-# Introdução
-
-A automação de tarefas rotineiras representa uma das maiores oportunidades para escritórios que desejam aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas. Python, por ser uma linguagem acessível, poderosa e com uma comunidade ativa, tornou-se a escolha ideal para quem quer começar a automatizar processos no dia a dia profissional.
-
-Este livro foi desenvolvido para ser um guia prático e direto ao ponto, acessível mesmo para quem nunca programou antes. O objetivo é mostrar, de forma clara e aplicada, como a automação pode transformar a rotina de escritórios de diferentes áreas — advocacia, contabilidade, logística, repartições públicas, e-commerce e muito mais.
-
-Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e dicas para aplicar imediatamente no seu trabalho. Não é necessário ser especialista em tecnologia: basta curiosidade e vontade de aprender. O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
-
-- **Parte I – Fundamentos da Automação:**  
-  Conceitos essenciais, instalação do ambiente, manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas e introdução ao uso de inteligência artificial em tarefas do escritório.
-
-- **Parte II – Casos Reais por Tipo de Escritório:**  
-  Exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
-
-O objetivo é que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
+Esperamos que este livro seja um ponto de partida para transformar sua rotina profissional, tornando seu escritório mais inteligente, eficiente e preparado para os desafios
 
 ***
 
@@ -2512,54 +1584,866 @@ A automação da leitura e consolidação de extratos bancários pode trazer mai
 
 # 11. Geração automática de guias de impostos
 
-A geração de guias de impostos é uma obrigação periódica para empresas, sendo essencial para a regularidade fiscal e o cumprimento das obrigações tributárias. Neste exemplo, vamos mostrar como
-- Exemplo Prático 06 – Leitura e modificação de um arquivo Word  
-  codes/06_exemplo_pratico_modificacao_word.py
-- Exemplo Prático 07 – Automação de Excel com Pandas  
-  codes/07_exemplo_pratico_automacao_excel.py
-- Exemplo Prático 08 – Geração e envio de múltiplos relatórios diários por e-mail  
-  codes/08_exemplo_pratico_envio_relatorio_diario.py
-- Exemplo Prático 09 – Web scraping básico com BeautifulSoup  
-  codes/09_exemplo_pratico_webscraping.py
-- Exemplo Prático 10 – Extração de tabelas HTML para Excel  
-  codes/10_exemplo_pratico_tabela_html_excel.py
-- Exemplo Prático 11 – Automação de sites com Selenium  
-  codes/11_exemplo_pratico_selenium.py
-- Exemplo Prático 12 – Interface gráfica simples com Tkinter  
-  codes/12_exemplo_pratico_tkinter.py
-- Exemplo Prático 13 – Interface web simples com PyWebIO  
-  codes/13_exemplo_pratico_pywebio.py
-- Exemplo Prático 14 – Gerador automático de procurações e petições  
-  codes/14_exemplo_pratico_gerador_procuracao.py
-- Exemplo Prático 15 – Controle de prazos processuais com alertas  
-  codes/15_exemplo_pratico_prazos_alerta.py
-- Exemplo Prático 16 – Consulta automatizada a sites de tribunais  
-  codes/16_exemplo_pratico_consulta_tribunal.py
-- Exemplo Prático 17 – Leitura e consolidação de extratos bancários  
-  codes/17_exemplo_pratico_extratos_bancarios.py
-- Exemplo Prático 18 – Geração automática de guias de impostos  
-  codes/18_exemplo_pratico_guia_imposto.py
-- Exemplo Prático 19 – Envio automático de boletos por e-mail  
-  codes/19_exemplo_pratico_envio_boleto.py
-- Exemplo Prático 20 – Leitura e geração de manifestos (XML, PDF)  
-  codes/20_exemplo_pratico_manifesto.py
-- Exemplo Prático 21 – Roteirização com base em distância (API)  
-  codes/21_exemplo_pratico_roteirizacao.py
-- Exemplo Prático 22 – Acompanhamento de entregas via planilhas  
-  codes/22_exemplo_pratico_entregas.py
-- Exemplo Prático 23 – Leitura de pedidos de marketplaces  
-  codes/23_exemplo_pratico_pedidos_marketplace.py
-- Exemplo Prático 24 – Atualização automática de estoque  
-  codes/24_exemplo_pratico_estoque.py
-- Exemplo Prático 25 – Envio de notas fiscais e respostas automáticas  
-  codes/25_exemplo_pratico_nota_fiscal.py
-- Exemplo Prático 26 – Controle automatizado de protocolos  
-  codes/26_exemplo_pratico_protocolos.py
-- Exemplo Prático 27 – Conversor de tabelas PDF para Excel  
-  codes/27_exemplo_pratico_pdf_para_excel.py
-- Exemplo Prático 28 – Organizador de arquivos em pastas por cliente  
-  codes/28_exemplo_pratico_organizador_arquivos.py
-- Exemplo Prático 29 – Dashboard de pagamentos  
-  codes/29_exemplo_pratico_dashboard_pagamentos.py
-- Exemplo Prático 30 – Calculadora de impostos com interface  
-  codes/30_exemplo_pratico_calculadora_impostos.py
+A geração de guias de impostos é uma obrigação periódica para empresas, sendo essencial para a regularidade fiscal e o cumprimento das obrigações tributárias. Neste exemplo, vamos mostrar como automatizar a geração de guias de impostos, utilizando Python para calcular os valores devidos e gerar os documentos necessários.
+
+## 11.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Calcule os valores de impostos devidos com base nas receitas e despesas informadas.
+- Gere as guias de pagamento dos impostos de forma automática.
+
+## 11.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `calcular_impostos()`: Para calcular os impostos devidos.
+- `gerar_guia_pagamento()`: Para gerar a guia de pagamento do imposto.
+
+## 11.3. Exemplo de Código
+
+```python
+# Função para calcular os impostos devidos
+def calcular_impostos(receitas, despesas, aliquota_imposto):
+    lucro = receitas - despesas
+    imposto_devido = lucro * aliquota_imposto
+    return imposto_devido
+
+# Função para gerar a guia de pagamento do imposto
+def gerar_guia_pagamento(imposto_devido, caminho_saida):
+    with open(caminho_saida, 'w') as file:
+        file.write(f"Guia de Pagamento de Imposto\n")
+        file.write(f"Valor do Imposto Devido: R$ {imposto_devido:.2f}\n")
+    print(f"Guia de pagamento gerada: {caminho_saida}")
+
+# Exemplo de uso
+receitas = 10000
+despesas = 5000
+aliquota_imposto = 0.15  # 15%
+
+imposto_devido = calcular_impostos(receitas, despesas, aliquota_imposto)
+gerar_guia_pagamento(imposto_devido, 'guia_pagamento_imposto.txt')
+```
+
+## 11.4. Considerações Finais
+
+A automação da geração de guias de impostos pode trazer maior agilidade e precisão para o cumprimento das obrigações tributárias das empresas, reduzindo o risco de erros e atrasos. Com o uso de cálculos automáticos e a geração de documentos, é possível simplificar e otimizar essa tarefa contábil.
+
+***
+
+# 12. Envio automático de boletos por e-mail
+
+O envio de boletos por e-mail é uma prática comum e eficiente para a cobrança de clientes, facilitando o recebimento e melhorando o fluxo de caixa das empresas. Neste exemplo, vamos mostrar como automatizar o envio de boletos por e-mail, utilizando Python para gerar os boletos e enviá-los automaticamente para os clientes.
+
+## 12.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Gere boletos bancários com base nas informações de cobrança.
+- Envie os boletos gerados como anexos em e-mails para os clientes.
+
+## 12.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `gerar_boleto()`: Para gerar o boleto bancário.
+- `enviar_boleto_email()`: Para enviar o boleto por e-mail.
+
+## 12.3. Exemplo de Código
+
+```python
+import pandas as pd
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+
+# Função para gerar o boleto bancário
+def gerar_boleto(dados_boleto, caminho_saida):
+    df_boleto = pd.DataFrame([dados_boleto])
+    df_boleto.to_csv(caminho_saida, index=False, sep=';')
+    print(f"Boleto gerado: {caminho_saida}")
+
+# Função para enviar o boleto por e-mail
+def enviar_boleto_email(destinatario, assunto, corpo, caminho_boleto, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    # Criar o objeto de mensagem
+    msg = MIMEMultipart()
+    msg['Subject'] = assunto
+    msg['From'] = smtp_user
+    msg['To'] = destinatario
+    # Adicionar o corpo do e-mail
+    msg.attach(MIMEText(corpo, 'plain'))
+    # Adicionar o anexo
+    with open(caminho_boleto, 'rb') as anexo:
+        parte = MIMEBase('application', 'octet-stream')
+        parte.set_payload(anexo.read())
+        encoders.encode_base64(parte)
+        parte.add_header('Content-Disposition', f'attachment; filename={caminho_boleto.split("/")[-1]}')
+        msg.attach(parte)
+    # Enviar o e-mail
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(smtp_user, smtp_password)
+        server.send_message(msg)
+
+# Exemplo de uso
+dados_boleto = {
+    'Cliente': 'João da Silva',
+    'Valor': 150.00,
+    'Vencimento': '2025-06-10'
+}
+caminho_boleto = 'boleto_joao_silva.csv'
+gerar_boleto(dados_boleto, caminho_boleto)
+
+# Enviar o boleto por e-mail (descomente a linha abaixo para enviar o e-mail)
+# enviar_boleto_email('joao@email.com', 'Seu Boleto', 'Segue em anexo o boleto.', caminho_boleto, 'seu_email@gmail.com', 'sua_senha')
+```
+
+## 12.4. Considerações Finais
+
+A automação do envio de boletos por e-mail pode trazer maior eficiência e agilidade para o processo de cobrança, melhorando o fluxo de caixa e a relação com os clientes. Com o uso de geração automática de boletos e envio programático por e-mail, é possível simplificar e otimizar essa tarefa financeira.
+
+***
+
+# Escritório de Logística
+
+Os escritórios de logística são responsáveis pelo planejamento, execução e controle de operações de transporte e armazenamento de mercadorias, visando a eficiência e a redução de custos. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e rastreabilidade.
+
+Nesta seção, apresentamos exemplos práticos de automação voltados para escritórios de logística, com o objetivo de demonstrar como as técnicas de programação e automação podem ser aplicadas para resolver problemas específicos dessa área.
+
+Os exemplos foram escolhidos com base em situações comuns enfrentadas por profissionais de logística e buscam mostrar, de forma prática e didática, como a automação pode trazer ganhos significativos de produtividade, precisão e eficiência.
+
+Ao final de cada exemplo, você encontrará dicas e sugestões para adaptar as soluções apresentadas à sua realidade, além de exercícios práticos para consolidar o aprendizado.
+
+Esperamos que esta seção inspire você a identificar novas oportunidades de automação em sua rotina profissional e a explorar todo o potencial da programação e da inteligência artificial para transformar o seu trabalho.
+
+***
+
+# 13. Leitura e geração de manifestos (XML, PDF)
+
+A leitura e geração de manifestos é uma atividade importante para o transporte de mercadorias, sendo essencial para a conformidade fiscal e o rastreamento das operações de transporte. Neste exemplo, vamos mostrar como automatizar a leitura de manifestos em formato XML e PDF, e a geração de novos manifestos com base nas informações lidas.
+
+## 13.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia um manifesto em formato XML, extraindo as informações relevantes.
+- Gere um novo manifesto em formato PDF, com as informações extraídas.
+
+## 13.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_manifesto_xml()`: Para ler o manifesto em formato XML.
+- `gerar_manifesto_pdf()`: Para gerar o novo manifesto em formato PDF.
+
+## 13.3. Exemplo de Código
+
+```python
+import xml.etree.ElementTree as ET
+from fpdf import FPDF
+
+# Função para ler o manifesto em formato XML
+def ler_manifesto_xml(caminho_arquivo):
+    tree = ET.parse(caminho_arquivo)
+    root = tree.getroot()
+    dados_manifesto = {
+        'remetente': root.find('remetente').text,
+        'destinatario': root.find('destinatario').text,
+        'peso': root.find('peso').text,
+        'valor_frete': root.find('valor_frete').text
+    }
+    return dados_manifesto
+
+# Função para gerar o manifesto em formato PDF
+def gerar_manifesto_pdf(dados_manifesto, caminho_saida):
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("Arial", size=12)
+    for chave, valor in dados_manifesto.items():
+        pdf.cell(0, 10, f"{chave}: {valor}", ln=True)
+    pdf.output(caminho_saida)
+    print(f"Manifesto gerado: {caminho_saida}")
+
+# Exemplo de uso
+caminho_xml = 'manifesto.xml'
+caminho_pdf = 'manifesto.pdf'
+dados_manifesto = ler_manifesto_xml(caminho_xml)
+gerar_manifesto_pdf(dados_manifesto, caminho_pdf)
+```
+
+## 13.4. Considerações Finais
+
+A automação da leitura e geração de manifestos pode trazer maior eficiência e precisão para as operações de transporte, facilitando o cumprimento das obrigações fiscais e o rastreamento das mercadorias. Com o uso de arquivos XML e PDF, e a automação do processamento e geração de documentos, é possível simplificar e otimizar essa tarefa logística.
+
+***
+
+# 14. Roteirização com base em distância (API Google Maps ou OpenRoute)
+
+A roteirização é uma atividade fundamental para a otimização do transporte de mercadorias, permitindo a definição das melhores rotas a serem seguidas pelos veículos. Neste exemplo, vamos mostrar como automatizar a roteirização com base em distância, utilizando APIs como Google Maps ou OpenRoute.
+
+## 14.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Receba uma lista de endereços de origem e destino.
+- Calcule a rota mais curta ou mais rápida entre os pontos, utilizando a API escolhida.
+- Exiba o resultado com as informações da rota, como distância e tempo estimado.
+
+## 14.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `calcular_rota_google_maps()`: Para calcular a rota utilizando a API do Google Maps.
+- `calcular_rota_openroute()`: Para calcular a rota utilizando a API do OpenRoute.
+
+## 14.3. Exemplo de Código
+
+```python
+import requests
+
+# Função para calcular a rota utilizando a API do Google Maps
+def calcular_rota_google_maps(origem, destino, chave_api):
+    url = f"https://maps.googleapis.com/maps/api/directions/json?origin={origem}&destination={destino}&key={chave_api}"
+    response = requests.get(url)
+    dados = response.json()
+    if dados['status'] == 'OK':
+        rota = dados['routes'][0]
+        distancia = rota['legs'][0]['distance']['text']
+        tempo = rota['legs'][0]['duration']['text']
+        return f"Distância: {distancia}, Tempo: {tempo}"
+    else:
+        return "Erro ao calcular a rota."
+
+# Função para calcular a rota utilizando a API do OpenRoute
+def calcular_rota_openroute(origem, destino):
+    url = f"https://api.openrouteservice.org/v2/directions/driving-car?api_key=sua_chave_api&start={origem}&end={destino}"
+    response = requests.get(url)
+    dados = response.json()
+    if dados['routes']:
+        rota = dados['routes'][0]
+        distancia = rota['summary']['length']
+        tempo = rota['summary']['duration']
+        return f"Distância: {distancia} metros, Tempo: {tempo} segundos"
+    else:
+        return "Erro ao calcular a rota."
+
+# Exemplo de uso
+origem = "-23.550520, -46.633308"  # São Paulo
+destino = "-22.906847, -43.172896"  # Rio de Janeiro
+# Calcular rota pelo Google Maps
+resultado_google_maps = calcular_rota_google_maps(origem, destino, 'sua_chave_api_google_maps')
+print("Google Maps:", resultado_google_maps)
+# Calcular rota pelo OpenRoute
+resultado_openroute = calcular_rota_openroute(origem, destino)
+print("OpenRoute:", resultado_openroute)
+```
+
+## 14.4. Considerações Finais
+
+A automação da roteirização com base em distância pode trazer ganhos significativos de eficiência e economia para as operações de transporte, permitindo a definição de rotas otimizadas e a redução de custos com combustível e tempo de viagem. Com o uso de APIs de mapeamento e a automação do processamento das informações, é possível simplificar e otimizar essa tarefa logística.
+
+***
+
+# 15. Acompanhamento de entregas via planilhas
+
+O acompanhamento de entregas é uma atividade importante para garantir a satisfação dos clientes e a eficiência das operações de logística. Neste exemplo, vamos mostrar como automatizar o acompanhamento de entregas, utilizando Python para ler planilhas com os dados das entregas e enviar notificações automáticas.
+
+## 15.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia uma planilha com os dados das entregas, contendo informações como código da entrega, cliente, endereço, data e status.
+- Envie notificações automáticas para os clientes, informando sobre o status da entrega.
+
+## 15.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_planilha_entregas()`: Para ler a planilha com os dados das entregas.
+- `enviar_notificacoes()`: Para enviar as notificações automáticas.
+
+## 15.3. Exemplo de Código
+
+```python
+import pandas as pd
+import smtplib
+from email.mime.text import MIMEText
+
+# Função para ler a planilha de entregas
+def ler_planilha_entregas(caminho_arquivo):
+    return pd.read_excel(caminho_arquivo)
+
+# Função para enviar notificações automáticas
+def enviar_notificacoes(df_entregas, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    for _, row in df_entregas.iterrows():
+        destinatario = row['Email']
+        assunto = f"Atualização sobre sua entrega - {row['Código da Entrega']}"
+        corpo = f"Prezado(a),\n\nInformamos que o status da sua entrega {row['Código da Entrega']} foi atualizado para: {row['Status']}.\n\nAtenciosamente,"
+        
+        msg = MIMEText(corpo)
+        msg['Subject'] = assunto
+        msg['From'] = smtp_user
+        msg['To'] = destinatario
+        
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_password)
+            server.send_message(msg)
+
+# Exemplo de uso
+caminho_planilha = 'entregas.xlsx'
+df_entregas = ler_planilha_entregas(caminho_planilha)
+# Enviar notificações (descomente a linha abaixo para enviar os e-mails)
+# enviar_notificacoes(df_entregas, 'seu_email@gmail.com', 'sua_senha')
+
+print("Processamento concluído.")
+```
+
+## 15.4. Considerações Finais
+
+A automação do acompanhamento de entregas pode trazer maior eficiência e agilidade para as operações de logística, melhorando a comunicação com os clientes e a gestão das entregas. Com o uso de planilhas e o envio automático de notificações por e-mail, é possível simplificar e otimizar essa tarefa logística.
+
+***
+
+# 16. Leitura de pedidos de marketplaces
+
+A leitura e processamento de pedidos de marketplaces é uma tarefa importante para empresas que vendem produtos em plataformas como Mercado Livre, Amazon e outros. Neste exemplo, vamos mostrar como automatizar a leitura de pedidos recebidos em um marketplace, utilizando Python para processar as informações e gerar relatórios.
+
+## 16.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia um arquivo com os pedidos recebidos, contendo informações como produto, quantidade, preço e dados do cliente.
+- Gere um relatório com o resumo dos pedidos, incluindo o total de vendas e a lista de produtos mais vendidos.
+
+## 16.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_pedidos()`: Para ler o arquivo com os pedidos recebidos.
+- `gerar_relatorio_pedidos()`: Para gerar o relatório com o resumo dos pedidos.
+
+## 16.3. Exemplo de Código
+
+```python
+import pandas as pd
+
+# Função para ler os pedidos recebidos
+def ler_pedidos(caminho_arquivo):
+    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+
+# Função para gerar o relatório com o resumo dos pedidos
+def gerar_relatorio_pedidos(df_pedidos):
+    relatorio = df_pedidos.groupby('Produto').agg({'Quantidade': 'sum', 'Preço': 'mean'}).reset_index()
+    relatorio['Total Vendas'] = relatorio['Quantidade'] * relatorio['Preço']
+    relatorio.to_csv('relatorio_pedidos.csv', index=False, sep=';')
+    print("Relatório de pedidos gerado: relatorio_pedidos.csv")
+
+# Exemplo de uso
+caminho_arquivo = 'pedidos_marketplace.csv'
+df_pedidos = ler_pedidos(caminho_arquivo)
+gerar_relatorio_pedidos(df_pedidos)
+```
+
+## 16.4. Considerações Finais
+
+A automação da leitura e processamento de pedidos de marketplaces pode trazer maior eficiência e agilidade para as operações de vendas online, facilitando o acompanhamento dos pedidos e a geração de relatórios. Com o uso de arquivos CSV e a automação do processamento de dados, é possível simplificar e otimizar essa tarefa comercial.
+
+***
+
+# 17. Atualização automática de estoque
+
+A atualização de estoque é uma atividade crítica para empresas de e-commerce e vendas online, sendo essencial para garantir a disponibilidade dos produtos e evitar perdas financeiras. Neste exemplo, vamos mostrar como automatizar a atualização de estoque em planilhas Excel ou em um ERP simples, utilizando Python para ler os dados de vendas e atualizar as quantidades em estoque.
+
+## 17.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia um arquivo com os dados de vendas, contendo informações como produto, quantidade vendida e data da venda.
+- Atualize automaticamente as quantidades em estoque em uma planilha Excel ou em um ERP simples.
+
+## 17.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_vendas()`: Para ler o arquivo com os dados de vendas.
+- `atualizar_estoque()`: Para atualizar as quantidades em estoque.
+
+## 17.3. Exemplo de Código
+
+```python
+import pandas as pd
+
+# Função para ler os dados de vendas
+def ler_vendas(caminho_arquivo):
+    return pd.read_csv(caminho_arquivo, sep=';', encoding='latin1')
+
+# Função para atualizar o estoque
+def atualizar_estoque(df_vendas, caminho_estoque):
+    df_estoque = pd.read_excel(caminho_estoque)
+    for _, row in df_vendas.iterrows():
+        produto = row['Produto']
+        quantidade_vendida = row['Quantidade']
+        df_estoque.loc[df_estoque['Produto'] == produto, 'Estoque'] -= quantidade_vendida
+    df_estoque.to_excel(caminho_estoque, index=False)
+    print("Estoque atualizado com sucesso.")
+
+# Exemplo de uso
+caminho_vendas = 'vendas.csv'
+caminho_estoque = 'estoque.xlsx'
+df_vendas = ler_vendas(caminho_vendas)
+atualizar_estoque(df_vendas, caminho_estoque)
+```
+
+## 17.4. Considerações Finais
+
+A automação da atualização de estoque pode trazer maior eficiência e precisão para a gestão de estoques em empresas de e-commerce e vendas online, facilitando o acompanhamento das vendas e a atualização das quantidades em estoque. Com o uso de arquivos CSV e Excel, e a automação do processamento de dados, é possível simplificar e otimizar essa tarefa comercial.
+
+***
+
+# 18. Envio de notas fiscais e respostas automáticas a clientes
+
+O envio de notas fiscais e respostas automáticas a clientes é uma prática importante para garantir a conformidade fiscal e melhorar o atendimento ao cliente. Neste exemplo, vamos mostrar como automatizar o envio de notas fiscais eletrônicas e respostas automáticas a clientes, utilizando Python para gerar os documentos e enviá-los por e-mail.
+
+## 18.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Gere notas fiscais eletrônicas com base nas informações de vendas.
+- Envie as notas fiscais geradas e respostas automáticas por e-mail para os clientes.
+
+## 18.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `gerar_nota_fiscal()`: Para gerar a nota fiscal eletrônica.
+- `enviar_nota_fiscal_email()`: Para enviar a nota fiscal e a resposta automática por e-mail.
+
+## 18.3. Exemplo de Código
+
+```python
+import pandas as pd
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+
+# Função para gerar a nota fiscal eletrônica
+def gerar_nota_fiscal(dados_venda, caminho_saida):
+    df_nota = pd.DataFrame([dados_venda])
+    df_nota.to_csv(caminho_saida, index=False, sep=';')
+    print(f"Nota fiscal gerada: {caminho_saida}")
+
+# Função para enviar a nota fiscal por e-mail
+def enviar_nota_fiscal_email(destinatario, assunto, corpo, caminho_nota, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    # Criar o objeto de mensagem
+    msg = MIMEMultipart()
+    msg['Subject'] = assunto
+    msg['From'] = smtp_user
+    msg['To'] = destinatario
+    # Adicionar o corpo do e-mail
+    msg.attach(MIMEText(corpo, 'plain'))
+    # Adicionar o anexo
+    with open(caminho_nota, 'rb') as anexo:
+        parte = MIMEBase('application', 'octet-stream')
+        parte.set_payload(anexo.read())
+        encoders.encode_base64(parte)
+        parte.add_header('Content-Disposition', f'attachment; filename={caminho_nota.split("/")[-1]}')
+        msg.attach(parte)
+    # Enviar o e-mail
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(smtp_user, smtp_password)
+        server.send_message(msg)
+
+# Exemplo de uso
+dados_venda = {
+    'Cliente': 'João da Silva',
+    'Produto': 'Notebook',
+    'Quantidade': 1,
+    'Valor Unitário': 5000.00,
+    'CNPJ': '12.345.678/0001-95'
+}
+caminho_nota = 'nota_fiscal_joao_silva.csv'
+gerar_nota_fiscal(dados_venda, caminho_nota)
+
+# Enviar a nota fiscal por e-mail (descomente a linha abaixo para enviar o e-mail)
+# enviar_nota_fiscal_email('joao@email.com', 'Sua Nota Fiscal', 'Segue em anexo a nota fiscal.', caminho_nota, 'seu_email@gmail.com', 'sua_senha')
+```
+
+## 18.4. Considerações Finais
+
+A automação do envio de notas fiscais e respostas automáticas a clientes pode trazer maior eficiência e agilidade para o processo de faturamento e atendimento ao cliente, garantindo a conformidade fiscal e melhorando a experiência do cliente. Com o uso de geração automática de notas fiscais e envio programático por e-mail, é possível simplificar e otimizar essa tarefa financeira e comercial.
+
+***
+
+# Escritórios que prestam serviços para repartições públicas e órgãos governamentais
+
+Os escritórios que prestam serviços para repartições públicas e órgãos governamentais enfrentam desafios específicos relacionados à gestão de documentos, cumprimento de prazos, atendimento a requisitos legais e normativos, entre outros. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e conformidade.
+
+Nesta seção, apresentamos exemplos práticos de automação voltados para escritórios que prestam serviços para repartições públicas e órgãos governamentais, com o objetivo de demonstrar como as técnicas de programação e automação podem ser aplicadas para resolver problemas específicos dessa área.
+
+Os exemplos foram escolhidos com base em situações comuns enfrentadas por profissionais que atuam com serviços públicos e buscam mostrar, de forma prática e didática, como a automação pode trazer ganhos significativos de produtividade, precisão e eficiência.
+
+Ao final de cada exemplo, você encontrará dicas e sugestões para adaptar as soluções apresentadas à sua realidade, além de exercícios práticos para consolidar o aprendizado.
+
+Esperamos que esta seção inspire você a identificar novas oportunidades de automação em sua rotina profissional e a explorar todo o potencial da programação e da inteligência artificial para transformar o seu trabalho.
+
+***
+
+# 19. Controle Automatizado de Protocolos em Repartição Pública
+
+O controle de protocolos em repartições públicas é uma atividade importante para garantir a tramitação adequada de processos e documentos. Neste exemplo, vamos mostrar como automatizar o controle de protocolos em uma repartição pública, utilizando Python para ler planilhas com os dados dos protocolos e enviar notificações automáticas.
+
+## 19.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia uma planilha com os dados dos protocolos, contendo informações como número do protocolo, descrição, data de entrada e situação.
+- Verifique quais protocolos estão com a situação "Pendente".
+- Envie um e-mail de notificação para o responsável pelo protocolo, informando sobre a pendência.
+
+## 19.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_planilha_protocolos()`: Para ler a planilha com os dados dos protocolos.
+- `verificar_protocolos_pendentes()`: Para verificar quais protocolos estão pendentes.
+- `enviar_notificacoes_protocolos()`: Para enviar as notificações por e-mail.
+
+## 19.3. Exemplo de Código
+
+```python
+import pandas as pd
+import smtplib
+from email.mime.text import MIMEText
+
+# Função para ler a planilha de protocolos
+def ler_planilha_protocolos(caminho_arquivo):
+    return pd.read_excel(caminho_arquivo)
+
+# Função para verificar protocolos pendentes
+def verificar_protocolos_pendentes(df_protocolos):
+    return df_protocolos[df_protocolos['Situação'] == 'Pendente']
+
+# Função para enviar notificações por e-mail
+def enviar_notificacoes_protocolos(df_protocolos, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    for _, row in df_protocolos.iterrows():
+        destinatario = row['Email']
+        assunto = f"Pendência no Protocolo - {row['Número do Protocolo']}"
+        corpo = f"Prezado(a),\n\nIdentificamos uma pendência no protocolo {row['Número do Protocolo']}. Por favor, regularize a situação o quanto antes.\n\nAtenciosamente,"
+        
+        msg = MIMEText(corpo)
+        msg['Subject'] = assunto
+        msg['From'] = smtp_user
+        msg['To'] = destinatario
+        
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_password)
+            server.send_message(msg)
+
+# Exemplo de uso
+caminho_planilha = 'protocolos_reparticao_publica.xlsx'
+df_protocolos = ler_planilha_protocolos(caminho_planilha)
+df_protocolos_pendentes = verificar_protocolos_pendentes(df_protocolos)
+
+# Enviar notificações (descomente a linha abaixo para enviar os e-mails)
+# enviar_notificacoes_protocolos(df_protocolos_pendentes, 'seu_email@gmail.com', 'sua_senha')
+
+print("Processamento concluído.")
+```
+
+## 19.4. Considerações Finais
+
+A automação do controle de protocolos em repartições públicas pode trazer maior eficiência e segurança para a tramitação de processos e documentos, garantindo o cumprimento de prazos e a comunicação adequada entre as partes envolvidas. Com o uso de planilhas e o envio automático de notificações por e-mail, é possível simplificar e otimizar essa tarefa administrativa.
+
+***
+
+# 20. Conversor de tabelas PDF → Excel
+
+A conversão de tabelas em PDF para Excel é uma tarefa comum em escritórios que lidam com dados financeiros, orçamentos, relatórios e outros documentos que contêm tabelas. Neste exemplo, vamos mostrar como automatizar a conversão de tabelas em PDF para Excel, utilizando Python para extrair os dados das tabelas e salvá-los em um arquivo Excel.
+
+## 20.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia um arquivo PDF contendo uma tabela.
+- Extraia os dados da tabela e os salve em um arquivo Excel.
+
+## 20.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_tabela_pdf()`: Para ler a tabela do arquivo PDF.
+- `salvar_tabela_excel()`: Para salvar a tabela em um arquivo Excel.
+
+## 20.3. Exemplo de Código
+
+```python
+import pdfplumber
+import pandas as pd
+
+# Função para ler a tabela do PDF
+def ler_tabela_pdf(caminho_arquivo):
+    with pdfplumber.open(caminho_arquivo) as pdf:
+        primeira_pagina = pdf.pages[0]
+        tabela = primeira_pagina.extract_table()
+    return tabela
+
+# Função para salvar a tabela em um arquivo Excel
+def salvar_tabela_excel(tabela, caminho_saida):
+    df_tabela = pd.DataFrame(tabela[1:], columns=tabela[0])
+    df_tabela.to_excel(caminho_saida, index=False)
+    print(f"Tabela salva em Excel: {caminho_saida}")
+
+# Exemplo de uso
+caminho_pdf = 'tabela.pdf'
+caminho_excel = 'tabela.xlsx'
+tabela_extraida = ler_tabela_pdf(caminho_pdf)
+salvar_tabela_excel(tabela_extraida, caminho_excel)
+```
+
+## 20.4. Considerações Finais
+
+A automação da conversão de tabelas em PDF para Excel pode trazer maior eficiência e precisão para o trabalho com dados em escritórios, facilitando a análise e o compartilhamento das informações. Com o uso de arquivos PDF e Excel, e a automação do processamento e conversão de dados, é possível simplificar e otimizar essa tarefa de manipulação de dados.
+
+***
+
+# 21. Roteirização com base em distância (API Google Maps ou OpenRoute)
+
+A roteirização é uma atividade fundamental para a otimização do transporte de mercadorias, permitindo a definição das melhores rotas a serem seguidas pelos veículos. Neste exemplo, vamos mostrar como automatizar a roteirização com base em distância, utilizando APIs como Google Maps ou OpenRoute.
+
+## 21.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Receba uma lista de endereços de origem e destino.
+- Calcule a rota mais curta ou mais rápida entre os pontos, utilizando a API escolhida.
+- Exiba o resultado com as informações da rota, como distância e tempo estimado.
+
+## 21.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `calcular_rota_google_maps()`: Para calcular a rota utilizando a API do Google Maps.
+- `calcular_rota_openroute()`: Para calcular a rota utilizando a API do OpenRoute.
+
+## 21.3. Exemplo de Código
+
+```python
+import requests
+
+# Função para calcular a rota utilizando a API do Google Maps
+def calcular_rota_google_maps(origem, destino, chave_api):
+    url = f"https://maps.googleapis.com/maps/api/directions/json?origin={origem}&destination={destino}&key={chave_api}"
+    response = requests.get(url)
+    dados = response.json()
+    if dados['status'] == 'OK':
+        rota = dados['routes'][0]
+        distancia = rota['legs'][0]['distance']['text']
+        tempo = rota['legs'][0]['duration']['text']
+        return f"Distância: {distancia}, Tempo: {tempo}"
+    else:
+        return "Erro ao calcular a rota."
+
+# Função para calcular a rota utilizando a API do OpenRoute
+def calcular_rota_openroute(origem, destino):
+    url = f"https://api.openrouteservice.org/v2/directions/driving-car?api_key=sua_chave_api&start={origem}&end={destino}"
+    response = requests.get(url)
+    dados = response.json()
+    if dados['routes']:
+        rota = dados['routes'][0]
+        distancia = rota['summary']['length']
+        tempo = rota['summary']['duration']
+        return f"Distância: {distancia} metros, Tempo: {tempo} segundos"
+    else:
+        return "Erro ao calcular a rota."
+
+# Exemplo de uso
+origem = "-23.550520, -46.633308"  # São Paulo
+destino = "-22.906847, -43.172896"  # Rio de Janeiro
+# Calcular rota pelo Google Maps
+resultado_google_maps = calcular_rota_google_maps(origem, destino, 'sua_chave_api_google_maps')
+print("Google Maps:", resultado_google_maps)
+# Calcular rota pelo OpenRoute
+resultado_openroute = calcular_rota_openroute(origem, destino)
+print("OpenRoute:", resultado_openroute)
+```
+
+## 21.4. Considerações Finais
+
+A automação da roteirização com base em distância pode trazer ganhos significativos de eficiência e economia para as operações de transporte, permitindo a definição de rotas otimizadas e a redução de custos com combustível e tempo de viagem. Com o uso de APIs de mapeamento e a automação do processamento das informações, é possível simplificar e otimizar essa tarefa logística.
+
+***
+
+# 22. Acompanhamento de entregas via planilhas
+
+O acompanhamento de entregas é uma atividade importante para garantir a satisfação dos clientes e a eficiência das operações de logística. Neste exemplo, vamos mostrar como automatizar o acompanhamento de entregas, utilizando Python para ler planilhas com os dados das entregas e enviar notificações automáticas.
+
+## 22.1. Objetivo
+
+O objetivo deste exemplo é criar um script que:
+- Leia uma planilha com os dados das entregas, contendo informações como código da entrega, cliente, endereço, data e status.
+- Envie notificações automáticas para os clientes, informando sobre o status da entrega.
+
+## 22.2. Estrutura do Código
+
+O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+- `ler_planilha_entregas()`: Para ler a planilha com os dados das entregas.
+- `enviar_notificacoes()`: Para enviar as notificações automáticas.
+
+## 22.3. Exemplo de Código
+
+```python
+import pandas as pd
+import smtplib
+from email.mime.text import MIMEText
+
+# Função para ler a planilha de entregas
+def ler_planilha_entregas(caminho_arquivo):
+    return pd.read_excel(caminho_arquivo)
+
+# Função para enviar notificações automáticas
+def enviar_notificacoes(df_entregas, smtp_user, smtp_password):
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    for _, row in df_entregas.iterrows():
+        destinatario = row['Email']
+        assunto = f"Atualização sobre sua entrega - {row['Código da Entrega']}"
+        corpo = f"Prezado(a),\n\nInformamos que o status da sua entrega {row['Código da Entrega']} foi atualizado para: {row['Status']}.\n\nAtenciosamente,"
+        
+        msg = MIMEText(corpo)
+        msg['Subject'] = assunto
+        msg['From'] = smtp_user
+        msg['To'] = destinatario
+        
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_password)
+            server.send_message(msg)
+
+# Exemplo de uso
+caminho_planilha = 'entregas.xlsx'
+df_entregas = ler_planilha_entregas(caminho_planilha)
+# Enviar notificações (descomente a linha abaixo para enviar os e-mails)
+# enviar_notificacoes(df_entregas, 'seu_email@gmail.com', 'sua_senha')
+
+print("Processamento concluído.")
+```
+
+## 22.4. Considerações Finais
+
+A automação do acompanhamento de entregas pode trazer maior eficiência e agilidade para as operações de logística, melhorando a comunicação com os clientes e a gestão das entregas. Com o uso de planilhas e o envio automático de notificações por e-mail, é possível simplificar e otimizar essa tarefa logística.
+
+***
+
+# 23. Conclusão
+
+A automação de processos em escritórios que prestam serviços para repartições públicas e órgãos governamentais pode trazer ganhos significativos de eficiência, precisão e conformidade. Com o uso de ferramentas como Python, planilhas e APIs, é possível simplificar tarefas administrativas, melhorar a comunicação com os clientes e otimizar a gestão de documentos e processos.
+A implementação de soluções automatizadas pode reduzir o tempo gasto em atividades repetitivas, minimizar erros humanos e garantir que os prazos sejam cumpridos de forma mais eficaz.
+Além disso, a automação pode facilitar o acesso e a análise de dados, permitindo uma tomada de decisão mais informada e ágil. Com o avanço da tecnologia e a crescente demanda por eficiência nos serviços públicos, a automação se torna uma ferramenta indispensável para os profissionais que atuam nesse setor.
+
+***
+
+# 24. Agradecimentos
+
+Agradecemos a todos os leitores e profissionais que contribuíram para a elaboração deste material. Esperamos que os exemplos apresentados tenham sido úteis e inspiradores, e que possam ser aplicados na prática para melhorar a eficiência e a produtividade em seus escritórios.
+
+***
+
+# 25. Referências Bibliográficas (Formato ABNT)
+
+PYTHON SOFTWARE FOUNDATION. Python Documentation. Disponível em: <https://docs.python.org/3/>. Acesso em: 17 jun. 2025.
+
+MCKINNEY, Wes. Python for Data Analysis. 3. ed. Sebastopol: O'Reilly Media, 2022.
+
+VANDERPLAS, Jake. Python Data Science Handbook. Sebastopol: O'Reilly Media, 2016.
+
+REITZ, Kenneth; SCHLUSSER, Tanya. The Hitchhiker’s Guide to Python. Sebastopol: O’Reilly Media, 2021.
+
+LUTZ, Mark. Learning Python. 5. ed. Sebastopol: O’Reilly Media, 2013.
+
+SWEIGART, Al. Automate the Boring Stuff with Python. 2. ed. San Francisco: No Starch Press, 2019.
+
+PANDAS DEVELOPMENT TEAM. Pandas Documentation. Disponível em: <https://pandas.pydata.org/docs/>. Acesso em: 17 jun. 2025.
+
+REQUESTS. Requests: HTTP for Humans. Disponível em: <https://docs.python-requests.org/en/latest/>. Acesso em: 17 jun. 2025.
+
+RICHARDSON, Leonard. BeautifulSoup Documentation. Disponível em: <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>. Acesso em: 17 jun. 2025.
+
+SELENIUMHQ. Selenium with Python Documentation. Disponível em: <https://selenium-python.readthedocs.io/>. Acesso em: 17 jun. 2025.
+
+PYWEBIO. PyWebIO Documentation. Disponível em: <https://pywebio.readthedocs.io/>. Acesso em: 17 jun. 2025.
+
+TKDOCS. Tkinter Documentation. Disponível em: <https://tkdocs.com/>. Acesso em: 17 jun. 2025.
+
+PYPDF2. PyPDF2 Documentation. Disponível em: <https://pypdf2.readthedocs.io/>. Acesso em: 17 jun. 2025.
+
+PDFPLUMBER. pdfplumber Documentation. Disponível em: <https://github.com/jsvine/pdfplumber>. Acesso em: 17 jun. 2025.
+
+OPENPYXL. OpenPyXL Documentation. Disponível em: <https://openpyxl.readthedocs.io/>. Acesso em: 17 jun. 2025.
+
+PYTHON-DOCX. python-docx Documentation. Disponível em: <https://python-docx.readthedocs.io/>. Acesso em: 17 jun. 2025.
+
+FPDF. FPDF Documentation. Disponível em: <http://www.fpdf.org/>. Acesso em: 17 jun. 2025.
+
+FAKER. Faker Documentation. Disponível em: <https://faker.readthedocs.io/>. Acesso em: 17 jun. 2025.
+
+GOOGLE DEVELOPERS. Google Maps Platform Documentation. Disponível em: <https://developers.google.com/maps/documentation>. Acesso em: 17 jun. 2025.
+
+OPENROUTESERVICE. API Documentation. Disponível em: <https://openrouteservice.org/sign-up/>. Acesso em: 17 jun. 2025.
+
+***
+
+# 26. ADENDO: Códigos em Python
+
+- **Exemplo Prático 01** – Análise de vendas de produtos online (CSV)  
+  [`codes/01_exemplo_pratico_vendas_online.py`](codes/01_exemplo_pratico_vendas_online.py)
+- **Exemplo Prático 02** – Geração de relatórios financeiros (Excel)  
+  [`codes/02_exemplo_pratico_relatorio_financeiro.py`](codes/02_exemplo_pratico_relatorio_financeiro.py)
+- **Exemplo Prático 03** – Controle de inadimplência em aluguéis (Excel + E-mail)  
+  [`codes/03_exemplo_pratico_alugueis_com_email.py`](codes/03_exemplo_pratico_alugueis_com_email.py)
+- **Exemplo Prático 04** – Envio de e-mails automatizados (Python + SMTP)  
+  [`codes/04_exemplo_pratico_envio_email.py`](codes/04_exemplo_pratico_envio_email.py)
+- **Exemplo Prático 05** – Extração de texto de um PDF  
+  [`codes/05_exemplo_pratico_extracao_pdf.py`](codes/05_exemplo_pratico_extracao_pdf.py)
+- **Exemplo Prático 06** – Leitura e modificação de um arquivo Word  
+  [`codes/06_exemplo_pratico_modificacao_word.py`](codes/06_exemplo_pratico_modificacao_word.py)
+- **Exemplo Prático 07** – Automação de Excel com Pandas  
+  [`codes/07_exemplo_pratico_automacao_excel.py`](codes/07_exemplo_pratico_automacao_excel.py)
+- **Exemplo Prático 08** – Geração e envio de múltiplos relatórios diários por e-mail  
+  [`codes/08_exemplo_pratico_envio_relatorio_diario.py`](codes/08_exemplo_pratico_envio_relatorio_diario.py)
+- **Exemplo Prático 09** – Web scraping básico com BeautifulSoup  
+  [`codes/09_exemplo_pratico_webscraping.py`](codes/09_exemplo_pratico_webscraping.py)
+- **Exemplo Prático 10** – Extração de tabelas HTML para Excel  
+  [`codes/10_exemplo_pratico_tabela_html_excel.py`](codes/10_exemplo_pratico_tabela_html_excel.py)
+- **Exemplo Prático 11** – Automação de sites com Selenium  
+  [`codes/11_exemplo_pratico_selenium.py`](codes/11_exemplo_pratico_selenium.py)
+- **Exemplo Prático 12** – Interface gráfica simples com Tkinter  
+  [`codes/12_exemplo_pratico_tkinter.py`](codes/12_exemplo_pratico_tkinter.py)
+- **Exemplo Prático 13** – Interface web simples com PyWebIO  
+  [`codes/13_exemplo_pratico_pywebio.py`](codes/13_exemplo_pratico_pywebio.py)
+- **Exemplo Prático 14** – Gerador automático de procurações e petições  
+  [`codes/14_exemplo_pratico_gerador_procuracao.py`](codes/14_exemplo_pratico_gerador_procuracao.py)
+- **Exemplo Prático 15** – Controle de prazos processuais com alertas  
+  [`codes/15_exemplo_pratico_prazos_alerta.py`](codes/15_exemplo_pratico_prazos_alerta.py)
+- **Exemplo Prático 16** – Consulta automatizada a sites de tribunais  
+  [`codes/16_exemplo_pratico_consulta_tribunal.py`](codes/16_exemplo_pratico_consulta_tribunal.py)
+- **Exemplo Prático 17** – Leitura e consolidação de extratos bancários  
+  [`codes/17_exemplo_pratico_extratos_bancarios.py`](codes/17_exemplo_pratico_extratos_bancarios.py)
+- **Exemplo Prático 18** – Geração automática de guias de impostos  
+  [`codes/18_exemplo_pratico_guia_imposto.py`](codes/18_exemplo_pratico_guia_imposto.py)
+- **Exemplo Prático 19** – Envio automático de boletos por e-mail  
+  [`codes/19_exemplo_pratico_envio_boleto.py`](codes/19_exemplo_pratico_envio_boleto.py)
+- **Exemplo Prático 20** – Leitura e geração de manifestos (XML, PDF)  
+  [`codes/20_exemplo_pratico_manifesto.py`](codes/20_exemplo_pratico_manifesto.py)
+- **Exemplo Prático 21** – Roteirização com base em distância (API)  
+  [`codes/21_exemplo_pratico_roteirizacao.py`](codes/21_exemplo_pratico_roteirizacao.py)
+- **Exemplo Prático 22** – Acompanhamento de entregas via planilhas  
+  [`codes/22_exemplo_pratico_entregas.py`](codes/22_exemplo_pratico_entregas.py)
+- **Exemplo Prático 23** – Leitura de pedidos de marketplaces  
+  [`codes/23_exemplo_pratico_pedidos_marketplace.py`](codes/23_exemplo_pratico_pedidos_marketplace.py)
+- **Exemplo Prático 24** – Atualização automática de estoque  
+  [`codes/24_exemplo_pratico_estoque.py`](codes/24_exemplo_pratico_estoque.py)
+- **Exemplo Prático 25** – Envio de notas fiscais e respostas automáticas  
+  [`codes/25_exemplo_pratico_nota_fiscal.py`](codes/25_exemplo_pratico_nota_fiscal.py)
+- **Exemplo Prático 26** – Controle automatizado de protocolos  
+  [`codes/26_exemplo_pratico_protocolos.py`](codes/26_exemplo_pratico_protocolos.py)
+- **Exemplo Prático 27** – Conversor de tabelas PDF para Excel  
+  [`codes/27_exemplo_pratico_pdf_para_excel.py`](codes/27_exemplo_pratico_pdf_para_excel.py)
+- **Exemplo Prático 28** – Organizador de arquivos em pastas por cliente  
+  [`codes/28_exemplo_pratico_organizador_arquivos.py`](codes/28_exemplo_pratico_organizador_arquivos.py)
+- **Exemplo Prático 29** – Dashboard de pagamentos  
+  [`codes/29_exemplo_pratico_dashboard_pagamentos.py`](codes/29_exemplo_pratico_dashboard_pagamentos.py)
+- **Exemplo Prático 30** – Calculadora de impostos com interface  
+  [`codes/30_exemplo_pratico_calculadora_impostos.py`](codes/30_exemplo_pratico_calculadora_impostos.py)
