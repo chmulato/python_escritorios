@@ -1,61 +1,74 @@
 # Cronograma de Estudo - Python para Escritórios Inteligentes
 
-## Parte 1 – Fundamentos da Automação
+> **Início:** 2025-06-18  
+> **Observação:** Apenas dias úteis (segunda a sexta-feira).  
+> **Total de tópicos principais:** 30 (conforme BOOK.md, até o capítulo 30: Calculadora de impostos com interface).
 
-- [X] **2025-06-17:** Introdução à automação com Python
-- [X] **2025-06-18:** Instalação do ambiente: VS Code, Python e bibliotecas úteis
-- [X] **2025-06-19:** Trabalhando com arquivos (Excel, CSV, PDF, Word)
-- [X] **2025-06-20:** Automação de e-mails e notificações
-- [X] **2025-06-21:** Web scraping e automação de sites
-- [X] **2025-06-22:** Criação de interfaces gráficas simples (Tkinter ou PyWebIO)
+---
 
-## Parte 2 – Casos Reais por Tipo de Escritório
+## Parte I – Fundamentos da Automação
+
+- [ ] **2025-06-18 (Qua):** Introdução à automação com Python
+- [ ] **2025-06-19 (Qui):** Instalação de Ambiente: VS Code, Python e Bibliotecas Úteis
+- [ ] **2025-06-20 (Sex):** Trabalhando com arquivos (Excel, CSV, PDF, Word)
+- [ ] **2025-06-23 (Seg):** Automação de e-mails e notificações
+- [ ] **2025-06-24 (Ter):** Web scraping e automação de sites
+- [ ] **2025-06-25 (Qua):** Criação de interfaces gráficas simples (Tkinter ou PyWebIO)
+
+## Parte II – Casos Reais por Tipo de Escritório
 
 ### Escritório de Advocacia
-- [X] **2025-06-23:** Gerador automático de procurações e petições a partir de modelos
-- [X] **2025-06-24:** Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)
-- [X] **2025-06-25:** Consulta a sites de tribunais
+- [ ] **2025-06-26 (Qui):** Gerador automático de procurações e petições a partir de modelos
+- [ ] **2025-06-27 (Sex):** Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)
+- [ ] **2025-06-30 (Seg):** Consulta a sites de tribunais
 
 ### Escritório de Contabilidade
-- [X] **2025-06-26:** Leitura e consolidação de extratos bancários (CSV)
-- [X] **2025-06-27:** Geração automática de guias de impostos
-- [X] **2025-06-28:** Envio automático de boletos por e-mail
+- [ ] **2025-07-01 (Ter):** Leitura e consolidação de extratos bancários (CSV)
+- [ ] **2025-07-02 (Qua):** Geração automática de guias de impostos
+- [ ] **2025-07-03 (Qui):** Envio automático de boletos por e-mail
 
 ### Escritório de Logística
-- [X] **2025-06-29:** Leitura e geração de manifestos (XML, PDF)
-- [X] **2025-06-30:** Roteirização com base em distância (API Google Maps ou OpenRoute)
-- [X] **2025-07-01:** Acompanhamento de entregas via planilhas atualizadas
+- [ ] **2025-07-04 (Sex):** Leitura e geração de manifestos (XML, PDF)
+- [ ] **2025-07-07 (Seg):** Roteirização com base em distância (API Google Maps ou OpenRoute)
+- [ ] **2025-07-08 (Ter):** Acompanhamento de entregas via planilhas atualizadas
 
 ### E-commerce e Vendas Online
-- [X] **2025-07-02:** Leitura de pedidos de marketplaces
-- [X] **2025-07-03:** Atualização automática de estoque em Excel/ERP simples
-- [X] **2025-07-04:** Envio de notas fiscais e respostas automáticas a clientes
+- [ ] **2025-07-09 (Qua):** Leitura de pedidos de marketplaces
+- [ ] **2025-07-10 (Qui):** Atualização automática de estoque em Excel/ERP simples
+- [ ] **2025-07-11 (Sex):** Envio de notas fiscais e respostas automáticas a clientes
 
-### Escritórios que prestam serviços para repartições públicas e órgãos governamentais
-- [X] **2025-07-05:** Controle Automatizado de Protocolos em Repartição Pública
-- [X] **2025-07-06:** Conversor de tabelas PDF → Excel
-- [X] **2025-07-07:** Organizador de arquivos em pastas por cliente
-- [X] **2025-07-08:** Dashboard de pagamentos
+### Escritórios para repartições públicas e órgãos governamentais
+- [ ] **2025-07-14 (Seg):** Controle Automatizado de Protocolos em Repartição Pública
+- [ ] **2025-07-15 (Ter):** Conversor de tabelas PDF → Excel
+- [ ] **2025-07-16 (Qua):** Organizador de arquivos em pastas por cliente
+- [ ] **2025-07-17 (Qui):** Dashboard de pagamentos
 
-## Projetos Práticos
+---
 
-- [X] **2025-07-09:** Envio de relatório diário de vendas por e-mail (planilha pronta)
-- [X] **2025-07-10:** Geração e envio de múltiplos relatórios diários por e-mail (múltiplos arquivos)
-- [X] **2025-07-11:** Geração e envio automático de relatório de vendas (dados fictícios em um arquivo)
-- [X] **2025-07-12:** Organizador de arquivos em pastas por cliente
-- [X] **2025-07-13:** Conversor de tabelas PDF → Excel
-- [X] **2025-07-14:** Dashboard de pagamentos
-- [ ] **2025-07-15:** Web scraper de preços da concorrência
-- [ ] **2025-07-16:** Calculadora de impostos com interface simples
+## Projetos Práticos e Exercícios (conforme exemplos do BOOK.md)
 
-# Validação
+- [ ] **2025-07-18 (Sex):** Análise de vendas de produtos online (CSV)
+- [ ] **2025-07-21 (Seg):** Relatórios de inadimplência em aluguéis (Excel)
+- [ ] **2025-07-22 (Ter):** Extração de texto de um PDF
+- [ ] **2025-07-23 (Qua):** Leitura e modificação de um arquivo Word
+- [ ] **2025-07-24 (Qui):** Envio de relatórios diários por e-mail (Excel)
+- [ ] **2025-07-25 (Sex):** Geração e envio automático de relatórios diários (múltiplos arquivos)
+- [ ] **2025-07-28 (Seg):** Web scraping básico com BeautifulSoup
+- [ ] **2025-07-29 (Ter):** Extração de tabelas HTML para Excel
+- [ ] **2025-07-30 (Qua):** Automação de sites com Selenium
+- [ ] **2025-07-31 (Qui):** Interface gráfica simples com Tkinter
+- [ ] **2025-08-01 (Sex):** Interface web simples com PyWebIO
+- [ ] **2025-08-04 (Seg):** Calculadora de impostos com interface
 
-O cronograma está em acordo com o conteúdo do livro `python_escritorios.md`:
+---
 
-- Todos os tópicos da Parte 1 (fundamentos) e Parte 2 (casos reais) estão presentes e seguem a mesma ordem do sumário do livro.
-- Os exemplos práticos e projetos listados no cronograma correspondem aos capítulos e exemplos do livro.
-- Os temas de cada dia estão alinhados com os títulos e objetivos dos capítulos do livro.
-- Os projetos práticos adicionais (relatórios, organizador de arquivos, dashboard, etc.) também estão contemplados no conteúdo do livro.
+## Encerramento
 
-**Conclusão:**  
-O cronograma cobre todo o conteúdo do livro e está adequado para um estudo progressivo e completo dos exemplos e capítulos propostos.
+- [ ] **2025-08-05 (Ter):** Conclusão, agradecimentos e revisão geral
+
+---
+
+**Observação:**  
+O cronograma cobre todos os tópicos principais e exemplos práticos do sumário do BOOK.md, distribuídos apenas em dias úteis, sem pular nenhum capítulo ou exercício relevante.
+
+**Fim do cronograma.**
