@@ -113,7 +113,7 @@ Este projeto está licenciado sob a licença MIT.
 
 A licença MIT é uma licença de software livre e permissiva. Ela permite que qualquer pessoa use, copie, modifique, mescle, publique, distribua, sublicencie e/ou venda cópias do software, desde que o aviso de copyright e a permissão sejam incluídos em todas as cópias ou partes substanciais do software. O software é fornecido "no estado em que se encontra", sem garantias de qualquer tipo.
 
-## Curiosidades
+## Curiosidade
 
 ### O que é Pythookup?
 
