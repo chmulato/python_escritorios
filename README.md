@@ -6,7 +6,11 @@ Exemplos práticos para advocacia, contabilidade, logística, repartições púb
 
 ## Sobre
 
-Este repositório reúne exemplos e projetos práticos de automação de tarefas em escritórios utilizando Python e inteligência artificial. O objetivo é facilitar rotinas em áreas como advocacia, contabilidade, logística, repartições públicas e e-commerce, tornando os processos mais eficientes e inteligentes.
+Este repositório reúne exemplos e projetos práticos de automação de tarefas em escritórios utilizando Python e inteligência artificial. O objetivo é mostrar, de forma acessível e prática, como profissionais de diferentes áreas podem automatizar rotinas repetitivas, economizar tempo e aumentar a produtividade — mesmo sem experiência prévia em programação.
+
+Os exemplos abrangem desde a configuração do ambiente, manipulação de arquivos (Excel, CSV, PDF, Word), automação de e-mails, web scraping, até casos reais aplicados em advocacia, contabilidade, logística, repartições públicas e e-commerce. Cada projeto foi pensado para ser facilmente adaptado à realidade do escritório, servindo como ponto de partida para soluções personalizadas.
+
+Se você busca tornar seu trabalho mais eficiente, reduzir erros manuais e explorar o potencial da automação com Python, este repositório é para você.
 
 ## Estrutura do Conteúdo
 
