@@ -2348,7 +2348,7 @@ Agradecemos a todos os leitores e profissionais que contribuíram para a elabora
 
 ***
 
-# 25. Referências Bibliográficas (Formato ABNT) – Ordem Alfabética
+# 25. Referências Bibliográficas (Formato ABNT)
 
 FAKER. Faker Documentation. Disponível em: <https://faker.readthedocs.io/>. Acesso em: 17 jun. 2025.
 
