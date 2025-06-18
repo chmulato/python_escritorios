@@ -60,47 +60,54 @@ Programador de Computador
 
 # Sumário
 
-## Parte 1 – Fundamentos da Automação
+## Parte I – Fundamentos da Automação
 
-1. [Introdução à automação com Python](#1-introducao-a-automacao-com-python)
-2. [Instalação de ambiente: VS Code, Python, bibliotecas úteis](#2-instalacao-de-ambiente-vs-code-python-e-bibliotecas-uteis)
+1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)
+2. [Instalação de Ambiente: VS Code, Python e Bibliotecas Úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)
 3. [Trabalhando com arquivos (Excel, CSV, PDF, Word)](#3-trabalhando-com-arquivos-excel-csv-pdf-word)
-4. [Automação de e-mails e notificações](#4-automacao-de-e-mails-e-notificacoes)
-5. [Web scraping e automação de sites](#5-web-scraping-e-automacao-de-sites)
-6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criacao-de-interfaces-graficas-simples-tkinter-ou-pywebio)
+4. [Automação de e-mails e notificações](#4-automação-de-e-mails-e-notificações)
+5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)
+6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)
 
-## Parte 2 – Casos Reais por Tipo de Escritório
+## Parte II – Casos Reais por Tipo de Escritório
 
 ### Escritório de Advocacia
 
-7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automatico-de-procuracoes-e-peticoes-a-partir-de-modelos)
+7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)
 8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)
 9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)
 
 ### Escritório de Contabilidade
 
-10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidacao-de-extratos-bancarios-csv)
-11. [Geração automática de guias de impostos](#11-geracao-automatica-de-guias-de-impostos)
-12. [Envio automático de boletos por e-mail](#12-envio-automatico-de-boletos-por-e-mail)
+10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)
+11. [Geração automática de guias de impostos](#11-gera%C3%A7%C3%A3o-autom%C3%A1tica-de-guias-de-impostos)
+12. [Envio automático de boletos por e-mail](#12-envio-autom%C3%A1tico-de-boletos-por-e-mail)
 
 ### Escritório de Logística
 
-13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-geracao-de-manifestos-xml-pdf)
-14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteirizacao-com-base-em-distancia-api-google-maps-ou-openroute)
+13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-gera%C3%A7%C3%A3o-de-manifestos-xml-pdf)
+14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteiriza%C3%A7%C3%A3o-com-base-em-dist%C3%A2ncia-api-google-maps-ou-openroute)
 15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)
 
 ### E-commerce e Vendas Online
 
 16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualizacao-automatica-de-estoque-em-excelerp-simples)
-18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-automaticas-a-clientes)
+17. [Atualização automática de estoque em Excel/ERP simples](#17-atualiza%C3%A7%C3%A3o-autom%C3%A1tica-de-estoque-em-excelerp-simples)
+18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-autom%C3%A1ticas-a-clientes)
 
 ### Escritórios que prestam serviços para repartições públicas e órgãos governamentais
 
-19. [Controle Automatizado de Protocolos em Repartição Pública](#19-controle-automatizado-de-protocolos-em-reparticao-publica)
+19. [Controle Automatizado de Protocolos em Repartição Pública](#19-controle-automatizado-de-protocolos-em-reparti%C3%A7%C3%A3o-p%C3%BAblica)
 20. [Conversor de tabelas PDF → Excel](#20-conversor-de-tabelas-pdf--excel)
 21. [Organizador de arquivos em pastas por cliente](#21-organizador-de-arquivos-em-pastas-por-cliente)
 22. [Dashboard de pagamentos](#22-dashboard-de-pagamentos)
+
+---
+
+23. [Conclusão](#23-conclusão)
+24. [Agradecimentos](#24-agradecimentos)
+25. [Referências bibliográficas (formato ABNT)](#25-referências-bibliográficas-formato-abnt)
+26. [Adendo: códigos em Python](#26-adendo-códigos-em-python)
 
 ***
 
