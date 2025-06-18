@@ -108,7 +108,7 @@ Programador de Computador
 ### E-commerce e Vendas Online
 
 16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)
-17. [Atualização automática de estoque em Excel/ERP simples](#17-atualizacao-automatica-de-estoque-em-excelerp-simples)
+17. [Atualização automática de estoque em Excel/ERP simples](17-atualiza%C3%A7%C3%A3o-autom%C3%A1tica-de-estoque)
 18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-autom%C3%A1ticas-a-clientes)
 
 ### Escritórios que prestam serviços para repartições públicas e órgãos governamentais
