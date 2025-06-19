@@ -45,8 +45,6 @@ Que este livro inspire você a dar o primeiro passo, a superar o medo do desconh
 
 Boa leitura, bons estudos e, acima de tudo, ótimas descobertas!
 
-**Christian Vladimir Uhdre Mulato**
-
 ***
 
 # Apresentação
@@ -67,10 +65,6 @@ O conteúdo está dividido em duas partes principais para facilitar o aprendizad
 
 Espero que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
 
-Boa leitura e ótimos projetos!
-
-**Christian Mulato**  
-Programador de Computador
 
 ***
 
