@@ -61,10 +61,9 @@ O conteúdo está dividido em duas partes principais para facilitar o aprendizad
 - Aqui você aprenderá os conceitos essenciais, desde a instalação do ambiente até a manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas simples e introdução ao uso de inteligência artificial em tarefas do escritório.
 
 - **Parte II – Casos Reais por Tipo de Escritório:**
--  Nesta parte, apresentamos exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
+- Nesta parte, apresentamos exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios que prestam serviços para repartições públicas e órgãos governamentais, mostrando como adaptar as soluções para a sua realidade.
 
 Espero que este material ajude você a transformar sua rotina profissional, abrindo portas para novas possibilidades e mostrando que a automação e a inteligência artificial estão ao alcance de todos.
-
 
 ***
 
