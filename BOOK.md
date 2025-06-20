@@ -81,31 +81,31 @@ Espero que este material ajude você a transformar sua rotina profissional, abri
 
 ## Parte II – Casos Reais por Tipo de Escritório
 
-### [Escritórios de Advocacia](#escritórios-de-advocacia)
+### [Escritórios de Advocacia](#escrit%C3%B3rios-de-advocacia-1)
 
 7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)
 8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)
 9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)
 
-### [Escritórios de Contabilidade](#escritórios-de-contabilidade)
+### [Escritórios de Contabilidade](#escrit%C3%B3rios-de-contabilidade-1)
 
 10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)
 11. [Geração automática de guias de impostos](#11-gera%C3%A7%C3%A3o-autom%C3%A1tica-de-guias-de-impostos)
 12. [Envio automático de boletos por e-mail](#12-envio-autom%C3%A1tico-de-boletos-por-e-mail)
 
-### [Escritórios de Logística](#escritórios-de-logística)
+### [Escritórios de Logística](#escrit%C3%B3rios-de-log%C3%ADstica-1)
 
 13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-gera%C3%A7%C3%A3o-de-manifestos-xml-pdf)
 14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteiriza%C3%A7%C3%A3o-com-base-em-dist%C3%A2ncia-api-google-maps-ou-openroute)
 15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)
 
-### [E-commerce e Vendas Online](#e-commerce-e-vendas-online)
+### [E-commerce e Vendas Online](#e-commerce-e-vendas-online-1)
 
 16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)
 17. [Atualização automática de estoque em Excel/ERP simples](#17-atualiza%C3%A7%C3%A3o-autom%C3%A1tica-de-estoque)
 18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-autom%C3%A1ticas-a-clientes)
 
-### [Escritórios que prestam serviços para repartições públicas e órgãos governamentais](#escritórios-que-prestam-serviços-para-repartições-públicas-e-órgãos-governamentais)
+### [Escritórios que prestam serviços para repartições públicas e órgãos governamentais](#escrit%C3%B3rios-que-prestam-servi%C3%A7os-para-reparti%C3%A7%C3%B5es-p%C3%BAblicas-e-%C3%B3rg%C3%A3os-governamentais-1)
 
 19. [Controle Automatizado de Protocolos em Repartição Pública](#19-controle-automatizado-de-protocolos-em-reparti%C3%A7%C3%A3o-p%C3%BAblica)
 20. [Conversor de tabelas PDF → Excel](#20-conversor-de-tabelas-pdf--excel)
