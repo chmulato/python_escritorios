@@ -1,4 +1,5 @@
 CAPA
+
 ```plaintext
  ___________________________________________________________
 |                                                           |
@@ -57,7 +58,7 @@ Ao longo dos capítulos, você encontrará exemplos reais, projetos práticos e 
 
 O conteúdo está dividido em duas partes principais para facilitar o aprendizado e a aplicação dos conceitos:
 
-- **Parte I – Fundamentos da Automação:** 
+- **Parte I – Fundamentos da Automação:**
 - Aqui você aprenderá os conceitos essenciais, desde a instalação do ambiente até a manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas simples e introdução ao uso de inteligência artificial em tarefas do escritório.
 
 - **Parte II – Casos Reais por Tipo de Escritório:**
@@ -80,38 +81,38 @@ Espero que este material ajude você a transformar sua rotina profissional, abri
 
 ## Parte II – Casos Reais por Tipo de Escritório
 
-### Escritório de Advocacia
+### [Escritórios de Advocacia](#escritórios-de-advocacia)
 
 7. [Gerador automático de procurações e petições a partir de modelos](#7-gerador-automático-de-procurações-e-petições-a-partir-de-modelos)
 8. [Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)](#8-controle-de-prazos-processuais-leitura-de-planilhas--envio-de-alertas-por-e-mail)
 9. [Consulta a sites de tribunais](#9-consulta-a-sites-de-tribunais)
 
-### Escritório de Contabilidade
+### [Escritórios de Contabilidade](#escritórios-de-contabilidade)
 
 10. [Leitura e consolidação de extratos bancários (CSV)](#10-leitura-e-consolidação-de-extratos-bancários-csv)
 11. [Geração automática de guias de impostos](#11-gera%C3%A7%C3%A3o-autom%C3%A1tica-de-guias-de-impostos)
 12. [Envio automático de boletos por e-mail](#12-envio-autom%C3%A1tico-de-boletos-por-e-mail)
 
-### Escritório de Logística
+### [Escritórios de Logística](#escritórios-de-logística)
 
 13. [Leitura e geração de manifestos (XML, PDF)](#13-leitura-e-gera%C3%A7%C3%A3o-de-manifestos-xml-pdf)
 14. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#14-roteiriza%C3%A7%C3%A3o-com-base-em-dist%C3%A2ncia-api-google-maps-ou-openroute)
 15. [Acompanhamento de entregas via planilhas atualizadas](#15-acompanhamento-de-entregas-via-planilhas-atualizadas)
 
-### E-commerce e Vendas Online
+### [E-commerce e Vendas Online](#e-commerce-e-vendas-online)
 
 16. [Leitura de pedidos de marketplaces](#16-leitura-de-pedidos-de-marketplaces)
 17. [Atualização automática de estoque em Excel/ERP simples](#17-atualiza%C3%A7%C3%A3o-autom%C3%A1tica-de-estoque)
 18. [Envio de notas fiscais e respostas automáticas a clientes](#18-envio-de-notas-fiscais-e-respostas-autom%C3%A1ticas-a-clientes)
 
-### Escritórios que prestam serviços para repartições públicas e órgãos governamentais
+### [Escritórios que prestam serviços para repartições públicas e órgãos governamentais](#escritórios-que-prestam-serviços-para-repartições-públicas-e-órgãos-governamentais)
 
 19. [Controle Automatizado de Protocolos em Repartição Pública](#19-controle-automatizado-de-protocolos-em-reparti%C3%A7%C3%A3o-p%C3%BAblica)
 20. [Conversor de tabelas PDF → Excel](#20-conversor-de-tabelas-pdf--excel)
 21. [Roteirização com base em distância (API Google Maps ou OpenRoute)](#21-roteiriza%C3%A7%C3%A3o-com-base-em-dist%C3%A2ncia-api-google-maps-ou-openroute)
 22. [Acompanhamento de entregas via planilhas](#22-acompanhamento-de-entregas-via-planilhas)
 
----
+***
 
 23. [Conclusão](#23-conclusão)
 24. [Agradecimentos](#24-agradecimentos)
@@ -146,7 +147,7 @@ Automação é o processo de usar tecnologia para executar tarefas de forma auto
 
 Python é uma das linguagens de programação mais populares para automação devido à sua simplicidade, legibilidade e grande quantidade de bibliotecas prontas para uso. Com Python, é possível automatizar desde tarefas simples, como renomear arquivos em lote, até processos mais complexos, como gerar relatórios, enviar e-mails, manipular planilhas e interagir com sistemas web.
 
-### Por que automatizar com Python?
+## Por que automatizar com Python?
 
 - **Facilidade de aprendizado:** Python possui uma sintaxe clara e intuitiva, ideal para iniciantes.
 - **Comunidade ativa:** Há muitos tutoriais, fóruns e exemplos disponíveis.
@@ -197,7 +198,7 @@ pip install pandas openpyxl
 - **Python** (Microsoft): Suporte a sintaxe, depuração e execução de scripts Python.
 - **Jupyter**: Para notebooks interativos, se desejar.
 
----
+***
 
 > Após esses passos, seu ambiente estará pronto para executar os exemplos práticos.
 
@@ -210,6 +211,7 @@ Nesta seção, você aprenderá a manipular diferentes tipos de arquivos comuns 
 ## 3.1. Arquivos CSV
 
 Para ler e escrever arquivos CSV, use o módulo csv ou o pandas:
+
 ```python
 import csv
 # Lendo um arquivo CSV
@@ -274,16 +276,20 @@ Para trabalhar com arquivos Excel, CSV, PDF e Word, você precisa instalar algum
 
 1. **Crie um ambiente virtual (opcional, mas recomendado):**
    No terminal, execute:
-   ```
+
+   ```plaintext
    python -m venv venv
    ```
+
    Ative o ambiente virtual:
-   ```
+
+   ```plaintext
    venv\Scripts\activate
    ```
 
 2. **Instale as bibliotecas necessárias:**
-   ```
+
+   ```plaintext
    pip install pandas openpyxl pdfplumber python-docx
    ```
 
@@ -293,7 +299,8 @@ Para trabalhar com arquivos Excel, CSV, PDF e Word, você precisa instalar algum
    - `python-docx`: leitura/escrita de arquivos Word (.docx)
 
 3. **(Opcional) Crie um arquivo `requirements.txt` para registrar as dependências:**
-   ```
+
+   ```plaintext
    pip freeze > requirements.txt
    ```
 
@@ -313,13 +320,15 @@ Nesta seção, você encontrará exercícios práticos para aplicar os conceitos
 Você trabalha no setor de análise de dados de uma loja online. Recebeu um arquivo `vendas.csv` contendo o histórico de vendas do último mês. Cada linha do arquivo representa uma venda, com as seguintes colunas: `data`, `produto`, `quantidade`, `preco_unitario`.
 
 **Desafio:**  
+
 1. Leia o arquivo `vendas.csv` usando Python.
 2. Calcule o total vendido (em reais) por produto.
 3. Gere um novo arquivo `relatorio_vendas.csv` contendo duas colunas: `produto` e `total_vendido`.
 4. (Opcional) Identifique qual produto teve o maior volume de vendas.
 
 **Exemplo de entrada (`vendas.csv`):**
-```
+
+```plaintext
 data,produto,quantidade,preco_unitario
 2025-06-01,Mouse,2,50
 2025-06-01,Teclado,1,120
@@ -356,16 +365,17 @@ print("Relatório de vendas gerado com sucesso!")
 ```
 
 **Resultado esperado (`relatorio_vendas.csv`)**:
+
 ```plaintext
 produto,total_vendido
 Mouse,150
 Teclado,120
 Monitor,900
 ```
+
 **Conclusão:**
 
 Com este exercício, você praticou a leitura de arquivos CSV, manipulação de dados com pandas e geração de relatórios. Essas habilidades são fundamentais para automatizar análises de vendas e outras tarefas relacionadas a dados em escritórios.
-
 
 ***
 
@@ -510,6 +520,7 @@ O código completo para geração do relatório de inadimplentes e envio real de
 ```
 
 **Atenção:**  
+
 - Nunca compartilhe senhas em código público.
 - Teste o envio com poucos destinatários antes de usar em produção.
 - Certifique-se de que o envio de e-mails está de acordo com as políticas da sua empresa e com a legislação vigente (LGPD).
@@ -598,7 +609,6 @@ Prefeitura Municipal de Campo Largo
 **Conclusão:**
 
 Com este exercício, você praticou a leitura de arquivos PDF e a extração de texto usando Python. Essa habilidade é útil para automatizar a coleta de informações de documentos oficiais, economizando tempo e aumentando a eficiência no trabalho com repartições públicas.
-
 
 ***
 
@@ -698,6 +708,7 @@ enviar_email('destinatario@example.com', 'Assunto do E-mail', 'Corpo do e-mail')
 ## 4.2. Enviando E-mails com Anexos
 
 Para enviar e-mails com anexos, você pode usar a biblioteca `email` para criar mensagens mais complexas. Veja o exemplo abaixo:
+
 ```python
 import smtplib
 from email.mime.multipart import MIMEMultipart
@@ -763,7 +774,6 @@ pip install secure-smtplib email
 
 Nesta seção, você encontrará exercícios práticos para aplicar os conceitos aprendidos sobre automação de e-mails e notificações. Esses exercícios são projetados para serem desafiadores e ajudarão a consolidar seu conhecimento em automação de comunicação por e-mail.
 
-
 ### 4.5.1. Exercício Prático: Envio de Relatórios Diários por E-mail
 
 **História:**
@@ -771,6 +781,7 @@ A empresa "Tech Solutions" precisa enviar relatórios diários de vendas para a 
 
 **Desafio:**
 Crie um script Python que:
+
 1. Leia o arquivo `relatorio_vendas.xlsx` localizado na pasta `codes`.
 2. Envie o arquivo como anexo para o e-mail da gerente Ana, cujo endereço é `ana@techsolutions.com`.
 3. O assunto do e-mail deve ser "Relatório de Vendas - [Data Atual]".
@@ -846,15 +857,17 @@ print("E-mail enviado com sucesso!")
 ```
 
 **Resultado esperado:**
+
 ```plaintext
 Arquivo de vendas gerado em: C:\dev\python_escritorios\codes\relatorio_vendas.xlsx
 Copie e cole os dados abaixo no Excel, se desejar:
-Data	Produto	Quantidade	Valor Total
-25/10/2023	Notebook	5	15000.00
+Data Produto Quantidade Valor Total
+25/10/2023 Notebook 5 15000.00
 E-mail enviado com sucesso!
 ```
 
 **Observações:**
+
 - Substitua `seu_email@gmail.com` e `sua_senha` pelas suas credenciais.
 - Instale as dependências necessárias com:  
   `pip install pandas faker openpyxl`
@@ -892,6 +905,7 @@ Automatizar o processo de geração de dados fictícios de vendas para vários d
 Veja o arquivo `codes/08_exemplo_pratico_envio_relatorio_diario.py` para o exemplo completo.
 
 **Resumo do Aprendizado:**
+
 - Geração de dados para múltiplos dias.
 - Manipulação e criação dinâmica de múltiplos arquivos Excel.
 - Envio de múltiplos anexos em um único e-mail.
@@ -908,6 +922,7 @@ Ao automatizar o envio de e-mails, é importante considerar as implicações de 
 Uma abordagem mais segura é usar OAuth2 para autenticação. O OAuth2 é um protocolo de autorização que permite que aplicativos de terceiros acessem suas informações sem precisar compartilhar suas senhas.
 
 **Vantagens do OAuth2:**
+
 - **Segurança:** Não é necessário armazenar senhas em texto claro.
 - **Controle:** É possível revogar o acesso a qualquer momento.
 - **Escopo:** É possível limitar o acesso a apenas determinadas informações.
@@ -936,11 +951,13 @@ print(dados)
 Se você estiver usando o Gmail, é possível que precise permitir o acesso de "aplicativos menos seguros" para que o envio de e-mails funcione. No entanto, essa opção reduz a segurança da sua conta e não é recomendada.
 
 **Como Ativar:**
+
 1. Acesse sua conta do Google.
 2. Vá para "Segurança".
 3. Na seção "Acesso a app menos seguro", ative a opção "Permitir aplicativos menos seguros".
 
 **Atenção:**
+
 - Essa opção pode não estar disponível para contas do Google Workspace (antigo G Suite).
 - O Google pode bloquear o acesso de aplicativos menos seguros a qualquer momento, afetando a funcionalidade do seu aplicativo.
 
@@ -956,7 +973,7 @@ Nesta seção, você aprenderá como extrair dados de sites e automatizar intera
 
 Você verá exemplos práticos usando as bibliotecas `requests` e `BeautifulSoup` para extração de dados, além de dicas para lidar com tabelas HTML e boas práticas para respeitar as políticas dos sites.
 
-*** 
+***
 
 ## 5.1. Introdução ao Web Scraping
 
@@ -984,6 +1001,7 @@ else:
 ```
 
 **Resultado esperado**:
+
 ```plaintext
 Informação 1
 Informação 2
@@ -999,7 +1017,6 @@ Ao realizar web scraping, é importante seguir algumas boas práticas para garan
 - **Use User-Agent:** Inclua um cabeçalho `User-Agent` na sua requisição para identificar seu script como um navegador legítimo.
 - **Armazene os dados de forma estruturada:** Utilize formatos como CSV, JSON ou bancos de dados para armazenar os dados extraídos.
 - **Mantenha a ética:** Não use scraping para coletar informações sensíveis ou violar os termos de serviço do site.
-
 
 ## 5.2. Extraindo Dados de Tabelas HTML
 
@@ -1029,6 +1046,7 @@ else:
 ```
 
 **Resultado esperado:**
+
 ```plaintext
    Coluna1  Coluna2  Coluna3
 0  Dado1    Dado2    Dado3
@@ -1041,6 +1059,7 @@ else:
 Após extrair os dados de uma tabela HTML, você pode manipulá-los usando as funcionalidades do `pandas`. Por exemplo, você pode filtrar, agrupar ou transformar os dados conforme necessário.
 
 **Exemplo de manipulação de dados:**
+
 ```python
 # Filtrar dados onde Coluna1 é igual a 'Dado1'
 dados_filtrados = df[df['Coluna1'] == 'Dado1']
@@ -1048,6 +1067,7 @@ print(dados_filtrados)
 ```
 
 **Resultado esperado:**
+
 ```plaintext
    Coluna1  Coluna2  Coluna3
 0  Dado1    Dado2    Dado3
@@ -1059,7 +1079,7 @@ O Selenium é uma das ferramentas mais poderosas para automação de navegadores
 
 Essa abordagem é especialmente útil para automatizar tarefas em sistemas web internos, portais de clientes, ou para coletar dados de sites que exigem autenticação ou navegação dinâmica. O Selenium suporta diversos navegadores, como Chrome, Firefox e Edge, e pode ser integrado a scripts Python para criar robôs de automação robustos.
 
-### Principais recursos do Selenium:
+### Principais recursos do Selenium
 
 - **Automação de login e navegação:** Preencha campos de usuário e senha, clique em botões de login e navegue por diferentes páginas automaticamente.
 - **Interação com elementos dinâmicos:** Clique em menus, marque checkboxes, selecione opções em listas suspensas e interaja com pop-ups.
@@ -1079,7 +1099,8 @@ Para usar o Selenium, instale a biblioteca e baixe o driver do navegador corresp
 ```bash
 pip install selenium
 ```
-Baixe o ChromeDriver em: https://sites.google.com/chromium.org/driver/
+
+Baixe o ChromeDriver em: <https://sites.google.com/chromium.org/driver/>
 
 ### 5.3.2. Exemplo de Automação com Selenium
 
@@ -1121,6 +1142,7 @@ driver.quit()
 ```
 
 **Resultado esperado:**
+
 ```plaintext
 Informação 1
 Informação 2
@@ -1138,23 +1160,30 @@ Informação 3
 ### 5.3.4. Exemplos de Interação com Elementos
 
 - **Clicar em botões:**
+
 ```python
 botao = driver.find_element(By.ID, 'botaoEnviar')
 botao.click()
 ```
+
 - **Preencher campos de texto:**
+
 ```python
 campo_texto = driver.find_element(By.NAME, 'campoTexto')
 campo_texto.send_keys('Texto a ser preenchido')
 ```
+
 - **Selecionar opções em dropdowns:**
+
 ```python
 from selenium.webdriver.support.ui import Select
 select_element = driver.find_element(By.ID, 'dropdown')
 select = Select(select_element)
 select.select_by_visible_text('Opção 1')
 ```
+
 - **Navegar para outra página:**
+
 ```python
 driver.get('https://example.com/outra_pagina')
 ```
@@ -1175,7 +1204,7 @@ Você verá exemplos de como criar janelas, botões, campos de texto e outros el
 
 Tkinter é a biblioteca padrão do Python para criação de interfaces gráficas. Com ela, é possível criar janelas, diálogos, botões, menus e outros elementos gráficos de forma simples e rápida.
 
-### Exemplo básico de uma janela Tkinter:
+### Exemplo básico de uma janela Tkinter
 
 ```python
 import tkinter as tk
@@ -1204,7 +1233,7 @@ Uma janela com um botão. Ao clicar no botão, a mensagem "Botão clicado!" deve
 
 É possível coletar entradas de usuário através de campos de texto, caixas de seleção, botões de opção, entre outros.
 
-### Exemplo de coleta de entrada:
+### Exemplo de coleta de entrada
 
 ```python
 import tkinter as tk
@@ -1246,7 +1275,7 @@ Uma janela com um campo de texto, um botão e um rótulo. O usuário deve digita
 
 PyWebIO é uma biblioteca que permite criar interfaces web interativas diretamente em scripts Python, sem a necessidade de conhecimentos em HTML ou CSS. É uma ótima opção para quem deseja criar rapidamente interfaces para suas aplicações de automação.
 
-### Exemplo básico de uso do PyWebIO:
+### Exemplo básico de uso do PyWebIO
 
 ```python
 from pywebio import start_server
@@ -1270,7 +1299,7 @@ Ao executar o script, um servidor web será iniciado. Acesse `http://localhost:8
 
 Tanto no Tkinter quanto no PyWebIO, é possível criar formulários para coletar informações de usuários.
 
-### Exemplo de formulário no Tkinter:
+### Exemplo de formulário no Tkinter
 
 ```python
 import tkinter as tk
@@ -1304,7 +1333,7 @@ botao_enviar.pack()
 janela.mainloop()
 ```
 
-### Exemplo de formulário no PyWebIO:
+### Exemplo de formulário no PyWebIO
 
 ```python
 from pywebio import start_server
@@ -1323,13 +1352,47 @@ def app():
 start_server(app, port=8080)
 ```
 
-# 7. Gerador automático de procurações e petições a partir de modelos
+***
+
+# Parte 2: Automação de Escritórios
+
+Nesta parte do livro, você aprenderá como aplicar os conceitos de automação em ambientes de escritório, focando em tarefas comuns que podem ser automatizadas para aumentar a eficiência, reduzir erros e liberar tempo para atividades mais estratégicas. Serão apresentados exemplos práticos e projetos reais, organizados por tipo de escritório, para que você possa adaptar as soluções à sua realidade profissional.
+
+Ao longo dos próximos capítulos, você verá como automatizar:
+
+- A geração de documentos legais e o controle de prazos processuais em escritórios de advocacia.
+- A leitura e consolidação de extratos bancários, geração de guias de impostos e envio automático de boletos em escritórios de contabilidade.
+- O acompanhamento de entregas, roteirização de rotas e geração de manifestos em escritórios de logística.
+- A leitura de pedidos, atualização de estoque e envio de notas fiscais em e-commerces e empresas de vendas online.
+- O controle de protocolos, conversão de tabelas e automação de rotinas em escritórios que prestam serviços para repartições públicas e órgãos governamentais.
+
+Cada seção traz exemplos práticos, dicas e exercícios para consolidar o aprendizado e estimular a criatividade na busca por novas automações.
+
+***
+
+# Escritórios de Advocacia
+
+Os escritórios de advocacia lidam diariamente com uma grande quantidade de documentos, prazos processuais e consultas a sistemas jurídicos. A automação dessas tarefas pode trazer ganhos significativos de produtividade, reduzir erros e liberar tempo para atividades mais estratégicas, como o atendimento ao cliente e a elaboração de peças jurídicas.
+
+Neste capítulo, você aprenderá como aplicar Python para automatizar processos comuns em escritórios de advocacia, tornando o trabalho mais eficiente e seguro. Serão apresentados exemplos práticos que podem ser adaptados à rotina de diferentes escritórios, facilitando a gestão de documentos, o controle de prazos e a consulta a sites de tribunais.
+
+A seguir, você verá como automatizar:
+
+- A geração de documentos legais, como procurações e petições, a partir de modelos pré-definidos.
+- O controle de prazos processuais com alertas por e-mail.
+- A leitura e extração de informações de documentos PDF e Word.
+- A automação de consultas a sites de tribunais e a extração de dados relevantes.
+
+***
+
+## 7. Gerador automático de procurações e petições a partir de modelos
 
 A criação de procurações e petições é uma tarefa comum e essencial no dia a dia de um escritório de advocacia. No entanto, preencher esses documentos manualmente pode ser demorado e sujeito a erros. Neste exemplo, vamos mostrar como automatizar a geração de procurações e petições a partir de modelos pré-definidos, utilizando Python e a biblioteca `docx` para manipulação de arquivos do Word.
 
 ## 7.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Leia um modelo de procuração ou petição, previamente elaborado em um arquivo do Word.
 - Substitua automaticamente os campos variáveis (como nome do cliente, CPF, data, etc.) pelas informações fornecidas pelo usuário.
 - Salve o documento preenchido com um novo nome, indicando que se trata de um documento personalizado.
@@ -1337,6 +1400,7 @@ O objetivo deste exemplo é criar um script que:
 ## 7.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `ler_modelo()`: Para ler o arquivo modelo da procuração ou petição.
 - `preencher_documento()`: Para substituir os campos variáveis pelas informações do cliente.
 - `salvar_documento()`: Para salvar o documento preenchido com um novo nome.
@@ -1394,6 +1458,7 @@ O controle de prazos processuais é uma atividade crítica para escritórios de 
 ## 8.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Leia uma planilha com os prazos processuais, contendo informações como número do processo, descrição do prazo, data de início e data de término.
 - Verifique quais prazos estão próximos do vencimento (por exemplo, faltando 3 dias ou menos).
 - Envie um e-mail de alerta para o responsável pelo processo, informando sobre o prazo iminente.
@@ -1401,6 +1466,7 @@ O objetivo deste exemplo é criar um script que:
 ## 8.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `ler_planilha()`: Para ler o arquivo da planilha com os prazos processuais.
 - `verificar_prazos()`: Para identificar quais prazos estão próximos do vencimento.
 - `enviar_alertas()`: Para enviar os e-mails de alerta.
@@ -1466,6 +1532,7 @@ A consulta a sites de tribunais é uma atividade rotineira em escritórios de ad
 ## 9.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Acesse o site de um tribunal (por exemplo, Tribunal de Justiça de São Paulo).
 - Realize a busca por um processo utilizando o número do processo informado pelo usuário.
 - Extraia e exiba informações relevantes sobre o andamento do processo.
@@ -1473,6 +1540,7 @@ O objetivo deste exemplo é criar um script que:
 ## 9.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `acessar_site()`: Para acessar o site do tribunal.
 - `buscar_processo()`: Para realizar a busca pelo processo.
 - `extrair_informacoes()`: Para extrair as informações relevantes sobre o processo.
@@ -1525,18 +1593,18 @@ A automação da consulta a sites de tribunais pode trazer maior agilidade e efi
 
 ***
 
-# Escritório de Contabilidade
+# Escritórios de Contabilidade
 
-Os escritórios de contabilidade desempenham um papel crucial na gestão financeira de empresas e indivíduos, lidando com uma variedade de tarefas, como a preparação de declarações de impostos, a elaboração de demonstrações financeiras e o gerenciamento de folha de pagamento. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e conformidade.
+Os escritórios de contabilidade desempenham um papel fundamental na gestão financeira de empresas e profissionais autônomos. Além de garantir o cumprimento das obrigações fiscais, esses escritórios são responsáveis por organizar documentos, gerar relatórios, calcular impostos e manter o controle sobre receitas e despesas. Com o avanço da tecnologia, a automação dessas tarefas tornou-se essencial para aumentar a produtividade, reduzir erros e liberar tempo para atividades mais estratégicas.
 
-Nesta seção, apresentamos exemplos práticos de automação voltados para escritórios de contabilidade, com o objetivo de demonstrar como as técnicas de programação e automação podem ser aplicadas para resolver problemas específicos dessa área.
+Neste capítulo, você aprenderá como aplicar Python para automatizar processos comuns em escritórios de contabilidade, tornando o dia a dia mais eficiente e seguro. Serão apresentados exemplos práticos que podem ser adaptados à realidade de diferentes negócios, facilitando a rotina contábil e proporcionando maior agilidade no atendimento aos clientes.
 
-Os exemplos foram escolhidos com base em situações comuns enfrentadas por contadores e profissionais da área contábil e buscam mostrar, de forma prática e didática, como a automação pode trazer ganhos significativos de produtividade, precisão e eficiência.
+A seguir, você verá como automatizar:
 
-Ao final de cada exemplo, você encontrará dicas e sugestões para adaptar as soluções apresentadas à sua realidade, além de exercícios práticos para consolidar o aprendizado.
-
-Esperamos que esta seção inspire você a identificar novas oportunidades de automação em sua rotina profissional e a explorar todo o potencial da programação e da inteligência artificial para transformar o seu trabalho.
-
+- A leitura e consolidação de extratos bancários em formato CSV.
+- A geração automática de guias de impostos.
+- O envio automático de boletos por e-mail.
+  
 ***
 
 # 10. Leitura e consolidação de extratos bancários (CSV)
@@ -1546,12 +1614,14 @@ A leitura e consolidação de extratos bancários é uma tarefa essencial para a
 ## 10.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Leia um ou mais arquivos CSV contendo extratos bancários.
 - Consolide as informações em um único relatório, com o resumo das receitas e despesas.
 
 ## 10.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `ler_extrato()`: Para ler o arquivo CSV do extrato bancário.
 - `consolidar_extratos()`: Para consolidar as informações de múltiplos extratos.
 - `gerar_relatorio()`: Para gerar o relatório financeiro.
@@ -1597,12 +1667,14 @@ A geração de guias de impostos é uma obrigação periódica para empresas, se
 ## 11.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Calcule os valores de impostos devidos com base nas receitas e despesas informadas.
 - Gere as guias de pagamento dos impostos de forma automática.
 
 ## 11.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `calcular_impostos()`: Para calcular os impostos devidos.
 - `gerar_guia_pagamento()`: Para gerar a guia de pagamento do imposto.
 
@@ -1644,12 +1716,14 @@ O envio de boletos por e-mail é uma prática comum e eficiente para a cobrança
 ## 12.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Gere boletos bancários com base nas informações de cobrança.
 - Envie os boletos gerados como anexos em e-mails para os clientes.
 
 ## 12.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `gerar_boleto()`: Para gerar o boleto bancário.
 - `enviar_boleto_email()`: Para enviar o boleto por e-mail.
 
@@ -1712,17 +1786,17 @@ A automação do envio de boletos por e-mail pode trazer maior eficiência e agi
 
 ***
 
-# Escritório de Logística
+# Escritórios de Logística
 
-Os escritórios de logística são responsáveis pelo planejamento, execução e controle de operações de transporte e armazenamento de mercadorias, visando a eficiência e a redução de custos. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e rastreabilidade.
+Os escritórios de logística são responsáveis pelo planejamento, execução e controle das operações de transporte e armazenamento de mercadorias, buscando sempre a eficiência, a redução de custos e a satisfação dos clientes. A automação pode transformar a rotina desses escritórios, trazendo mais agilidade, precisão e rastreabilidade para os processos logísticos.
 
-Nesta seção, apresentamos exemplos práticos de automação voltados para escritórios de logística, com o objetivo de demonstrar como as técnicas de programação e automação podem ser aplicadas para resolver problemas específicos dessa área.
+Nesta seção, você aprenderá como aplicar Python para automatizar tarefas comuns em logística, desde a leitura e geração de documentos até o acompanhamento de entregas e roteirização de rotas. Os exemplos apresentados foram pensados para resolver desafios reais enfrentados por profissionais da área, mostrando como a tecnologia pode ser uma grande aliada na otimização das operações.
 
-Os exemplos foram escolhidos com base em situações comuns enfrentadas por profissionais de logística e buscam mostrar, de forma prática e didática, como a automação pode trazer ganhos significativos de produtividade, precisão e eficiência.
+A seguir, você verá como automatizar:
 
-Ao final de cada exemplo, você encontrará dicas e sugestões para adaptar as soluções apresentadas à sua realidade, além de exercícios práticos para consolidar o aprendizado.
-
-Esperamos que esta seção inspire você a identificar novas oportunidades de automação em sua rotina profissional e a explorar todo o potencial da programação e da inteligência artificial para transformar o seu trabalho.
+- A leitura e geração de manifestos em XML e PDF.
+- A roteirização com base em distância, utilizando APIs como Google Maps ou OpenRoute.
+- O acompanhamento de entregas via planilhas atualizadas.
 
 ***
 
@@ -1733,12 +1807,14 @@ A leitura e geração de manifestos é uma atividade importante para o transport
 ## 13.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Leia um manifesto em formato XML, extraindo as informações relevantes.
 - Gere um novo manifesto em formato PDF, com as informações extraídas.
 
 ## 13.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `ler_manifesto_xml()`: Para ler o manifesto em formato XML.
 - `gerar_manifesto_pdf()`: Para gerar o novo manifesto em formato PDF.
 
@@ -1790,6 +1866,7 @@ A roteirização é uma atividade fundamental para a otimização do transporte 
 ## 14.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Receba uma lista de endereços de origem e destino.
 - Calcule a rota mais curta ou mais rápida entre os pontos, utilizando a API escolhida.
 - Exiba o resultado com as informações da rota, como distância e tempo estimado.
@@ -1797,6 +1874,7 @@ O objetivo deste exemplo é criar um script que:
 ## 14.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `calcular_rota_google_maps()`: Para calcular a rota utilizando a API do Google Maps.
 - `calcular_rota_openroute()`: Para calcular a rota utilizando a API do OpenRoute.
 
@@ -1855,12 +1933,14 @@ O acompanhamento de entregas é uma atividade importante para garantir a satisfa
 ## 15.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Leia uma planilha com os dados das entregas, contendo informações como código da entrega, cliente, endereço, data e status.
 - Envie notificações automáticas para os clientes, informando sobre o status da entrega.
 
 ## 15.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `ler_planilha_entregas()`: Para ler a planilha com os dados das entregas.
 - `enviar_notificacoes()`: Para enviar as notificações automáticas.
 
@@ -1909,6 +1989,20 @@ A automação do acompanhamento de entregas pode trazer maior eficiência e agil
 
 ***
 
+# E-commerce e Vendas Online
+
+O setor de e-commerce e vendas online cresce a cada ano, exigindo das empresas agilidade, precisão e integração de processos para atender clientes em diferentes canais de venda. Automatizar tarefas nesse contexto é fundamental para garantir eficiência operacional, evitar erros manuais e proporcionar uma melhor experiência ao cliente.
+
+Nesta seção, você aprenderá como aplicar Python para automatizar rotinas comuns em lojas virtuais e operações de vendas online, desde o processamento de pedidos até a atualização de estoque e o envio de documentos fiscais. Os exemplos apresentados foram pensados para resolver desafios reais enfrentados por quem atua no comércio eletrônico, mostrando como a tecnologia pode ser uma grande aliada no crescimento do negócio.
+
+A seguir, você verá como automatizar:
+
+- A leitura de pedidos de marketplaces.
+- A atualização automática de estoque em Excel ou ERP simples.
+- O envio de notas fiscais e respostas automáticas a clientes.
+
+***
+
 # 16. Leitura de pedidos de marketplaces
 
 A leitura e processamento de pedidos de marketplaces é uma tarefa importante para empresas que vendem produtos em plataformas como Mercado Livre, Amazon e outros. Neste exemplo, vamos mostrar como automatizar a leitura de pedidos recebidos em um marketplace, utilizando Python para processar as informações e gerar relatórios.
@@ -1916,12 +2010,14 @@ A leitura e processamento de pedidos de marketplaces é uma tarefa importante pa
 ## 16.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Leia um arquivo com os pedidos recebidos, contendo informações como produto, quantidade, preço e dados do cliente.
 - Gere um relatório com o resumo dos pedidos, incluindo o total de vendas e a lista de produtos mais vendidos.
 
 ## 16.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `ler_pedidos()`: Para ler o arquivo com os pedidos recebidos.
 - `gerar_relatorio_pedidos()`: Para gerar o relatório com o resumo dos pedidos.
 
@@ -1960,12 +2056,14 @@ A atualização de estoque é uma atividade crítica para empresas de e-commerce
 ## 17.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Leia um arquivo com os dados de vendas, contendo informações como produto, quantidade vendida e data da venda.
 - Atualize automaticamente as quantidades em estoque em uma planilha Excel ou em um ERP simples.
 
 ## 17.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `ler_vendas()`: Para ler o arquivo com os dados de vendas.
 - `atualizar_estoque()`: Para atualizar as quantidades em estoque.
 
@@ -2008,12 +2106,14 @@ O envio de notas fiscais e respostas automáticas a clientes é uma prática imp
 ## 18.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Gere notas fiscais eletrônicas com base nas informações de vendas.
 - Envie as notas fiscais geradas e respostas automáticas por e-mail para os clientes.
 
 ## 18.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `gerar_nota_fiscal()`: Para gerar a nota fiscal eletrônica.
 - `enviar_nota_fiscal_email()`: Para enviar a nota fiscal e a resposta automática por e-mail.
 
@@ -2080,15 +2180,16 @@ A automação do envio de notas fiscais e respostas automáticas a clientes pode
 
 # Escritórios que prestam serviços para repartições públicas e órgãos governamentais
 
-Os escritórios que prestam serviços para repartições públicas e órgãos governamentais enfrentam desafios específicos relacionados à gestão de documentos, cumprimento de prazos, atendimento a requisitos legais e normativos, entre outros. A automação pode trazer benefícios significativos para a rotina desses escritórios, permitindo maior agilidade, precisão e conformidade.
+Escritórios que atuam junto a repartições públicas e órgãos governamentais enfrentam desafios específicos, como a necessidade de lidar com grande volume de documentos, atender a exigências legais e normativas, cumprir prazos rigorosos e garantir a rastreabilidade das informações. A automação pode ser uma grande aliada nesse contexto, trazendo mais agilidade, precisão e conformidade para os processos administrativos e operacionais.
 
-Nesta seção, apresentamos exemplos práticos de automação voltados para escritórios que prestam serviços para repartições públicas e órgãos governamentais, com o objetivo de demonstrar como as técnicas de programação e automação podem ser aplicadas para resolver problemas específicos dessa área.
+Nesta seção, você aprenderá como aplicar Python para automatizar tarefas comuns nesse segmento, desde o controle de protocolos e conversão de documentos até a roteirização de rotas e o acompanhamento de entregas. Os exemplos apresentados foram pensados para resolver situações reais enfrentadas por profissionais que prestam serviços para o setor público, mostrando como a tecnologia pode facilitar o dia a dia e aumentar a eficiência.
 
-Os exemplos foram escolhidos com base em situações comuns enfrentadas por profissionais que atuam com serviços públicos e buscam mostrar, de forma prática e didática, como a automação pode trazer ganhos significativos de produtividade, precisão e eficiência.
+A seguir, você verá como automatizar:
 
-Ao final de cada exemplo, você encontrará dicas e sugestões para adaptar as soluções apresentadas à sua realidade, além de exercícios práticos para consolidar o aprendizado.
-
-Esperamos que esta seção inspire você a identificar novas oportunidades de automação em sua rotina profissional e a explorar todo o potencial da programação e da inteligência artificial para transformar o seu trabalho.
+- O controle automatizado de protocolos em repartições públicas.
+- A conversão de tabelas em PDF para Excel.
+- A roteirização com base em distância, utilizando APIs como Google Maps ou OpenRoute.
+- O acompanhamento de entregas via planilhas.
 
 ***
 
@@ -2099,6 +2200,7 @@ O controle de protocolos em repartições públicas é uma atividade importante 
 ## 19.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Leia uma planilha com os dados dos protocolos, contendo informações como número do protocolo, descrição, data de entrada e situação.
 - Verifique quais protocolos estão com a situação "Pendente".
 - Envie um e-mail de notificação para o responsável pelo protocolo, informando sobre a pendência.
@@ -2106,6 +2208,7 @@ O objetivo deste exemplo é criar um script que:
 ## 19.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `ler_planilha_protocolos()`: Para ler a planilha com os dados dos protocolos.
 - `verificar_protocolos_pendentes()`: Para verificar quais protocolos estão pendentes.
 - `enviar_notificacoes_protocolos()`: Para enviar as notificações por e-mail.
@@ -2168,12 +2271,14 @@ A conversão de tabelas em PDF para Excel é uma tarefa comum em escritórios qu
 ## 20.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Leia um arquivo PDF contendo uma tabela.
 - Extraia os dados da tabela e os salve em um arquivo Excel.
 
 ## 20.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `ler_tabela_pdf()`: Para ler a tabela do arquivo PDF.
 - `salvar_tabela_excel()`: Para salvar a tabela em um arquivo Excel.
 
@@ -2216,6 +2321,7 @@ A roteirização é uma atividade fundamental para a otimização do transporte 
 ## 21.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Receba uma lista de endereços de origem e destino.
 - Calcule a rota mais curta ou mais rápida entre os pontos, utilizando a API escolhida.
 - Exiba o resultado com as informações da rota, como distância e tempo estimado.
@@ -2223,6 +2329,7 @@ O objetivo deste exemplo é criar um script que:
 ## 21.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `calcular_rota_google_maps()`: Para calcular a rota utilizando a API do Google Maps.
 - `calcular_rota_openroute()`: Para calcular a rota utilizando a API do OpenRoute.
 
@@ -2281,12 +2388,14 @@ O acompanhamento de entregas é uma atividade importante para garantir a satisfa
 ## 22.1. Objetivo
 
 O objetivo deste exemplo é criar um script que:
+
 - Leia uma planilha com os dados das entregas, contendo informações como código da entrega, cliente, endereço, data e status.
 - Envie notificações automáticas para os clientes, informando sobre o status da entrega.
 
 ## 22.2. Estrutura do Código
 
 O código será estruturado em funções, para facilitar a leitura e a manutenção. As principais funções serão:
+
 - `ler_planilha_entregas()`: Para ler a planilha com os dados das entregas.
 - `enviar_notificacoes()`: Para enviar as notificações automáticas.
 
