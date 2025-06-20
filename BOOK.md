@@ -70,7 +70,9 @@ Espero que este material ajude você a transformar sua rotina profissional, abri
 
 # Sumário
 
-## Parte I – Fundamentos da Automação
+## [Introdução](#introdução)
+
+## [Parte I – Fundamentos da Automação](#parte-1-fundamentos-da-automação)
 
 1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)
 2. [Instalação de Ambiente: VS Code, Python e Bibliotecas Úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)
@@ -79,7 +81,7 @@ Espero que este material ajude você a transformar sua rotina profissional, abri
 5. [Web scraping e automação de sites](#5-web-scraping-e-automação-de-sites)
 6. [Criação de interfaces gráficas simples (Tkinter ou PyWebIO)](#6-criação-de-interfaces-gráficas-simples-tkinter-ou-pywebio)
 
-## Parte II – Casos Reais por Tipo de Escritório
+## [Parte II – Casos Reais por Tipo de Escritório](#parte-2-automa%C3%A7%C3%A3o-de-escrit%C3%B3rios)
 
 ### [Escritórios de Advocacia](#escrit%C3%B3rios-de-advocacia-1)
 
@@ -127,17 +129,25 @@ A automação de tarefas rotineiras é uma das maiores oportunidades para escrit
 
 Este livro foi pensado para ser um guia prático, direto ao ponto, e acessível mesmo para quem nunca programou antes. O conteúdo está dividido em duas partes principais, para facilitar o aprendizado e a aplicação dos conceitos:
 
-## Parte I – Fundamentos da Automação
+- **Parte I – Fundamentos da Automação:**  
+  Você aprenderá os conceitos essenciais, desde a instalação do ambiente até a manipulação de arquivos, automação de e-mails, web scraping, criação de interfaces gráficas simples e introdução ao uso de inteligência artificial em tarefas do escritório.
 
-Na primeira parte, você aprenderá os conceitos essenciais para começar a automatizar tarefas com Python. Aqui, abordamos desde a instalação do ambiente, passando pelo trabalho com arquivos, automação de e-mails, web scraping e até a criação de interfaces gráficas simples. O objetivo é construir uma base sólida, permitindo que você entenda como Python pode ser aplicado em diferentes situações do cotidiano de um escritório.
-
-## Parte II – Casos Reais por Tipo de Escritório
-
-Na segunda parte, apresentamos exemplos práticos e projetos voltados para áreas específicas: advocacia, contabilidade, logística e e-commerce. Cada capítulo traz situações reais enfrentadas nesses segmentos e mostra, passo a passo, como resolvê-las com Python. Assim, você poderá adaptar as soluções para a sua realidade, independentemente do ramo de atuação.
+- **Parte II – Casos Reais por Tipo de Escritório:**  
+  Apresentamos exemplos práticos e projetos voltados para diferentes áreas, incluindo escritórios de advocacia, contabilidade, logística, e-commerce e serviços para repartições públicas, mostrando como adaptar as soluções para a sua realidade.
 
 Ao final, você encontrará projetos práticos para consolidar o aprendizado e estimular a criatividade na busca por novas automações.
 
-Esperamos que este livro seja um ponto de partida para transformar sua rotina profissional, tornando seu escritório mais inteligente, eficiente e preparado para os desafios do futuro.
+Esperamos que este livro seja um ponto de partida para transformar sua rotina profissional, tornando seu escritório mais inteligente, eficiente e preparado para
+
+***
+
+# Parte I – Fundamentos da Automação
+
+Nesta primeira parte do livro, você irá construir a base necessária para começar a automatizar tarefas do dia a dia em escritórios utilizando Python. O objetivo é apresentar os conceitos essenciais de forma prática e acessível, mesmo para quem nunca programou antes.
+
+Você aprenderá desde a instalação do ambiente de desenvolvimento, passando pela manipulação de arquivos (Excel, CSV, PDF, Word), automação de e-mails e notificações, extração de dados de sites (web scraping), até a criação de interfaces gráficas simples. Cada capítulo traz exemplos práticos e exercícios para que você possa aplicar imediatamente o que aprendeu.
+
+Ao dominar os fundamentos apresentados nesta parte, você estará preparado para avançar para os casos reais de automação em diferentes tipos de escritórios, explorados na Parte II do livro.
 
 ***
 
