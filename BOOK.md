@@ -72,7 +72,7 @@ Espero que este material ajude você a transformar sua rotina profissional, abri
 
 ## [Introdução](#introdução)
 
-## [Parte I – Fundamentos da Automação](#parte-1-fundamentos-da-automação)
+## [Parte I – Fundamentos da Automação](#parte-i--fundamentos-da-automa%C3%A7%C3%A3o-1)
 
 1. [Introdução à automação com Python](#1-introdução-à-automação-com-python)
 2. [Instalação de Ambiente: VS Code, Python e Bibliotecas Úteis](#2-instalação-de-ambiente-vs-code-python-e-bibliotecas-úteis)
@@ -1364,7 +1364,7 @@ start_server(app, port=8080)
 
 ***
 
-# Parte 2: Automação de Escritórios
+# Parte II: Automação de Escritórios
 
 Nesta parte do livro, você aprenderá como aplicar os conceitos de automação em ambientes de escritório, focando em tarefas comuns que podem ser automatizadas para aumentar a eficiência, reduzir erros e liberar tempo para atividades mais estratégicas. Serão apresentados exemplos práticos e projetos reais, organizados por tipo de escritório, para que você possa adaptar as soluções à sua realidade profissional.
 
