@@ -70,7 +70,7 @@ Espero que este material ajude você a transformar sua rotina profissional, abri
 
 # Sumário
 
-## [Introdução](#introdução)
+## [Introdução](#introdu%C3%A7%C3%A3o-1)
 
 ## [Parte I – Fundamentos da Automação](#parte-i--fundamentos-da-automa%C3%A7%C3%A3o-1)
 
