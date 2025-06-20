@@ -214,7 +214,7 @@ pip install pandas openpyxl
 
 ***
 
-# 3. Trabalhando com arquivos (Excel, CSV, PDF, Word)
+# 3. Trabalhando com arquivos (Excel, CSV, PDF, Word) - [Sumário](#sum%C3%A1rio)
 
 Nesta seção, você aprenderá a manipular diferentes tipos de arquivos comuns no ambiente de escritório, como Excel, CSV, PDF e Word. Essas habilidades são essenciais para automatizar tarefas que envolvem leitura, escrita e processamento de dados.
 
@@ -683,7 +683,7 @@ Com este exercício, você praticou a leitura e modificação de arquivos Word u
 
 ***
 
-# 4. Automação de E-mails e Notificações
+# 4. Automação de E-mails e Notificações - [Sumário](#sum%C3%A1rio)
 
 Nesta seção, você aprenderá a automatizar o envio de e-mails e notificações usando Python. Essa habilidade é essencial para manter a comunicação eficiente em escritórios, seja para enviar lembretes, relatórios ou avisos importantes.
 
@@ -977,7 +977,7 @@ Neste capítulo, você aprendeu sobre considerações de segurança ao automatiz
 
 ***
 
-# 5. Web scraping e automação de sites
+# 5. Web scraping e automação de sites - [Sumário](#sum%C3%A1rio)
 
 Nesta seção, você aprenderá como extrair dados de sites e automatizar interações com páginas web utilizando Python. O web scraping permite coletar informações de páginas da internet de forma automatizada, facilitando tarefas como atualização de preços, monitoramento de concorrentes, coleta de dados públicos, entre outros. Além disso, a automação de sites possibilita simular ações humanas, como preencher formulários, clicar em botões e navegar por páginas automaticamente, tornando processos repetitivos mais rápidos e eficientes.
 
@@ -1202,7 +1202,7 @@ Com o Selenium, você pode criar robôs que automatizam tarefas repetitivas em s
 
 ***
 
-# 6. Criação de interfaces gráficas simples (Tkinter ou PyWebIO)
+# 6. Criação de interfaces gráficas simples (Tkinter ou PyWebIO) - [Sumário](#sum%C3%A1rio)
 
 Nesta seção, você aprenderá a criar interfaces gráficas simples para suas aplicações de automação. Interfaces gráficas são importantes para tornar suas ferramentas mais amigáveis e acessíveis, permitindo que usuários interajam com suas automações de forma mais intuitiva.
 
@@ -1395,7 +1395,7 @@ A seguir, você verá como automatizar:
 
 ***
 
-## 7. Gerador automático de procurações e petições a partir de modelos
+# 7. Gerador automático de procurações e petições a partir de modelos - [Sumário](#sum%C3%A1rio)
 
 A criação de procurações e petições é uma tarefa comum e essencial no dia a dia de um escritório de advocacia. No entanto, preencher esses documentos manualmente pode ser demorado e sujeito a erros. Neste exemplo, vamos mostrar como automatizar a geração de procurações e petições a partir de modelos pré-definidos, utilizando Python e a biblioteca `docx` para manipulação de arquivos do Word.
 
@@ -1461,7 +1461,7 @@ A automação da geração de procurações e petições pode trazer ganhos sign
 
 ***
 
-# 8. Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail)
+# 8. Controle de prazos processuais (leitura de planilhas + envio de alertas por e-mail) - [Sumário](#sum%C3%A1rio)
 
 O controle de prazos processuais é uma atividade crítica para escritórios de advocacia, pois o não cumprimento de prazos pode resultar em prejuízos financeiros e danos à reputação do escritório. Neste exemplo, vamos mostrar como automatizar o controle de prazos processuais, utilizando Python para ler planilhas com os prazos e enviar alertas por e-mail quando os prazos estiverem se aproximando.
 
@@ -1535,7 +1535,7 @@ A automação do controle de prazos processuais pode trazer maior eficiência e 
 
 ***
 
-# 9. Consulta a sites de tribunais
+# 9. Consulta a sites de tribunais - [Sumário](#sum%C3%A1rio)
 
 A consulta a sites de tribunais é uma atividade rotineira em escritórios de advocacia, utilizada para acompanhar o andamento de processos, verificar publicações e obter informações atualizadas sobre casos judiciais. Neste exemplo, vamos mostrar como automatizar a consulta a sites de tribunais, utilizando Python para acessar as informações de forma rápida e eficiente.
 
@@ -1617,7 +1617,7 @@ A seguir, você verá como automatizar:
   
 ***
 
-# 10. Leitura e consolidação de extratos bancários (CSV)
+# 10. Leitura e consolidação de extratos bancários (CSV) - [Sumário](#sum%C3%A1rio)
 
 A leitura e consolidação de extratos bancários é uma tarefa essencial para a gestão financeira de empresas, permitindo o acompanhamento de receitas, despesas e saldos. Neste exemplo, vamos mostrar como automatizar a leitura de extratos bancários em formato CSV e a consolidação das informações em um relatório financeiro.
 
@@ -1670,7 +1670,7 @@ A automação da leitura e consolidação de extratos bancários pode trazer mai
 
 ***
 
-# 11. Geração automática de guias de impostos
+# 11. Geração automática de guias de impostos - [Sumário](#sum%C3%A1rio)
 
 A geração de guias de impostos é uma obrigação periódica para empresas, sendo essencial para a regularidade fiscal e o cumprimento das obrigações tributárias. Neste exemplo, vamos mostrar como automatizar a geração de guias de impostos, utilizando Python para calcular os valores devidos e gerar os documentos necessários.
 
@@ -1719,7 +1719,7 @@ A automação da geração de guias de impostos pode trazer maior agilidade e pr
 
 ***
 
-# 12. Envio automático de boletos por e-mail
+# 12. Envio automático de boletos por e-mail - [Sumário](#sum%C3%A1rio)
 
 O envio de boletos por e-mail é uma prática comum e eficiente para a cobrança de clientes, facilitando o recebimento e melhorando o fluxo de caixa das empresas. Neste exemplo, vamos mostrar como automatizar o envio de boletos por e-mail, utilizando Python para gerar os boletos e enviá-los automaticamente para os clientes.
 
@@ -1810,7 +1810,7 @@ A seguir, você verá como automatizar:
 
 ***
 
-# 13. Leitura e geração de manifestos (XML, PDF)
+# 13. Leitura e geração de manifestos (XML, PDF) - [Sumário](#sum%C3%A1rio)
 
 A leitura e geração de manifestos é uma atividade importante para o transporte de mercadorias, sendo essencial para a conformidade fiscal e o rastreamento das operações de transporte. Neste exemplo, vamos mostrar como automatizar a leitura de manifestos em formato XML e PDF, e a geração de novos manifestos com base nas informações lidas.
 
@@ -1869,7 +1869,7 @@ A automação da leitura e geração de manifestos pode trazer maior eficiência
 
 ***
 
-# 14. Roteirização com base em distância (API Google Maps ou OpenRoute)
+# 14. Roteirização com base em distância (API Google Maps ou OpenRoute) - [Sumário](#sum%C3%A1rio)
 
 A roteirização é uma atividade fundamental para a otimização do transporte de mercadorias, permitindo a definição das melhores rotas a serem seguidas pelos veículos. Neste exemplo, vamos mostrar como automatizar a roteirização com base em distância, utilizando APIs como Google Maps ou OpenRoute.
 
@@ -1936,7 +1936,7 @@ A automação da roteirização com base em distância pode trazer ganhos signif
 
 ***
 
-# 15. Acompanhamento de entregas via planilhas
+# 15. Acompanhamento de entregas via planilhas - [Sumário](#sum%C3%A1rio)
 
 O acompanhamento de entregas é uma atividade importante para garantir a satisfação dos clientes e a eficiência das operações de logística. Neste exemplo, vamos mostrar como automatizar o acompanhamento de entregas, utilizando Python para ler planilhas com os dados das entregas e enviar notificações automáticas.
 
@@ -2013,7 +2013,7 @@ A seguir, você verá como automatizar:
 
 ***
 
-# 16. Leitura de pedidos de marketplaces
+# 16. Leitura de pedidos de marketplaces - [Sumário](#sum%C3%A1rio)
 
 A leitura e processamento de pedidos de marketplaces é uma tarefa importante para empresas que vendem produtos em plataformas como Mercado Livre, Amazon e outros. Neste exemplo, vamos mostrar como automatizar a leitura de pedidos recebidos em um marketplace, utilizando Python para processar as informações e gerar relatórios.
 
@@ -2059,7 +2059,7 @@ A automação da leitura e processamento de pedidos de marketplaces pode trazer 
 
 ***
 
-# 17. Atualização automática de estoque
+# 17. Atualização automática de estoque - [Sumário](#sum%C3%A1rio)
 
 A atualização de estoque é uma atividade crítica para empresas de e-commerce e vendas online, sendo essencial para garantir a disponibilidade dos produtos e evitar perdas financeiras. Neste exemplo, vamos mostrar como automatizar a atualização de estoque em planilhas Excel ou em um ERP simples, utilizando Python para ler os dados de vendas e atualizar as quantidades em estoque.
 
@@ -2109,7 +2109,7 @@ A automação da atualização de estoque pode trazer maior eficiência e precis
 
 ***
 
-# 18. Envio de notas fiscais e respostas automáticas a clientes
+# 18. Envio de notas fiscais e respostas automáticas a clientes - [Sumário](#sum%C3%A1rio)
 
 O envio de notas fiscais e respostas automáticas a clientes é uma prática importante para garantir a conformidade fiscal e melhorar o atendimento ao cliente. Neste exemplo, vamos mostrar como automatizar o envio de notas fiscais eletrônicas e respostas automáticas a clientes, utilizando Python para gerar os documentos e enviá-los por e-mail.
 
@@ -2203,7 +2203,7 @@ A seguir, você verá como automatizar:
 
 ***
 
-# 19. Controle Automatizado de Protocolos em Repartição Pública
+# 19. Controle Automatizado de Protocolos em Repartição Pública - [Sumário](#sum%C3%A1rio)
 
 O controle de protocolos em repartições públicas é uma atividade importante para garantir a tramitação adequada de processos e documentos. Neste exemplo, vamos mostrar como automatizar o controle de protocolos em uma repartição pública, utilizando Python para ler planilhas com os dados dos protocolos e enviar notificações automáticas.
 
@@ -2274,7 +2274,7 @@ A automação do controle de protocolos em repartições públicas pode trazer m
 
 ***
 
-# 20. Conversor de tabelas PDF → Excel
+# 20. Conversor de tabelas PDF → Excel - [Sumário](#sum%C3%A1rio)
 
 A conversão de tabelas em PDF para Excel é uma tarefa comum em escritórios que lidam com dados financeiros, orçamentos, relatórios e outros documentos que contêm tabelas. Neste exemplo, vamos mostrar como automatizar a conversão de tabelas em PDF para Excel, utilizando Python para extrair os dados das tabelas e salvá-los em um arquivo Excel.
 
@@ -2324,7 +2324,7 @@ A automação da conversão de tabelas em PDF para Excel pode trazer maior efici
 
 ***
 
-# 21. Roteirização com base em distância (API Google Maps ou OpenRoute)
+# 21. Roteirização com base em distância (API Google Maps ou OpenRoute) - [Sumário](#sum%C3%A1rio)
 
 A roteirização é uma atividade fundamental para a otimização do transporte de mercadorias, permitindo a definição das melhores rotas a serem seguidas pelos veículos. Neste exemplo, vamos mostrar como automatizar a roteirização com base em distância, utilizando APIs como Google Maps ou OpenRoute.
 
@@ -2391,7 +2391,7 @@ A automação da roteirização com base em distância pode trazer ganhos signif
 
 ***
 
-# 22. Acompanhamento de entregas via planilhas
+# 22. Acompanhamento de entregas via planilhas - [Sumário](#sum%C3%A1rio)
 
 O acompanhamento de entregas é uma atividade importante para garantir a satisfação dos clientes e a eficiência das operações de logística. Neste exemplo, vamos mostrar como automatizar o acompanhamento de entregas, utilizando Python para ler planilhas com os dados das entregas e enviar notificações automáticas.
 
@@ -2454,7 +2454,7 @@ A automação do acompanhamento de entregas pode trazer maior eficiência e agil
 
 ***
 
-# 23. Conclusão
+# 23. Conclusão - [Sumário](#sum%C3%A1rio)
 
 A automação de processos em escritórios que prestam serviços para repartições públicas e órgãos governamentais pode trazer ganhos significativos de eficiência, precisão e conformidade. Com o uso de ferramentas como Python, planilhas e APIs, é possível simplificar tarefas administrativas, melhorar a comunicação com os clientes e otimizar a gestão de documentos e processos.
 A implementação de soluções automatizadas pode reduzir o tempo gasto em atividades repetitivas, minimizar erros humanos e garantir que os prazos sejam cumpridos de forma mais eficaz.
